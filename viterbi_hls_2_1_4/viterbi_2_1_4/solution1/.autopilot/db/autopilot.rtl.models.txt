@@ -1,0 +1,9 @@
+decoder_h1_hamminbkb
+calculateDistanceFor
+calculateForState
+computeHammingDistan
+getFinalHammingDista
+getFinalLowestState
+getReturnPath
+getSequence
+decoder

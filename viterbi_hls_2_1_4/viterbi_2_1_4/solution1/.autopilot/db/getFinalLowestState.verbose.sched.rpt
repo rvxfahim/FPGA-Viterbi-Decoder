@@ -1,0 +1,266 @@
+
+
+================================================================
+== Vivado HLS Report for 'getFinalLowestState'
+================================================================
+* Date:           Thu Jul 28 06:40:26 2022
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        viterbi_2_1_4
+* Solution:       solution1
+* Product family: spartan7
+* Target device:  xc7s100-fgga676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     5.565|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    7|    7|    7|    7| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 7, depth = 8
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 8
+* Pipeline : 1
+  Pipeline-0 : II = 7, D = 8, States = { 1 2 3 4 5 6 7 8 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.76>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%HammingTable_hamming = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 0" [viterbi_2_1_4/viterbi.cpp:372]   --->   Operation 9 'getelementptr' 'HammingTable_hamming' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [2/2] (1.76ns)   --->   "%lowestValue = load i8* %HammingTable_hamming, align 1" [viterbi_2_1_4/viterbi.cpp:372]   --->   Operation 10 'load' 'lowestValue' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%HammingTable_hamming_1 = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 1" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 11 'getelementptr' 'HammingTable_hamming_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [2/2] (1.76ns)   --->   "%HammingTable_hamming_2 = load i8* %HammingTable_hamming_1, align 1" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 12 'load' 'HammingTable_hamming_2' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+
+State 2 <SV = 1> <Delay = 4.75>
+ST_2 : Operation 13 [1/2] (1.76ns)   --->   "%lowestValue = load i8* %HammingTable_hamming, align 1" [viterbi_2_1_4/viterbi.cpp:372]   --->   Operation 13 'load' 'lowestValue' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_2 : Operation 14 [1/2] (1.76ns)   --->   "%HammingTable_hamming_2 = load i8* %HammingTable_hamming_1, align 1" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 14 'load' 'HammingTable_hamming_2' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_2 : Operation 15 [1/1] (1.21ns)   --->   "%icmp_ln376 = icmp slt i8 %HammingTable_hamming_2, %lowestValue" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 15 'icmp' 'icmp_ln376' <Predicate = true> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%zext_ln376 = zext i1 %icmp_ln376 to i64" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 16 'zext' 'zext_ln376' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%HammingTable_hamming_3 = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 %zext_ln376" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 17 'getelementptr' 'HammingTable_hamming_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [2/2] (1.76ns)   --->   "%HammingTable_hamming_4 = load i8* %HammingTable_hamming_3, align 1" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 18 'load' 'HammingTable_hamming_4' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%HammingTable_hamming_5 = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 2" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 19 'getelementptr' 'HammingTable_hamming_5' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [2/2] (1.76ns)   --->   "%HammingTable_hamming_6 = load i8* %HammingTable_hamming_5, align 1" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 20 'load' 'HammingTable_hamming_6' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+
+State 3 <SV = 2> <Delay = 5.56>
+ST_3 : Operation 21 [1/1] (0.00ns)   --->   "%zext_ln376_1 = zext i1 %icmp_ln376 to i2" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 21 'zext' 'zext_ln376_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 22 [1/2] (1.76ns)   --->   "%HammingTable_hamming_4 = load i8* %HammingTable_hamming_3, align 1" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 22 'load' 'HammingTable_hamming_4' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_3 : Operation 23 [1/2] (1.76ns)   --->   "%HammingTable_hamming_6 = load i8* %HammingTable_hamming_5, align 1" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 23 'load' 'HammingTable_hamming_6' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_3 : Operation 24 [1/1] (1.21ns)   --->   "%icmp_ln376_1 = icmp slt i8 %HammingTable_hamming_6, %HammingTable_hamming_4" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 24 'icmp' 'icmp_ln376_1' <Predicate = true> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 25 [1/1] (0.81ns)   --->   "%select_ln376 = select i1 %icmp_ln376_1, i2 -2, i2 %zext_ln376_1" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 25 'select' 'select_ln376' <Predicate = true> <Delay = 0.81> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%zext_ln376_2 = zext i2 %select_ln376 to i64" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 26 'zext' 'zext_ln376_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%HammingTable_hamming_7 = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 %zext_ln376_2" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 27 'getelementptr' 'HammingTable_hamming_7' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 28 [2/2] (1.76ns)   --->   "%HammingTable_hamming_8 = load i8* %HammingTable_hamming_7, align 1" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 28 'load' 'HammingTable_hamming_8' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_3 : Operation 29 [1/1] (0.00ns)   --->   "%HammingTable_hamming_9 = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 3" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 29 'getelementptr' 'HammingTable_hamming_9' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 30 [2/2] (1.76ns)   --->   "%HammingTable_hamming_10 = load i8* %HammingTable_hamming_9, align 1" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 30 'load' 'HammingTable_hamming_10' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+
+State 4 <SV = 3> <Delay = 5.56>
+ST_4 : Operation 31 [1/2] (1.76ns)   --->   "%HammingTable_hamming_8 = load i8* %HammingTable_hamming_7, align 1" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 31 'load' 'HammingTable_hamming_8' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_4 : Operation 32 [1/2] (1.76ns)   --->   "%HammingTable_hamming_10 = load i8* %HammingTable_hamming_9, align 1" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 32 'load' 'HammingTable_hamming_10' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_4 : Operation 33 [1/1] (1.21ns)   --->   "%icmp_ln376_2 = icmp slt i8 %HammingTable_hamming_10, %HammingTable_hamming_8" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 33 'icmp' 'icmp_ln376_2' <Predicate = true> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 34 [1/1] (0.81ns)   --->   "%select_ln376_1 = select i1 %icmp_ln376_2, i2 -1, i2 %select_ln376" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 34 'select' 'select_ln376_1' <Predicate = true> <Delay = 0.81> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 35 [1/1] (0.00ns)   --->   "%zext_ln376_4 = zext i2 %select_ln376_1 to i64" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 35 'zext' 'zext_ln376_4' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 36 [1/1] (0.00ns)   --->   "%HammingTable_hamming_11 = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 %zext_ln376_4" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 36 'getelementptr' 'HammingTable_hamming_11' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 37 [2/2] (1.76ns)   --->   "%HammingTable_hamming_12 = load i8* %HammingTable_hamming_11, align 1" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 37 'load' 'HammingTable_hamming_12' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_4 : Operation 38 [1/1] (0.00ns) (grouped into LUT with out node select_ln376_3)   --->   "%select_ln376_2 = select i1 %icmp_ln376_2, i2 -1, i2 -2" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 38 'select' 'select_ln376_2' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 39 [1/1] (0.00ns) (grouped into LUT with out node select_ln376_3)   --->   "%or_ln376 = or i1 %icmp_ln376_2, %icmp_ln376_1" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 39 'or' 'or_ln376' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 40 [1/1] (0.81ns) (out node of the LUT)   --->   "%select_ln376_3 = select i1 %or_ln376, i2 %select_ln376_2, i2 %zext_ln376_1" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 40 'select' 'select_ln376_3' <Predicate = true> <Delay = 0.81> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 41 [1/1] (0.00ns)   --->   "%HammingTable_hamming_13 = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 4" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 41 'getelementptr' 'HammingTable_hamming_13' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 42 [2/2] (1.76ns)   --->   "%HammingTable_hamming_14 = load i8* %HammingTable_hamming_13, align 1" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 42 'load' 'HammingTable_hamming_14' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+
+State 5 <SV = 4> <Delay = 5.54>
+ST_5 : Operation 43 [1/1] (0.00ns)   --->   "%zext_ln376_3 = zext i2 %select_ln376_1 to i3" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 43 'zext' 'zext_ln376_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 44 [1/2] (1.76ns)   --->   "%HammingTable_hamming_12 = load i8* %HammingTable_hamming_11, align 1" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 44 'load' 'HammingTable_hamming_12' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_5 : Operation 45 [1/2] (1.76ns)   --->   "%HammingTable_hamming_14 = load i8* %HammingTable_hamming_13, align 1" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 45 'load' 'HammingTable_hamming_14' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_5 : Operation 46 [1/1] (1.21ns)   --->   "%icmp_ln376_3 = icmp slt i8 %HammingTable_hamming_14, %HammingTable_hamming_12" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 46 'icmp' 'icmp_ln376_3' <Predicate = true> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 47 [1/1] (0.79ns)   --->   "%select_ln376_4 = select i1 %icmp_ln376_3, i3 -4, i3 %zext_ln376_3" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 47 'select' 'select_ln376_4' <Predicate = true> <Delay = 0.79> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 48 [1/1] (0.00ns)   --->   "%zext_ln376_6 = zext i3 %select_ln376_4 to i64" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 48 'zext' 'zext_ln376_6' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 49 [1/1] (0.00ns)   --->   "%HammingTable_hamming_15 = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 %zext_ln376_6" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 49 'getelementptr' 'HammingTable_hamming_15' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 50 [2/2] (1.76ns)   --->   "%HammingTable_hamming_16 = load i8* %HammingTable_hamming_15, align 1" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 50 'load' 'HammingTable_hamming_16' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_5 : Operation 51 [1/1] (0.00ns)   --->   "%HammingTable_hamming_17 = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 5" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 51 'getelementptr' 'HammingTable_hamming_17' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 52 [2/2] (1.76ns)   --->   "%HammingTable_hamming_18 = load i8* %HammingTable_hamming_17, align 1" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 52 'load' 'HammingTable_hamming_18' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+
+State 6 <SV = 5> <Delay = 5.54>
+ST_6 : Operation 53 [1/1] (0.00ns) (grouped into LUT with out node select_ln376_7)   --->   "%zext_ln376_5 = zext i2 %select_ln376_3 to i3" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 53 'zext' 'zext_ln376_5' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 54 [1/2] (1.76ns)   --->   "%HammingTable_hamming_16 = load i8* %HammingTable_hamming_15, align 1" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 54 'load' 'HammingTable_hamming_16' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_6 : Operation 55 [1/2] (1.76ns)   --->   "%HammingTable_hamming_18 = load i8* %HammingTable_hamming_17, align 1" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 55 'load' 'HammingTable_hamming_18' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_6 : Operation 56 [1/1] (1.21ns)   --->   "%icmp_ln376_4 = icmp slt i8 %HammingTable_hamming_18, %HammingTable_hamming_16" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 56 'icmp' 'icmp_ln376_4' <Predicate = true> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 57 [1/1] (0.79ns)   --->   "%select_ln376_5 = select i1 %icmp_ln376_4, i3 -3, i3 %select_ln376_4" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 57 'select' 'select_ln376_5' <Predicate = true> <Delay = 0.79> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_6 : Operation 58 [1/1] (0.00ns)   --->   "%zext_ln376_7 = zext i3 %select_ln376_5 to i64" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 58 'zext' 'zext_ln376_7' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 59 [1/1] (0.00ns)   --->   "%HammingTable_hamming_19 = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 %zext_ln376_7" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 59 'getelementptr' 'HammingTable_hamming_19' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 60 [2/2] (1.76ns)   --->   "%HammingTable_hamming_20 = load i8* %HammingTable_hamming_19, align 1" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 60 'load' 'HammingTable_hamming_20' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_6 : Operation 61 [1/1] (0.00ns) (grouped into LUT with out node select_ln376_7)   --->   "%select_ln376_6 = select i1 %icmp_ln376_4, i3 -3, i3 -4" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 61 'select' 'select_ln376_6' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_6 : Operation 62 [1/1] (0.00ns) (grouped into LUT with out node select_ln376_7)   --->   "%or_ln376_1 = or i1 %icmp_ln376_4, %icmp_ln376_3" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 62 'or' 'or_ln376_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 63 [1/1] (0.80ns) (out node of the LUT)   --->   "%select_ln376_7 = select i1 %or_ln376_1, i3 %select_ln376_6, i3 %zext_ln376_5" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 63 'select' 'select_ln376_7' <Predicate = true> <Delay = 0.80> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_6 : Operation 64 [1/1] (0.00ns)   --->   "%HammingTable_hamming_21 = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 6" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 64 'getelementptr' 'HammingTable_hamming_21' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 65 [2/2] (1.76ns)   --->   "%HammingTable_hamming_22 = load i8* %HammingTable_hamming_21, align 1" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 65 'load' 'HammingTable_hamming_22' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+
+State 7 <SV = 6> <Delay = 5.54>
+ST_7 : Operation 66 [1/2] (1.76ns)   --->   "%HammingTable_hamming_20 = load i8* %HammingTable_hamming_19, align 1" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 66 'load' 'HammingTable_hamming_20' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_7 : Operation 67 [1/2] (1.76ns)   --->   "%HammingTable_hamming_22 = load i8* %HammingTable_hamming_21, align 1" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 67 'load' 'HammingTable_hamming_22' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_7 : Operation 68 [1/1] (1.21ns)   --->   "%icmp_ln376_5 = icmp slt i8 %HammingTable_hamming_22, %HammingTable_hamming_20" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 68 'icmp' 'icmp_ln376_5' <Predicate = true> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 69 [1/1] (0.79ns)   --->   "%select_ln376_8 = select i1 %icmp_ln376_5, i3 -2, i3 %select_ln376_5" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 69 'select' 'select_ln376_8' <Predicate = true> <Delay = 0.79> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_7 : Operation 70 [1/1] (0.00ns)   --->   "%zext_ln376_8 = zext i3 %select_ln376_8 to i64" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 70 'zext' 'zext_ln376_8' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 71 [1/1] (0.00ns)   --->   "%HammingTable_hamming_23 = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 %zext_ln376_8" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 71 'getelementptr' 'HammingTable_hamming_23' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 72 [2/2] (1.76ns)   --->   "%HammingTable_hamming_24 = load i8* %HammingTable_hamming_23, align 1" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 72 'load' 'HammingTable_hamming_24' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_7 : Operation 73 [1/1] (0.00ns)   --->   "%HammingTable_hamming_25 = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 7" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 73 'getelementptr' 'HammingTable_hamming_25' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 74 [2/2] (1.76ns)   --->   "%HammingTable_hamming_26 = load i8* %HammingTable_hamming_25, align 1" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 74 'load' 'HammingTable_hamming_26' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+
+State 8 <SV = 7> <Delay = 3.79>
+ST_8 : Operation 75 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecFUCore([8 x i8]* %HammingTable_hammingDistances_finalStates, [1 x i8]* @p_str, [7 x i8]* @p_str2, [1 x i8]* @p_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 75 'specfucore' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 76 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind" [viterbi_2_1_4/viterbi.cpp:369]   --->   Operation 76 'specpipeline' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 77 [1/2] (1.76ns)   --->   "%HammingTable_hamming_24 = load i8* %HammingTable_hamming_23, align 1" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 77 'load' 'HammingTable_hamming_24' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_8 : Operation 78 [1/2] (1.76ns)   --->   "%HammingTable_hamming_26 = load i8* %HammingTable_hamming_25, align 1" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 78 'load' 'HammingTable_hamming_26' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_8 : Operation 79 [1/1] (1.21ns)   --->   "%icmp_ln376_6 = icmp slt i8 %HammingTable_hamming_26, %HammingTable_hamming_24" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 79 'icmp' 'icmp_ln376_6' <Predicate = true> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 80 [1/1] (0.00ns) (grouped into LUT with out node select_ln376_10)   --->   "%select_ln376_9 = select i1 %icmp_ln376_6, i3 -1, i3 -2" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 80 'select' 'select_ln376_9' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_8 : Operation 81 [1/1] (0.00ns) (grouped into LUT with out node select_ln376_10)   --->   "%or_ln376_2 = or i1 %icmp_ln376_6, %icmp_ln376_5" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 81 'or' 'or_ln376_2' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 82 [1/1] (0.81ns) (out node of the LUT)   --->   "%select_ln376_10 = select i1 %or_ln376_2, i3 %select_ln376_9, i3 %select_ln376_7" [viterbi_2_1_4/viterbi.cpp:376]   --->   Operation 82 'select' 'select_ln376_10' <Predicate = true> <Delay = 0.81> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_8 : Operation 83 [1/1] (0.00ns)   --->   "ret i3 %select_ln376_10" [viterbi_2_1_4/viterbi.cpp:386]   --->   Operation 83 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	'getelementptr' operation ('HammingTable_hamming', viterbi_2_1_4/viterbi.cpp:372) [4]  (0 ns)
+	'load' operation ('lowestValue', viterbi_2_1_4/viterbi.cpp:372) on array 'HammingTable_hammingDistances_finalStates' [5]  (1.77 ns)
+
+ <State 2>: 4.75ns
+The critical path consists of the following:
+	'load' operation ('lowestValue', viterbi_2_1_4/viterbi.cpp:372) on array 'HammingTable_hammingDistances_finalStates' [5]  (1.77 ns)
+	'icmp' operation ('icmp_ln376', viterbi_2_1_4/viterbi.cpp:376) [8]  (1.21 ns)
+	'getelementptr' operation ('HammingTable_hamming_3', viterbi_2_1_4/viterbi.cpp:376) [11]  (0 ns)
+	'load' operation ('HammingTable_hamming_4', viterbi_2_1_4/viterbi.cpp:376) on array 'HammingTable_hammingDistances_finalStates' [12]  (1.77 ns)
+
+ <State 3>: 5.56ns
+The critical path consists of the following:
+	'load' operation ('HammingTable_hamming_4', viterbi_2_1_4/viterbi.cpp:376) on array 'HammingTable_hammingDistances_finalStates' [12]  (1.77 ns)
+	'icmp' operation ('icmp_ln376_1', viterbi_2_1_4/viterbi.cpp:376) [15]  (1.21 ns)
+	'select' operation ('select_ln376', viterbi_2_1_4/viterbi.cpp:376) [16]  (0.813 ns)
+	'getelementptr' operation ('HammingTable_hamming_7', viterbi_2_1_4/viterbi.cpp:376) [18]  (0 ns)
+	'load' operation ('HammingTable_hamming_8', viterbi_2_1_4/viterbi.cpp:376) on array 'HammingTable_hammingDistances_finalStates' [19]  (1.77 ns)
+
+ <State 4>: 5.56ns
+The critical path consists of the following:
+	'load' operation ('HammingTable_hamming_8', viterbi_2_1_4/viterbi.cpp:376) on array 'HammingTable_hammingDistances_finalStates' [19]  (1.77 ns)
+	'icmp' operation ('icmp_ln376_2', viterbi_2_1_4/viterbi.cpp:376) [22]  (1.21 ns)
+	'select' operation ('select_ln376_1', viterbi_2_1_4/viterbi.cpp:376) [23]  (0.813 ns)
+	'getelementptr' operation ('HammingTable_hamming_11', viterbi_2_1_4/viterbi.cpp:376) [26]  (0 ns)
+	'load' operation ('HammingTable_hamming_12', viterbi_2_1_4/viterbi.cpp:376) on array 'HammingTable_hammingDistances_finalStates' [27]  (1.77 ns)
+
+ <State 5>: 5.55ns
+The critical path consists of the following:
+	'load' operation ('HammingTable_hamming_12', viterbi_2_1_4/viterbi.cpp:376) on array 'HammingTable_hammingDistances_finalStates' [27]  (1.77 ns)
+	'icmp' operation ('icmp_ln376_3', viterbi_2_1_4/viterbi.cpp:376) [34]  (1.21 ns)
+	'select' operation ('select_ln376_4', viterbi_2_1_4/viterbi.cpp:376) [35]  (0.795 ns)
+	'getelementptr' operation ('HammingTable_hamming_15', viterbi_2_1_4/viterbi.cpp:376) [37]  (0 ns)
+	'load' operation ('HammingTable_hamming_16', viterbi_2_1_4/viterbi.cpp:376) on array 'HammingTable_hammingDistances_finalStates' [38]  (1.77 ns)
+
+ <State 6>: 5.55ns
+The critical path consists of the following:
+	'load' operation ('HammingTable_hamming_16', viterbi_2_1_4/viterbi.cpp:376) on array 'HammingTable_hammingDistances_finalStates' [38]  (1.77 ns)
+	'icmp' operation ('icmp_ln376_4', viterbi_2_1_4/viterbi.cpp:376) [41]  (1.21 ns)
+	'select' operation ('select_ln376_5', viterbi_2_1_4/viterbi.cpp:376) [42]  (0.795 ns)
+	'getelementptr' operation ('HammingTable_hamming_19', viterbi_2_1_4/viterbi.cpp:376) [44]  (0 ns)
+	'load' operation ('HammingTable_hamming_20', viterbi_2_1_4/viterbi.cpp:376) on array 'HammingTable_hammingDistances_finalStates' [45]  (1.77 ns)
+
+ <State 7>: 5.55ns
+The critical path consists of the following:
+	'load' operation ('HammingTable_hamming_20', viterbi_2_1_4/viterbi.cpp:376) on array 'HammingTable_hammingDistances_finalStates' [45]  (1.77 ns)
+	'icmp' operation ('icmp_ln376_5', viterbi_2_1_4/viterbi.cpp:376) [51]  (1.21 ns)
+	'select' operation ('select_ln376_8', viterbi_2_1_4/viterbi.cpp:376) [52]  (0.795 ns)
+	'getelementptr' operation ('HammingTable_hamming_23', viterbi_2_1_4/viterbi.cpp:376) [54]  (0 ns)
+	'load' operation ('HammingTable_hamming_24', viterbi_2_1_4/viterbi.cpp:376) on array 'HammingTable_hammingDistances_finalStates' [55]  (1.77 ns)
+
+ <State 8>: 3.8ns
+The critical path consists of the following:
+	'load' operation ('HammingTable_hamming_24', viterbi_2_1_4/viterbi.cpp:376) on array 'HammingTable_hammingDistances_finalStates' [55]  (1.77 ns)
+	'icmp' operation ('icmp_ln376_6', viterbi_2_1_4/viterbi.cpp:376) [58]  (1.21 ns)
+	'or' operation ('or_ln376_2', viterbi_2_1_4/viterbi.cpp:376) [60]  (0 ns)
+	'select' operation ('select_ln376_10', viterbi_2_1_4/viterbi.cpp:376) [61]  (0.813 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

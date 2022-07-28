@@ -1,0 +1,1544 @@
+INFO-FLOW: Workspace C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1 opened at Thu Jul 28 06:40:09 +0600 2022
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     config_clock -quiet -name default -uncertainty 1.25 -unit % 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib K:/Xilinx/Vivado/2019.1/common/technology/xilinx/spartan7/spartan7 
+Execute       source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.lib 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.lib 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.lib 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.lib 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.lib 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.lib 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.lib 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.lib 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.lib 
+Execute       source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute       source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/spartan7/dsp48e1.hlp 
+Execute       source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute     source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/spartan7/spartan7.gen 
+Execute       source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.126 sec.
+Command     ap_source done; 0.126 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib K:/Xilinx/Vivado/2019.1/common/technology/xilinx/spartan7/spartan7_fpv6 
+Execute       source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute             source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute     source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/spartan7/spartan7_fpv6.gen 
+Execute       source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xc7s100-fgga676-2 
+Execute       ap_part_info -name xc7s100-fgga676-2 -data single -quiet 
+Command       ap_part_info done; 0.533 sec.
+Execute       ap_part_info -name xc7s100-fgga676-2 -data info 
+Execute       add_library xilinx/spartan7/spartan7:xc7s100:-fgga676:-2 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7s100 
+Command         license_isbetapart done; error code: 1; 
+Execute         ap_part_info -data single -name xc7s100-fgga676-2 
+Execute         ap_part_info -name xc7s100-fgga676-2 -data resources 
+Execute         ap_part_info -name xc7s100-fgga676-2 -data info 
+Execute         ap_part_info -name xc7s100-fgga676-2 -data info 
+Execute         config_chip_info -quiet -resource {SLICE 16000} {LUT 64000} {FF 128000} {DSP48E 160} {BRAM 240} {URAM 0} 
+Execute         ap_part_info -name xc7s100-fgga676-2 -data info 
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/spartan7/spartan7_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7s100-fgga676-2'
+Execute       ap_part_info -name xc7s100-fgga676-2 -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.626 sec.
+Execute     ap_part_info -data single -name xc7s100-fgga676-2 
+Execute     ap_part_info -name xc7s100-fgga676-2 -data resources 
+Execute     ap_part_info -name xc7s100-fgga676-2 -data info 
+Execute     ap_part_info -name xc7s100-fgga676-2 -data info 
+Execute     config_chip_info -quiet -resource {SLICE 16000} {LUT 64000} {FF 128000} {DSP48E 160} {BRAM 240} {URAM 0} 
+Execute     ap_part_info -name xc7s100-fgga676-2 -data info 
+Execute     config_chip_info -quiet -speed medium 
+Execute     config_sdx -target=none 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' config_export -vivado_optimization_level=2 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+Execute       config_export -vivado_optimization_level=2 
+Execute         get_config_export -vivado_impl_strategy 
+Execute         get_config_export -vivado_phys_opt 
+Execute       get_config_compile -pipeline_loops 
+Execute       get_config_compile -name_max_length 
+Execute       get_config_schedule -enable_dsp_full_reg 
+Execute       get_config_rtl -register_reset_num 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_interface -m_axi_addr64 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' set_clock_uncertainty default 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+Execute       set_clock_uncertainty default 
+Execute     config_export -format=ip_catalog 
+Execute     config_export -rtl=verilog 
+Execute     config_export -use_netlist=top 
+Execute     config_export -vivado_optimization_level=2 
+Execute       get_config_export -vivado_impl_strategy 
+Execute       get_config_export -vivado_phys_opt 
+Execute     config_export -vivado_phys_opt=place 
+Execute     config_export -vivado_report_level=0 
+Command   open_solution done; 0.813 sec.
+Execute   set_part xc7s100-fgga676-2 
+Execute     ap_part_info -name xc7s100-fgga676-2 -data single -quiet 
+Execute     ap_part_info -name xc7s100-fgga676-2 -data info 
+Execute     add_library xilinx/spartan7/spartan7:xc7s100:-fgga676:-2 
+Execute       get_default_platform 
+Execute       license_isbetapart xc7s100 
+Command       license_isbetapart done; error code: 1; 
+Execute       ap_part_info -data single -name xc7s100-fgga676-2 
+Execute       ap_part_info -name xc7s100-fgga676-2 -data resources 
+Execute       ap_part_info -name xc7s100-fgga676-2 -data info 
+Execute       ap_part_info -name xc7s100-fgga676-2 -data info 
+Execute       config_chip_info -quiet -resource {SLICE 16000} {LUT 64000} {FF 128000} {DSP48E 160} {BRAM 240} {URAM 0} 
+Execute       ap_part_info -name xc7s100-fgga676-2 -data info 
+Execute       config_chip_info -quiet -speed medium 
+Execute     add_library xilinx/spartan7/spartan7_fpv6 
+Execute       get_default_platform 
+Execute     ap_part_info -name xc7s100-fgga676-2 -data info 
+Execute     get_default_platform 
+Execute   create_clock -period 10 -name default 
+Execute   config_sdx -target none 
+Execute     send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' config_export -vivado_optimization_level=2 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+Execute     config_export -vivado_optimization_level=2 
+Execute       get_config_export -vivado_impl_strategy 
+Execute       get_config_export -vivado_phys_opt 
+Execute     get_config_compile -pipeline_loops 
+Execute     get_config_compile -name_max_length 
+Execute     get_config_schedule -enable_dsp_full_reg 
+Execute     get_config_rtl -register_reset_num 
+Execute     get_config_rtl -module_auto_prefix 
+Execute     get_config_interface -m_axi_addr64 
+Execute     send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' set_clock_uncertainty default 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+Execute     set_clock_uncertainty default 
+Execute   config_export -format ip_catalog -rtl verilog -use_netlist top -vivado_optimization_level 2 -vivado_phys_opt place -vivado_report_level 0 
+Execute     get_config_export -vivado_impl_strategy 
+Execute   set_clock_uncertainty 12.5% 
+Execute   source ./viterbi_2_1_4/solution1/directives.tcl 
+Execute     set_directive_unroll HammingTable::HammingTable/HammingTable_label1/label1 
+INFO-FLOW: Setting directive 'UNROLL' 
+Execute     set_directive_unroll HammingTable::HammingTable/HammingTable_label4/label3 
+INFO-FLOW: Setting directive 'UNROLL' 
+INFO-FLOW: Setting directive 'UNROLL' 
+Execute     set_directive_pipeline HammingTable::getFinalLowestState 
+INFO-FLOW: Setting directive 'UNROLL' 
+INFO-FLOW: Setting directive 'UNROLL' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+Execute     set_directive_pipeline HammingTable::getFinalLowestState/getFinalLowestState_label5 
+INFO-FLOW: Setting directive 'UNROLL' 
+INFO-FLOW: Setting directive 'UNROLL' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+Execute     set_directive_unroll HammingTable::HammingTable/HammingTable_label3/label2 
+INFO-FLOW: Setting directive 'UNROLL' 
+INFO-FLOW: Setting directive 'UNROLL' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'UNROLL' 
+Execute     set_directive_resource -core MuxnS getSequence return 
+INFO-FLOW: Setting directive 'UNROLL' 
+INFO-FLOW: Setting directive 'UNROLL' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'UNROLL' 
+INFO-FLOW: Setting directive 'RESOURCE' variable=positionBooleanTextRequiredreturn core=MuxnS 
+Execute     set_directive_resource -core MuxnS getSequence return 
+INFO-FLOW: Setting directive 'UNROLL' 
+INFO-FLOW: Setting directive 'UNROLL' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'UNROLL' 
+INFO-FLOW: Setting directive 'RESOURCE' variable=positionBooleanTextRequiredreturn core=MuxnS 
+INFO-FLOW: Setting directive 'RESOURCE' variable=positionBooleanTextRequiredreturn core=MuxnS 
+Execute     set_directive_pipeline getSequence 
+INFO-FLOW: Setting directive 'UNROLL' 
+INFO-FLOW: Setting directive 'UNROLL' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'UNROLL' 
+INFO-FLOW: Setting directive 'RESOURCE' variable=positionBooleanTextRequiredreturn core=MuxnS 
+INFO-FLOW: Setting directive 'RESOURCE' variable=positionBooleanTextRequiredreturn core=MuxnS 
+INFO-FLOW: Setting directive 'PIPELINE' 
+Execute     set_directive_resource -core AddSub -latency 1 decoder h6.hammingDistances 
+INFO-FLOW: Setting directive 'UNROLL' 
+INFO-FLOW: Setting directive 'UNROLL' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'UNROLL' 
+INFO-FLOW: Setting directive 'RESOURCE' variable=positionBooleanTextRequiredreturn core=MuxnS 
+INFO-FLOW: Setting directive 'RESOURCE' variable=positionBooleanTextRequiredreturn core=MuxnS 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'RESOURCE' variable=positionBooleanTextRequiredh6.hammingDistances core=AddSub latency=1 
+Execute     set_directive_pipeline -enable_flush decoder 
+INFO-FLOW: Setting directive 'UNROLL' 
+INFO-FLOW: Setting directive 'UNROLL' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'UNROLL' 
+INFO-FLOW: Setting directive 'RESOURCE' variable=positionBooleanTextRequiredreturn core=MuxnS 
+INFO-FLOW: Setting directive 'RESOURCE' variable=positionBooleanTextRequiredreturn core=MuxnS 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'RESOURCE' variable=positionBooleanTextRequiredh6.hammingDistances core=AddSub latency=1 
+INFO-FLOW: Setting directive 'PIPELINE' enable_flush=positionBoolean1 
+Execute     set_directive_pipeline HammingTable::getReturnPath 
+INFO-FLOW: Setting directive 'UNROLL' 
+INFO-FLOW: Setting directive 'UNROLL' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'UNROLL' 
+INFO-FLOW: Setting directive 'RESOURCE' variable=positionBooleanTextRequiredreturn core=MuxnS 
+INFO-FLOW: Setting directive 'RESOURCE' variable=positionBooleanTextRequiredreturn core=MuxnS 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'RESOURCE' variable=positionBooleanTextRequiredh6.hammingDistances core=AddSub latency=1 
+INFO-FLOW: Setting directive 'PIPELINE' enable_flush=positionBoolean1 
+INFO-FLOW: Setting directive 'PIPELINE' 
+Execute     set_directive_pipeline HammingTable::calculateForState 
+INFO-FLOW: Setting directive 'UNROLL' 
+INFO-FLOW: Setting directive 'UNROLL' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'UNROLL' 
+INFO-FLOW: Setting directive 'RESOURCE' variable=positionBooleanTextRequiredreturn core=MuxnS 
+INFO-FLOW: Setting directive 'RESOURCE' variable=positionBooleanTextRequiredreturn core=MuxnS 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'RESOURCE' variable=positionBooleanTextRequiredh6.hammingDistances core=AddSub latency=1 
+INFO-FLOW: Setting directive 'PIPELINE' enable_flush=positionBoolean1 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+Execute   csynth_design 
+Execute     get_config_compile -dump_cfg 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute       get_config_schedule -relax_ii_for_timing 
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+Execute       get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file 'viterbi_2_1_4/viterbi.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling viterbi_2_1_4/viterbi.cpp as C++
+Execute       ap_part_info -name xc7s100-fgga676-2 -data info 
+Execute       is_encrypted viterbi_2_1_4/viterbi.cpp 
+Execute       ap_part_info -name xc7s100-fgga676-2 -data info 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "K:/Xilinx/Vivado/2019.1/msys" -hls  -fno-exceptions  -D__llvm__  -E "viterbi_2_1_4/viterbi.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "K:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "K:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/viterbi.pp.0.cpp" 
+INFO-FLOW: exec K:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain K:/Xilinx/Vivado/2019.1/msys -hls -fno-exceptions -D__llvm__ -E viterbi_2_1_4/viterbi.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I K:/Xilinx/Vivado/2019.1/common/technology/autopilot -I K:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/viterbi.pp.0.cpp
+Command       clang done; 1.171 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/viterbi.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec K:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/viterbi.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.151 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/viterbi.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "K:/Xilinx/Vivado/2019.1/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "K:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "K:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/viterbi.pp.0.cpp"  -o "C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec K:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain K:/Xilinx/Vivado/2019.1/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I K:/Xilinx/Vivado/2019.1/common/technology/autopilot -I K:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/viterbi.pp.0.cpp -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/useless.bc
+Command       clang done; 1.425 sec.
+INFO-FLOW: Done: GCC PP time: 3.7 seconds per iteration
+INFO-FLOW: Setting directive 'UNROLL' 
+INFO-FLOW: Setting directive 'UNROLL' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'UNROLL' 
+INFO-FLOW: Setting directive 'RESOURCE' variable=positionBooleanTextRequiredreturn core=MuxnS 
+INFO-FLOW: Setting directive 'RESOURCE' variable=positionBooleanTextRequiredreturn core=MuxnS 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'RESOURCE' variable=positionBooleanTextRequiredh6.hammingDistances core=AddSub latency=1 
+INFO-FLOW: Setting directive 'PIPELINE' enable_flush=positionBoolean1 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+Execute       source K:/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute       source K:/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute         source K:/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/try/try.tcl 
+INFO-FLOW: Setting directive 'UNROLL' 
+INFO-FLOW: Setting directive 'UNROLL' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'UNROLL' 
+INFO-FLOW: Setting directive 'RESOURCE' variable=positionBooleanTextRequiredreturn core=MuxnS 
+INFO-FLOW: Setting directive 'RESOURCE' variable=positionBooleanTextRequiredreturn core=MuxnS 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'RESOURCE' variable=positionBooleanTextRequiredh6.hammingDistances core=AddSub latency=1 
+INFO-FLOW: Setting directive 'PIPELINE' enable_flush=positionBoolean1 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/viterbi.pp.0.cpp std=gnu++98 -directive=C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec K:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/viterbi.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.663 sec.
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/viterbi.pp.0.cpp std=gnu++98 -directive=C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec K:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/all.directive.json -quiet -fix-errors C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/viterbi.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.228 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr K:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/xilinx-dataflow-lawyer.viterbi.pp.0.cpp.diag.yml C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/viterbi.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/xilinx-dataflow-lawyer.viterbi.pp.0.cpp.out.log 2> C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/xilinx-dataflow-lawyer.viterbi.pp.0.cpp.err.log 
+Command       ap_eval done; 0.414 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/viterbi.pp.0.cpp std=gnu++98 
+Execute         ap_eval exec -ignorestderr K:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/tidy-3.1.viterbi.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/viterbi.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/tidy-3.1.viterbi.pp.0.cpp.out.log 2> C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/tidy-3.1.viterbi.pp.0.cpp.err.log 
+Command         ap_eval done; 1.221 sec.
+Execute         source K:/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Execute           source K:/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
+Execute         ap_eval exec -ignorestderr K:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/viterbi.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/xilinx-legacy-rewriter.viterbi.pp.0.cpp.out.log 2> C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/xilinx-legacy-rewriter.viterbi.pp.0.cpp.err.log 
+Command         ap_eval done; 0.42 sec.
+Command       tidy_31 done; 1.66 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 3.3 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/viterbi.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec K:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/viterbi.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.766 sec.
+Execute       ap_part_info -name xc7s100-fgga676-2 -data info 
+INFO-FLOW: Processing labels
+Execute       clang -src C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/viterbi.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain K:/Xilinx/Vivado/2019.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/viterbi.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "K:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "K:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/viterbi.bc" 
+INFO-FLOW: exec K:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain K:/Xilinx/Vivado/2019.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/viterbi.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I K:/Xilinx/Vivado/2019.1/common/technology/autopilot -I K:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/viterbi.bc
+Command       clang done; 1.484 sec.
+INFO-FLOW: Linking Debug ...
+Execute       llvm-ld C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/viterbi.g.bc -hls-opt -except-internalize decoder -LK:/Xilinx/Vivado/2019.1/win64/lib -lhlsm -lhlsmc++ -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/a.g 
+Command       llvm-ld done; 0.864 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 184.434 ; gain = 93.324
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 184.434 ; gain = 93.324
+Execute       get_config_sdx -target 
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/a.pp.bc -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/a.pp.0.bc -f 
+Execute         llvm-ld C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/a.pp.0.bc -disable-opt -LK:/Xilinx/Vivado/2019.1/win64/lib -lfloatconversion -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/a.g.0 
+Command         llvm-ld done; 0.509 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top decoder -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/a.g.0.bc -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+Command         transform done; 0.137 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 184.434 ; gain = 93.324
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/a.g.1.bc -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+Command         transform done; 0.34 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/a.g.2.prechk.bc -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 184.434 ; gain = 93.324
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/a.g.1.bc to C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/a.o.1.bc -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'decoder' (viterbi_2_1_4/viterbi.cpp:51:52).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'HammingTable::getFinalLowestState' (viterbi_2_1_4/viterbi.cpp:368).
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'getFinalLowestState_label5' (viterbi_2_1_4/viterbi.cpp:375) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'HammingTable_label3' (viterbi_2_1_4/viterbi.cpp:51) in function 'decoder' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'HammingTable_label4' (viterbi_2_1_4/viterbi.cpp:63) in function 'decoder' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'getFinalLowestState_label5' (viterbi_2_1_4/viterbi.cpp:375) in function 'HammingTable::getFinalLowestState' completely with a factor of 8.
+INFO: [XFORM 203-102] Partitioning array 'h1.recievedSequence' (viterbi_2_1_4/viterbi.cpp:531) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h1.aTransition' (viterbi_2_1_4/viterbi.cpp:531) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h1.bTransition' (viterbi_2_1_4/viterbi.cpp:531) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h1.cTransition' (viterbi_2_1_4/viterbi.cpp:531) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h1.dTransition' (viterbi_2_1_4/viterbi.cpp:531) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h1.eTransition' (viterbi_2_1_4/viterbi.cpp:531) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h1.fTransition' (viterbi_2_1_4/viterbi.cpp:531) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h1.gTransition' (viterbi_2_1_4/viterbi.cpp:531) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h1.hTransition' (viterbi_2_1_4/viterbi.cpp:531) automatically.
+INFO: [XFORM 203-102] Partitioning array 'oldHam.finalStates' (viterbi_2_1_4/viterbi.cpp:535) automatically.
+INFO: [XFORM 203-102] Partitioning array 'previousValues' (viterbi_2_1_4/viterbi.cpp:538) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h2.recievedSequence' (viterbi_2_1_4/viterbi.cpp:549) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h2.aTransition' (viterbi_2_1_4/viterbi.cpp:549) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h2.bTransition' (viterbi_2_1_4/viterbi.cpp:549) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h2.cTransition' (viterbi_2_1_4/viterbi.cpp:549) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h2.dTransition' (viterbi_2_1_4/viterbi.cpp:549) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h2.eTransition' (viterbi_2_1_4/viterbi.cpp:549) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h2.fTransition' (viterbi_2_1_4/viterbi.cpp:549) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h2.gTransition' (viterbi_2_1_4/viterbi.cpp:549) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h2.hTransition' (viterbi_2_1_4/viterbi.cpp:549) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h2.previousHammingDistance' (viterbi_2_1_4/viterbi.cpp:549) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h3.recievedSequence' (viterbi_2_1_4/viterbi.cpp:574) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h3.aTransition' (viterbi_2_1_4/viterbi.cpp:574) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h3.bTransition' (viterbi_2_1_4/viterbi.cpp:574) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h3.cTransition' (viterbi_2_1_4/viterbi.cpp:574) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h3.dTransition' (viterbi_2_1_4/viterbi.cpp:574) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h3.eTransition' (viterbi_2_1_4/viterbi.cpp:574) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h3.fTransition' (viterbi_2_1_4/viterbi.cpp:574) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h3.gTransition' (viterbi_2_1_4/viterbi.cpp:574) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h3.hTransition' (viterbi_2_1_4/viterbi.cpp:574) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h3.previousHammingDistance' (viterbi_2_1_4/viterbi.cpp:574) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h4.recievedSequence' (viterbi_2_1_4/viterbi.cpp:597) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h4.aTransition' (viterbi_2_1_4/viterbi.cpp:597) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h4.bTransition' (viterbi_2_1_4/viterbi.cpp:597) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h4.cTransition' (viterbi_2_1_4/viterbi.cpp:597) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h4.dTransition' (viterbi_2_1_4/viterbi.cpp:597) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h4.eTransition' (viterbi_2_1_4/viterbi.cpp:597) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h4.fTransition' (viterbi_2_1_4/viterbi.cpp:597) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h4.gTransition' (viterbi_2_1_4/viterbi.cpp:597) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h4.hTransition' (viterbi_2_1_4/viterbi.cpp:597) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h4.previousHammingDistance' (viterbi_2_1_4/viterbi.cpp:597) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h5.recievedSequence' (viterbi_2_1_4/viterbi.cpp:620) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h5.aTransition' (viterbi_2_1_4/viterbi.cpp:620) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h5.bTransition' (viterbi_2_1_4/viterbi.cpp:620) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h5.cTransition' (viterbi_2_1_4/viterbi.cpp:620) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h5.dTransition' (viterbi_2_1_4/viterbi.cpp:620) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h5.eTransition' (viterbi_2_1_4/viterbi.cpp:620) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h5.fTransition' (viterbi_2_1_4/viterbi.cpp:620) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h5.gTransition' (viterbi_2_1_4/viterbi.cpp:620) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h5.hTransition' (viterbi_2_1_4/viterbi.cpp:620) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h5.previousHammingDistance' (viterbi_2_1_4/viterbi.cpp:620) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h6.recievedSequence' (viterbi_2_1_4/viterbi.cpp:642) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h6.aTransition' (viterbi_2_1_4/viterbi.cpp:642) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h6.bTransition' (viterbi_2_1_4/viterbi.cpp:642) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h6.cTransition' (viterbi_2_1_4/viterbi.cpp:642) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h6.dTransition' (viterbi_2_1_4/viterbi.cpp:642) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h6.eTransition' (viterbi_2_1_4/viterbi.cpp:642) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h6.fTransition' (viterbi_2_1_4/viterbi.cpp:642) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h6.gTransition' (viterbi_2_1_4/viterbi.cpp:642) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h6.hTransition' (viterbi_2_1_4/viterbi.cpp:642) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h6.previousHammingDistance' (viterbi_2_1_4/viterbi.cpp:642) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h7.recievedSequence' (viterbi_2_1_4/viterbi.cpp:665) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h7.aTransition' (viterbi_2_1_4/viterbi.cpp:665) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h7.bTransition' (viterbi_2_1_4/viterbi.cpp:665) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h7.cTransition' (viterbi_2_1_4/viterbi.cpp:665) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h7.dTransition' (viterbi_2_1_4/viterbi.cpp:665) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h7.eTransition' (viterbi_2_1_4/viterbi.cpp:665) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h7.fTransition' (viterbi_2_1_4/viterbi.cpp:665) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h7.gTransition' (viterbi_2_1_4/viterbi.cpp:665) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h7.hTransition' (viterbi_2_1_4/viterbi.cpp:665) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h7.previousHammingDistance' (viterbi_2_1_4/viterbi.cpp:665) automatically.
+INFO: [XFORM 203-102] Partitioning array 'h1.previousHammingDistance' automatically.
+INFO: [XFORM 203-102] Automatically partitioning small array 'bitSequence.bits' completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'bitSequence.bits' in dimension 1 completely.
+Command         transform done; 0.926 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/a.o.1.tmp.bc -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (viterbi_2_1_4/viterbi.cpp:291:29) to (viterbi_2_1_4/viterbi.cpp:365:9) in function 'HammingTable::getReturnPath'... converting 10 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (viterbi_2_1_4/viterbi.cpp:230:46) to (viterbi_2_1_4/viterbi.cpp:245:5) in function 'HammingTable::calculateDistanceForTransition'... converting 8 basic blocks.
+Command         transform done; 0.284 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 184.434 ; gain = 93.324
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -ptrLegalization -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/a.o.2.bc -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+WARNING: [XFORM 203-631] Renaming function 'HammingTable::getReturnPath' to 'getReturnPath' (viterbi_2_1_4/viterbi.cpp:291)
+WARNING: [XFORM 203-631] Renaming function 'HammingTable::getFinalLowestState' to 'getFinalLowestState' (viterbi_2_1_4/viterbi.cpp:368)
+WARNING: [XFORM 203-631] Renaming function 'HammingTable::getFinalHammingDistance' to 'getFinalHammingDista' (viterbi_2_1_4/viterbi.cpp:288:9)
+WARNING: [XFORM 203-631] Renaming function 'HammingTable::computeHammingDistance' to 'computeHammingDistan' (viterbi_2_1_4/viterbi.cpp:257:13)
+WARNING: [XFORM 203-631] Renaming function 'HammingTable::calculateForState' to 'calculateForState' (viterbi_2_1_4/viterbi.cpp:72)
+WARNING: [XFORM 203-631] Renaming function 'HammingTable::calculateDistanceForTransition' to 'calculateDistanceFor' (viterbi_2_1_4/viterbi.cpp:233:5)
+Command         transform done; 0.818 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:15 . Memory (MB): peak = 241.754 ; gain = 150.645
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 3.103 sec.
+Command     elaborate done; 14.214 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'decoder' ...
+Execute       ap_set_top_model decoder 
+Execute       get_model_list decoder -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model decoder 
+Execute       preproc_iomode -model getSequence 
+Execute       preproc_iomode -model getReturnPath 
+Execute       preproc_iomode -model getFinalLowestState 
+Execute       preproc_iomode -model getFinalHammingDista 
+Execute       preproc_iomode -model computeHammingDistan 
+Execute       preproc_iomode -model calculateForState 
+Execute       preproc_iomode -model calculateDistanceFor 
+Execute       get_model_list decoder -filter all-wo-channel 
+INFO-FLOW: Model list for configure: calculateDistanceFor calculateForState computeHammingDistan getFinalHammingDista getFinalLowestState getReturnPath getSequence decoder
+INFO-FLOW: Configuring Module : calculateDistanceFor ...
+Execute       set_default_model calculateDistanceFor 
+Execute       apply_spec_resource_limit calculateDistanceFor 
+INFO-FLOW: Configuring Module : calculateForState ...
+Execute       set_default_model calculateForState 
+Execute       apply_spec_resource_limit calculateForState 
+INFO-FLOW: Configuring Module : computeHammingDistan ...
+Execute       set_default_model computeHammingDistan 
+Execute       apply_spec_resource_limit computeHammingDistan 
+INFO-FLOW: Configuring Module : getFinalHammingDista ...
+Execute       set_default_model getFinalHammingDista 
+Execute       apply_spec_resource_limit getFinalHammingDista 
+INFO-FLOW: Configuring Module : getFinalLowestState ...
+Execute       set_default_model getFinalLowestState 
+Execute       apply_spec_resource_limit getFinalLowestState 
+INFO-FLOW: Configuring Module : getReturnPath ...
+Execute       set_default_model getReturnPath 
+Execute       apply_spec_resource_limit getReturnPath 
+INFO-FLOW: Configuring Module : getSequence ...
+Execute       set_default_model getSequence 
+Execute       apply_spec_resource_limit getSequence 
+INFO-FLOW: Configuring Module : decoder ...
+Execute       set_default_model decoder 
+Execute       apply_spec_resource_limit decoder 
+INFO-FLOW: Model list for preprocess: calculateDistanceFor calculateForState computeHammingDistan getFinalHammingDista getFinalLowestState getReturnPath getSequence decoder
+INFO-FLOW: Preprocessing Module: calculateDistanceFor ...
+Execute       set_default_model calculateDistanceFor 
+Execute       cdfg_preprocess -model calculateDistanceFor 
+Execute       rtl_gen_preprocess calculateDistanceFor 
+INFO-FLOW: Preprocessing Module: calculateForState ...
+Execute       set_default_model calculateForState 
+Execute       cdfg_preprocess -model calculateForState 
+WARNING: [SYN 201-303] Cannot apply functional unit assignment of 'AddSub' on 'HammingTable_hammingDistances_finalStates', which is not an operation.
+Execute       rtl_gen_preprocess calculateForState 
+INFO-FLOW: Preprocessing Module: computeHammingDistan ...
+Execute       set_default_model computeHammingDistan 
+Execute       cdfg_preprocess -model computeHammingDistan 
+WARNING: [SYN 201-303] Cannot apply functional unit assignment of 'AddSub' on 'HammingTable_hammingDistances_finalStates', which is not an operation.
+Execute       rtl_gen_preprocess computeHammingDistan 
+INFO-FLOW: Preprocessing Module: getFinalHammingDista ...
+Execute       set_default_model getFinalHammingDista 
+Execute       cdfg_preprocess -model getFinalHammingDista 
+WARNING: [SYN 201-303] Cannot apply functional unit assignment of 'AddSub' on 'HammingTable_hammingDistances_finalStates', which is not an operation.
+Execute       rtl_gen_preprocess getFinalHammingDista 
+INFO-FLOW: Preprocessing Module: getFinalLowestState ...
+Execute       set_default_model getFinalLowestState 
+Execute       cdfg_preprocess -model getFinalLowestState 
+WARNING: [SYN 201-303] Cannot apply functional unit assignment of 'AddSub' on 'HammingTable_hammingDistances_finalStates', which is not an operation.
+Execute       rtl_gen_preprocess getFinalLowestState 
+INFO-FLOW: Preprocessing Module: getReturnPath ...
+Execute       set_default_model getReturnPath 
+Execute       cdfg_preprocess -model getReturnPath 
+Execute       rtl_gen_preprocess getReturnPath 
+INFO-FLOW: Preprocessing Module: getSequence ...
+Execute       set_default_model getSequence 
+Execute       cdfg_preprocess -model getSequence 
+WARNING: [SYN 201-303] Cannot apply functional unit assignment of 'MuxnS' (viterbi_2_1_4/viterbi.cpp:393) on 'load' operation ('agg.result.decoded', viterbi_2_1_4/viterbi.cpp:509) on static variable 'bitSequence_decoded' due to incompatible operation sets.
+Execute       rtl_gen_preprocess getSequence 
+INFO-FLOW: Preprocessing Module: decoder ...
+Execute       set_default_model decoder 
+Execute       cdfg_preprocess -model decoder 
+WARNING: [SYN 201-303] Cannot apply functional unit assignment of 'AddSub' (viterbi_2_1_4/viterbi.cpp:643) on 'alloca' operation ('h6.hammingDistances.finalStates', viterbi_2_1_4/viterbi.cpp:642) due to incompatible operation sets.
+WARNING: [SYN 201-303] Cannot apply functional unit assignment of 'AddSub' on 'alloca' operation ('h1.hammingDistances.finalStates', viterbi_2_1_4/viterbi.cpp:531) due to incompatible operation sets.
+WARNING: [SYN 201-303] Cannot apply functional unit assignment of 'AddSub' on 'alloca' operation ('h7.hammingDistances.finalStates', viterbi_2_1_4/viterbi.cpp:665) due to incompatible operation sets.
+WARNING: [SYN 201-303] Cannot apply functional unit assignment of 'AddSub' on 'alloca' operation ('h5.hammingDistances.finalStates', viterbi_2_1_4/viterbi.cpp:620) due to incompatible operation sets.
+WARNING: [SYN 201-303] Cannot apply functional unit assignment of 'AddSub' on 'alloca' operation ('h4.hammingDistances.finalStates', viterbi_2_1_4/viterbi.cpp:597) due to incompatible operation sets.
+WARNING: [SYN 201-303] Cannot apply functional unit assignment of 'AddSub' on 'alloca' operation ('h3.hammingDistances.finalStates', viterbi_2_1_4/viterbi.cpp:574) due to incompatible operation sets.
+WARNING: [SYN 201-303] Cannot apply functional unit assignment of 'AddSub' on 'alloca' operation ('h2.hammingDistances.finalStates', viterbi_2_1_4/viterbi.cpp:549) due to incompatible operation sets.
+Execute       rtl_gen_preprocess decoder 
+WARNING: [SYN 201-107] Renaming port name 'decoder/output' to 'decoder/output_r' to avoid the conflict with HDL keywords or other object names.
+INFO-FLOW: Model list for synthesis: calculateDistanceFor calculateForState computeHammingDistan getFinalHammingDista getFinalLowestState getReturnPath getSequence decoder
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'calculateDistanceFor' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model calculateDistanceFor 
+Execute       schedule -model calculateDistanceFor 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'calculateDistanceFor'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 15.734 seconds; current allocated memory: 188.892 MB.
+Execute       syn_report -verbosereport -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/calculateDistanceFor.verbose.sched.rpt 
+Execute       db_write -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/calculateDistanceFor.sched.adb -f 
+INFO-FLOW: Finish scheduling calculateDistanceFor.
+Execute       set_default_model calculateDistanceFor 
+Execute       bind -model calculateDistanceFor 
+BIND OPTION: model=calculateDistanceFor
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.083 seconds; current allocated memory: 188.962 MB.
+Execute       syn_report -verbosereport -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/calculateDistanceFor.verbose.bind.rpt 
+Execute       db_write -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/calculateDistanceFor.bind.adb -f 
+INFO-FLOW: Finish binding calculateDistanceFor.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'calculateForState' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model calculateForState 
+Execute       schedule -model calculateForState 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'calculateForState'.
+WARNING: [SCHED 204-68] The II Violation in module 'calculateForState' (Function: calculateForState): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('HammingTable_hamming_61_write_ln211', viterbi_2_1_4/viterbi.cpp:211) of variable 'tmp_13', viterbi_2_1_4/viterbi.cpp:207 on array 'HammingTable_hammingDistances_finalStates' and 'load' operation ('HammingTable_hamming_62', viterbi_2_1_4/viterbi.cpp:209) on array 'HammingTable_hammingDistances_finalStates'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.169 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.234 seconds; current allocated memory: 189.476 MB.
+Execute       syn_report -verbosereport -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/calculateForState.verbose.sched.rpt 
+Execute       db_write -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/calculateForState.sched.adb -f 
+INFO-FLOW: Finish scheduling calculateForState.
+Execute       set_default_model calculateForState 
+Execute       bind -model calculateForState 
+BIND OPTION: model=calculateForState
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.154 seconds; current allocated memory: 190.409 MB.
+Execute       syn_report -verbosereport -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/calculateForState.verbose.bind.rpt 
+Execute       db_write -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/calculateForState.bind.adb -f 
+INFO-FLOW: Finish binding calculateForState.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'computeHammingDistan' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model computeHammingDistan 
+Execute       schedule -model computeHammingDistan 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'computeHammingDistan'.
+WARNING: [SCHED 204-68] The II Violation in module 'computeHammingDistan' (Function: computeHammingDistan): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'call' operation ('call_ret20', viterbi_2_1_4/viterbi.cpp:276) to 'calculateForState' and 'call' operation ('call_ret16', viterbi_2_1_4/viterbi.cpp:268) to 'calculateForState'.
+WARNING: [SCHED 204-68] The II Violation in module 'computeHammingDistan' (Function: computeHammingDistan): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between 'call' operation ('call_ret20', viterbi_2_1_4/viterbi.cpp:276) to 'calculateForState' and 'call' operation ('call_ret16', viterbi_2_1_4/viterbi.cpp:268) to 'calculateForState'.
+WARNING: [SCHED 204-68] The II Violation in module 'computeHammingDistan' (Function: computeHammingDistan): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'call' operation ('call_ret21', viterbi_2_1_4/viterbi.cpp:277) to 'calculateForState' and 'call' operation ('call_ret16', viterbi_2_1_4/viterbi.cpp:268) to 'calculateForState'.
+WARNING: [SCHED 204-68] The II Violation in module 'computeHammingDistan' (Function: computeHammingDistan): Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 1)
+   between 'call' operation ('call_ret21', viterbi_2_1_4/viterbi.cpp:277) to 'calculateForState' and 'call' operation ('call_ret16', viterbi_2_1_4/viterbi.cpp:268) to 'calculateForState'.
+WARNING: [SCHED 204-68] The II Violation in module 'computeHammingDistan' (Function: computeHammingDistan): Unable to enforce a carried dependence constraint (II = 12, distance = 1, offset = 1)
+   between 'call' operation ('call_ret25', viterbi_2_1_4/viterbi.cpp:281) to 'calculateForState' and 'call' operation ('call_ret16', viterbi_2_1_4/viterbi.cpp:268) to 'calculateForState'.
+WARNING: [SCHED 204-63] Unable to schedule the whole 2 cycles 'call' operation ('call_ret', viterbi_2_1_4/viterbi.cpp:282) to 'calculateForState' within the first 15 cycles (II = 16).
+Please consider increasing the target initiation interval of the pipeline.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 17, Depth = 17.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.142 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.291 seconds; current allocated memory: 191.014 MB.
+Execute       syn_report -verbosereport -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/computeHammingDistan.verbose.sched.rpt 
+Execute       db_write -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/computeHammingDistan.sched.adb -f 
+INFO-FLOW: Finish scheduling computeHammingDistan.
+Execute       set_default_model computeHammingDistan 
+Execute       bind -model computeHammingDistan 
+BIND OPTION: model=computeHammingDistan
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.196 seconds; current allocated memory: 191.908 MB.
+Execute       syn_report -verbosereport -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/computeHammingDistan.verbose.bind.rpt 
+Execute       db_write -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/computeHammingDistan.bind.adb -f 
+INFO-FLOW: Finish binding computeHammingDistan.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'getFinalHammingDista' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model getFinalHammingDista 
+Execute       schedule -model getFinalHammingDista 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'getFinalHammingDista'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('HammingTable_hamming_31', viterbi_2_1_4/viterbi.cpp:288) on array 'HammingTable_hammingDistances_finalStates' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'HammingTable_hammingDistances_finalStates'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 4, Depth = 5.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.192 seconds; current allocated memory: 192.034 MB.
+Execute       syn_report -verbosereport -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getFinalHammingDista.verbose.sched.rpt 
+Execute       db_write -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getFinalHammingDista.sched.adb -f 
+INFO-FLOW: Finish scheduling getFinalHammingDista.
+Execute       set_default_model getFinalHammingDista 
+Execute       bind -model getFinalHammingDista 
+BIND OPTION: model=getFinalHammingDista
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.072 seconds; current allocated memory: 192.145 MB.
+Execute       syn_report -verbosereport -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getFinalHammingDista.verbose.bind.rpt 
+Execute       db_write -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getFinalHammingDista.bind.adb -f 
+INFO-FLOW: Finish binding getFinalHammingDista.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'getFinalLowestState' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model getFinalLowestState 
+Execute       schedule -model getFinalLowestState 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'getFinalLowestState'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('HammingTable_hamming_6', viterbi_2_1_4/viterbi.cpp:376) on array 'HammingTable_hammingDistances_finalStates' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'HammingTable_hammingDistances_finalStates'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 7, Depth = 8.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.107 seconds; current allocated memory: 192.310 MB.
+Execute       syn_report -verbosereport -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getFinalLowestState.verbose.sched.rpt 
+Execute       db_write -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getFinalLowestState.sched.adb -f 
+INFO-FLOW: Finish scheduling getFinalLowestState.
+Execute       set_default_model getFinalLowestState 
+Execute       bind -model getFinalLowestState 
+BIND OPTION: model=getFinalLowestState
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.098 seconds; current allocated memory: 192.533 MB.
+Execute       syn_report -verbosereport -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getFinalLowestState.verbose.bind.rpt 
+Execute       db_write -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getFinalLowestState.bind.adb -f 
+INFO-FLOW: Finish binding getFinalLowestState.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'getReturnPath' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model getReturnPath 
+Execute       schedule -model getReturnPath 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'getReturnPath'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.117 seconds; current allocated memory: 192.670 MB.
+Execute       syn_report -verbosereport -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getReturnPath.verbose.sched.rpt 
+Execute       db_write -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getReturnPath.sched.adb -f 
+INFO-FLOW: Finish scheduling getReturnPath.
+Execute       set_default_model getReturnPath 
+Execute       bind -model getReturnPath 
+BIND OPTION: model=getReturnPath
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.079 seconds; current allocated memory: 192.889 MB.
+Execute       syn_report -verbosereport -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getReturnPath.verbose.bind.rpt 
+Execute       db_write -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getReturnPath.bind.adb -f 
+INFO-FLOW: Finish binding getReturnPath.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'getSequence' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model getSequence 
+Execute       schedule -model getSequence 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'getSequence'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.124 seconds; current allocated memory: 193.156 MB.
+Execute       syn_report -verbosereport -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getSequence.verbose.sched.rpt 
+Execute       db_write -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getSequence.sched.adb -f 
+INFO-FLOW: Finish scheduling getSequence.
+Execute       set_default_model getSequence 
+Execute       bind -model getSequence 
+BIND OPTION: model=getSequence
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.099 seconds; current allocated memory: 193.458 MB.
+Execute       syn_report -verbosereport -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getSequence.verbose.bind.rpt 
+Execute       db_write -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getSequence.bind.adb -f 
+INFO-FLOW: Finish binding getSequence.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'decoder' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model decoder 
+Execute       schedule -model decoder 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'decoder'.
+WARNING: [SCHED 204-68] The II Violation in module 'decoder' (Function: decoder): Unable to enforce a carried dependence constraint (II = 17, distance = 1, offset = 1)
+   between 'call' operation ('call_ret2', viterbi_2_1_4/viterbi.cpp:535) to 'getFinalHammingDista' and 'call' operation ('call_ret1', viterbi_2_1_4/viterbi.cpp:532) to 'computeHammingDistan'.
+WARNING: [SCHED 204-68] The II Violation in module 'decoder' (Function: decoder): Unable to enforce a carried dependence constraint (II = 18, distance = 1, offset = 1)
+   between 'call' operation ('call_ret2', viterbi_2_1_4/viterbi.cpp:535) to 'getFinalHammingDista' and 'call' operation ('call_ret1', viterbi_2_1_4/viterbi.cpp:532) to 'computeHammingDistan'.
+WARNING: [SCHED 204-68] The II Violation in module 'decoder' (Function: decoder): Unable to enforce a carried dependence constraint (II = 19, distance = 1, offset = 1)
+   between 'call' operation ('call_ret2', viterbi_2_1_4/viterbi.cpp:535) to 'getFinalHammingDista' and 'call' operation ('call_ret1', viterbi_2_1_4/viterbi.cpp:532) to 'computeHammingDistan'.
+WARNING: [SCHED 204-68] The II Violation in module 'decoder' (Function: decoder): Unable to enforce a carried dependence constraint (II = 20, distance = 1, offset = 1)
+   between 'call' operation ('call_ret2', viterbi_2_1_4/viterbi.cpp:535) to 'getFinalHammingDista' and 'call' operation ('call_ret1', viterbi_2_1_4/viterbi.cpp:532) to 'computeHammingDistan'.
+WARNING: [SCHED 204-68] The II Violation in module 'decoder' (Function: decoder): Unable to enforce a carried dependence constraint (II = 27, distance = 1, offset = 1)
+   between 'call' operation ('tmp', viterbi_2_1_4/viterbi.cpp:688) to 'getFinalLowestState' and 'call' operation ('call_ret12', viterbi_2_1_4/viterbi.cpp:666) to 'computeHammingDistan'.
+WARNING: [SCHED 204-68] The II Violation in module 'decoder' (Function: decoder): Unable to enforce a carried dependence constraint (II = 28, distance = 1, offset = 1)
+   between 'call' operation ('tmp', viterbi_2_1_4/viterbi.cpp:688) to 'getFinalLowestState' and 'call' operation ('call_ret12', viterbi_2_1_4/viterbi.cpp:666) to 'computeHammingDistan'.
+WARNING: [SCHED 204-68] The II Violation in module 'decoder' (Function: decoder): Unable to enforce a carried dependence constraint (II = 29, distance = 1, offset = 1)
+   between 'call' operation ('tmp', viterbi_2_1_4/viterbi.cpp:688) to 'getFinalLowestState' and 'call' operation ('call_ret12', viterbi_2_1_4/viterbi.cpp:666) to 'computeHammingDistan'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 30, Depth = 172.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.164 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.27 seconds; current allocated memory: 194.199 MB.
+Execute       syn_report -verbosereport -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.verbose.sched.rpt 
+Execute       db_write -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.sched.adb -f 
+INFO-FLOW: Finish scheduling decoder.
+Execute       set_default_model decoder 
+Execute       bind -model decoder 
+BIND OPTION: model=decoder
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.282 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.397 seconds; current allocated memory: 195.708 MB.
+Execute       syn_report -verbosereport -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.verbose.bind.rpt 
+Command       syn_report done; 0.251 sec.
+Execute       db_write -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.bind.adb -f 
+INFO-FLOW: Finish binding decoder.
+Execute       get_model_list decoder -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess calculateDistanceFor 
+Execute       rtl_gen_preprocess calculateForState 
+Execute       rtl_gen_preprocess computeHammingDistan 
+Execute       rtl_gen_preprocess getFinalHammingDista 
+Execute       rtl_gen_preprocess getFinalLowestState 
+Execute       rtl_gen_preprocess getReturnPath 
+Execute       rtl_gen_preprocess getSequence 
+Execute       rtl_gen_preprocess decoder 
+INFO-FLOW: Model list for RTL generation: calculateDistanceFor calculateForState computeHammingDistan getFinalHammingDista getFinalLowestState getReturnPath getSequence decoder
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'calculateDistanceFor' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model calculateDistanceFor -vendor xilinx -mg_file C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/calculateDistanceFor.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'calculateDistanceFor'.
+INFO: [HLS 200-111]  Elapsed time: 0.357 seconds; current allocated memory: 196.051 MB.
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.rtl_wrap.cfg.tcl 
+Execute       gen_rtl calculateDistanceFor -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/syn/systemc/calculateDistanceFor -synmodules calculateDistanceFor calculateForState computeHammingDistan getFinalHammingDista getFinalLowestState getReturnPath getSequence decoder 
+Execute       gen_rtl calculateDistanceFor -style xilinx -f -lang vhdl -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/syn/vhdl/calculateDistanceFor 
+Execute       gen_rtl calculateDistanceFor -style xilinx -f -lang vlog -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/syn/verilog/calculateDistanceFor 
+Execute       syn_report -csynth -model calculateDistanceFor -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/syn/report/calculateDistanceFor_csynth.rpt 
+Execute       syn_report -rtlxml -model calculateDistanceFor -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/syn/report/calculateDistanceFor_csynth.xml 
+Execute       syn_report -verbosereport -model calculateDistanceFor -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/calculateDistanceFor.verbose.rpt 
+Execute       db_write -model calculateDistanceFor -f -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/calculateDistanceFor.adb 
+Execute       gen_tb_info calculateDistanceFor -p C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/calculateDistanceFor 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'calculateForState' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model calculateForState -vendor xilinx -mg_file C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/calculateForState.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'calculateForState'.
+INFO: [HLS 200-111]  Elapsed time: 0.17 seconds; current allocated memory: 197.500 MB.
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.rtl_wrap.cfg.tcl 
+Execute       gen_rtl calculateForState -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/syn/systemc/calculateForState -synmodules calculateDistanceFor calculateForState computeHammingDistan getFinalHammingDista getFinalLowestState getReturnPath getSequence decoder 
+Execute       gen_rtl calculateForState -style xilinx -f -lang vhdl -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/syn/vhdl/calculateForState 
+Execute       gen_rtl calculateForState -style xilinx -f -lang vlog -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/syn/verilog/calculateForState 
+Execute       syn_report -csynth -model calculateForState -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/syn/report/calculateForState_csynth.rpt 
+Execute       syn_report -rtlxml -model calculateForState -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/syn/report/calculateForState_csynth.xml 
+Execute       syn_report -verbosereport -model calculateForState -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/calculateForState.verbose.rpt 
+Execute       db_write -model calculateForState -f -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/calculateForState.adb 
+Execute       gen_tb_info calculateForState -p C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/calculateForState 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'computeHammingDistan' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model computeHammingDistan -vendor xilinx -mg_file C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/computeHammingDistan.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'computeHammingDistan'.
+Command       create_rtl_model done; 0.116 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.476 seconds; current allocated memory: 199.182 MB.
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.rtl_wrap.cfg.tcl 
+Execute       gen_rtl computeHammingDistan -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/syn/systemc/computeHammingDistan -synmodules calculateDistanceFor calculateForState computeHammingDistan getFinalHammingDista getFinalLowestState getReturnPath getSequence decoder 
+Execute       gen_rtl computeHammingDistan -style xilinx -f -lang vhdl -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/syn/vhdl/computeHammingDistan 
+Execute       gen_rtl computeHammingDistan -style xilinx -f -lang vlog -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/syn/verilog/computeHammingDistan 
+Execute       syn_report -csynth -model computeHammingDistan -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/syn/report/computeHammingDistan_csynth.rpt 
+Execute       syn_report -rtlxml -model computeHammingDistan -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/syn/report/computeHammingDistan_csynth.xml 
+Execute       syn_report -verbosereport -model computeHammingDistan -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/computeHammingDistan.verbose.rpt 
+Execute       db_write -model computeHammingDistan -f -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/computeHammingDistan.adb 
+Execute       gen_tb_info computeHammingDistan -p C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/computeHammingDistan 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'getFinalHammingDista' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model getFinalHammingDista -vendor xilinx -mg_file C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getFinalHammingDista.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'getFinalHammingDista'.
+INFO: [HLS 200-111]  Elapsed time: 0.473 seconds; current allocated memory: 199.722 MB.
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.rtl_wrap.cfg.tcl 
+Execute       gen_rtl getFinalHammingDista -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/syn/systemc/getFinalHammingDista -synmodules calculateDistanceFor calculateForState computeHammingDistan getFinalHammingDista getFinalLowestState getReturnPath getSequence decoder 
+Execute       gen_rtl getFinalHammingDista -style xilinx -f -lang vhdl -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/syn/vhdl/getFinalHammingDista 
+Execute       gen_rtl getFinalHammingDista -style xilinx -f -lang vlog -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/syn/verilog/getFinalHammingDista 
+Execute       syn_report -csynth -model getFinalHammingDista -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/syn/report/getFinalHammingDista_csynth.rpt 
+Execute       syn_report -rtlxml -model getFinalHammingDista -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/syn/report/getFinalHammingDista_csynth.xml 
+Execute       syn_report -verbosereport -model getFinalHammingDista -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getFinalHammingDista.verbose.rpt 
+Execute       db_write -model getFinalHammingDista -f -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getFinalHammingDista.adb 
+Execute       gen_tb_info getFinalHammingDista -p C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getFinalHammingDista 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'getFinalLowestState' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model getFinalLowestState -vendor xilinx -mg_file C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getFinalLowestState.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'getFinalLowestState'.
+INFO: [HLS 200-111]  Elapsed time: 0.133 seconds; current allocated memory: 200.224 MB.
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.rtl_wrap.cfg.tcl 
+Execute       gen_rtl getFinalLowestState -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/syn/systemc/getFinalLowestState -synmodules calculateDistanceFor calculateForState computeHammingDistan getFinalHammingDista getFinalLowestState getReturnPath getSequence decoder 
+Execute       gen_rtl getFinalLowestState -style xilinx -f -lang vhdl -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/syn/vhdl/getFinalLowestState 
+Execute       gen_rtl getFinalLowestState -style xilinx -f -lang vlog -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/syn/verilog/getFinalLowestState 
+Execute       syn_report -csynth -model getFinalLowestState -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/syn/report/getFinalLowestState_csynth.rpt 
+Execute       syn_report -rtlxml -model getFinalLowestState -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/syn/report/getFinalLowestState_csynth.xml 
+Execute       syn_report -verbosereport -model getFinalLowestState -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getFinalLowestState.verbose.rpt 
+Execute       db_write -model getFinalLowestState -f -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getFinalLowestState.adb 
+Execute       gen_tb_info getFinalLowestState -p C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getFinalLowestState 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'getReturnPath' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model getReturnPath -vendor xilinx -mg_file C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getReturnPath.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'getReturnPath'.
+INFO: [HLS 200-111]  Elapsed time: 0.198 seconds; current allocated memory: 200.620 MB.
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.rtl_wrap.cfg.tcl 
+Execute       gen_rtl getReturnPath -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/syn/systemc/getReturnPath -synmodules calculateDistanceFor calculateForState computeHammingDistan getFinalHammingDista getFinalLowestState getReturnPath getSequence decoder 
+Execute       gen_rtl getReturnPath -style xilinx -f -lang vhdl -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/syn/vhdl/getReturnPath 
+Execute       gen_rtl getReturnPath -style xilinx -f -lang vlog -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/syn/verilog/getReturnPath 
+Execute       syn_report -csynth -model getReturnPath -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/syn/report/getReturnPath_csynth.rpt 
+Execute       syn_report -rtlxml -model getReturnPath -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/syn/report/getReturnPath_csynth.xml 
+Execute       syn_report -verbosereport -model getReturnPath -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getReturnPath.verbose.rpt 
+Execute       db_write -model getReturnPath -f -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getReturnPath.adb 
+Execute       gen_tb_info getReturnPath -p C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getReturnPath 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'getSequence' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model getSequence -vendor xilinx -mg_file C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getSequence.compgen.tcl 
+WARNING: [RTGEN 206-101] Register 'bitSequence_decoded' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'getSequence'.
+INFO: [HLS 200-111]  Elapsed time: 0.209 seconds; current allocated memory: 201.262 MB.
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.rtl_wrap.cfg.tcl 
+Execute       gen_rtl getSequence -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/syn/systemc/getSequence -synmodules calculateDistanceFor calculateForState computeHammingDistan getFinalHammingDista getFinalLowestState getReturnPath getSequence decoder 
+Execute       gen_rtl getSequence -style xilinx -f -lang vhdl -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/syn/vhdl/getSequence 
+Execute       gen_rtl getSequence -style xilinx -f -lang vlog -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/syn/verilog/getSequence 
+Execute       syn_report -csynth -model getSequence -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/syn/report/getSequence_csynth.rpt 
+Execute       syn_report -rtlxml -model getSequence -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/syn/report/getSequence_csynth.xml 
+Execute       syn_report -verbosereport -model getSequence -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getSequence.verbose.rpt 
+Execute       db_write -model getSequence -f -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getSequence.adb 
+Execute       gen_tb_info getSequence -p C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getSequence 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'decoder' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model decoder -vendor xilinx -mg_file C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'decoder/d_in_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'decoder' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'output_r' is power-on initialization.
+WARNING: [RTGEN 206-101] Global scalar 'output_r' will not be exposed as RTL port.
+INFO: [SYN 201-210] Renamed object name 'decoder_h1_hammingDistances_s' to 'decoder_h1_hamminbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'decoder_h2_hammingDistances_s' to 'decoder_h2_hammincud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'decoder_h3_hammingDistances_s' to 'decoder_h3_hammindEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'decoder_h4_hammingDistances_s' to 'decoder_h4_hammineOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'decoder_h5_hammingDistances_s' to 'decoder_h5_hamminfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'decoder_h6_hammingDistances_s' to 'decoder_h6_hamming8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'decoder_h7_hammingDistances_s' to 'decoder_h7_hamminhbi' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'decoder'.
+Command       create_rtl_model done; 0.717 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.038 seconds; current allocated memory: 206.245 MB.
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.rtl_wrap.cfg.tcl 
+Execute       gen_rtl decoder -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/syn/systemc/decoder -synmodules calculateDistanceFor calculateForState computeHammingDistan getFinalHammingDista getFinalLowestState getReturnPath getSequence decoder 
+Execute       gen_rtl decoder -istop -style xilinx -f -lang vhdl -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/syn/vhdl/decoder 
+Execute       gen_rtl decoder -istop -style xilinx -f -lang vlog -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/syn/verilog/decoder 
+Execute       syn_report -csynth -model decoder -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/syn/report/decoder_csynth.rpt 
+Execute       syn_report -rtlxml -model decoder -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/syn/report/decoder_csynth.xml 
+Execute       syn_report -verbosereport -model decoder -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.verbose.rpt 
+Command       syn_report done; 0.293 sec.
+Execute       db_write -model decoder -f -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.adb 
+Execute       gen_tb_info decoder -p C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder 
+Execute       export_constraint_db -f -tool general -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.constraint.tcl 
+Execute       syn_report -designview -model decoder -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.design.xml 
+Command       syn_report done; 0.156 sec.
+Execute       get_config_rtl -disable_wave_debug 
+Execute       syn_report -wcfg -model decoder -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder_dataflow_ana.wcfg 
+Execute       syn_report -protoinst -model decoder -o C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.protoinst 
+Execute       get_config_debug -directory 
+Execute       sc_get_clocks decoder 
+Execute       get_config_export -vivado_clock 
+Execute       sc_get_portdomain decoder 
+INFO-FLOW: Model list for RTL component generation: calculateDistanceFor calculateForState computeHammingDistan getFinalHammingDista getFinalLowestState getReturnPath getSequence decoder
+INFO-FLOW: Handling components in module [calculateDistanceFor] ... 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/calculateDistanceFor.compgen.tcl 
+INFO-FLOW: Handling components in module [calculateForState] ... 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/calculateForState.compgen.tcl 
+INFO-FLOW: Handling components in module [computeHammingDistan] ... 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/computeHammingDistan.compgen.tcl 
+INFO-FLOW: Handling components in module [getFinalHammingDista] ... 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getFinalHammingDista.compgen.tcl 
+INFO-FLOW: Handling components in module [getFinalLowestState] ... 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getFinalLowestState.compgen.tcl 
+INFO-FLOW: Handling components in module [getReturnPath] ... 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getReturnPath.compgen.tcl 
+INFO-FLOW: Handling components in module [getSequence] ... 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getSequence.compgen.tcl 
+INFO-FLOW: Handling components in module [decoder] ... 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.compgen.tcl 
+INFO-FLOW: Found component decoder_h1_hamminbkb.
+INFO-FLOW: Append model decoder_h1_hamminbkb
+INFO-FLOW: Append model calculateDistanceFor
+INFO-FLOW: Append model calculateForState
+INFO-FLOW: Append model computeHammingDistan
+INFO-FLOW: Append model getFinalHammingDista
+INFO-FLOW: Append model getFinalLowestState
+INFO-FLOW: Append model getReturnPath
+INFO-FLOW: Append model getSequence
+INFO-FLOW: Append model decoder
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: decoder_h1_hamminbkb calculateDistanceFor calculateForState computeHammingDistan getFinalHammingDista getFinalLowestState getReturnPath getSequence decoder
+INFO-FLOW: To file: write model decoder_h1_hamminbkb
+INFO-FLOW: To file: write model calculateDistanceFor
+INFO-FLOW: To file: write model calculateForState
+INFO-FLOW: To file: write model computeHammingDistan
+INFO-FLOW: To file: write model getFinalHammingDista
+INFO-FLOW: To file: write model getFinalLowestState
+INFO-FLOW: To file: write model getReturnPath
+INFO-FLOW: To file: write model getSequence
+INFO-FLOW: To file: write model decoder
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:CMD: auto_generate_csynth_design
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/global.setting.tcl
+Execute       source K:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/common.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source K:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/op.gen 
+Execute       source K:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source K:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/interface.gen 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/global.setting.tcl 
+Execute       source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/spartan7/spartan7.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
+Execute             source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.12 sec.
+Command       ap_source done; 0.12 sec.
+Execute       source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/spartan7/spartan7_fpv6.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7s100-fgga676-2 -data names -quiet 
+Execute       ap_part_info -name xc7s100-fgga676-2 -data info -quiet 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/calculateDistanceFor.compgen.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/calculateForState.compgen.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/computeHammingDistan.compgen.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getFinalHammingDista.compgen.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getFinalLowestState.compgen.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getReturnPath.compgen.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getSequence.compgen.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'decoder_h1_hamminbkb_ram (RAM)' using block RAMs.
+Execute         ap_part_info -name xc7s100-fgga676-2 -data names -quiet 
+Execute         ap_part_info -name xc7s100-fgga676-2 -data info -quiet 
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/global.setting.tcl
+Execute       source K:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/common.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source K:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/op.gen 
+Execute       source K:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source K:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/interface.gen 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/global.setting.tcl 
+Execute       source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/spartan7/spartan7.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
+Execute             source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.119 sec.
+Command       ap_source done; 0.12 sec.
+Execute       source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/spartan7/spartan7_fpv6.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=decoder xml_exists=0
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.rtl_wrap.cfg.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.rtl_wrap.cfg.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.rtl_wrap.cfg.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/calculateDistanceFor.compgen.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/calculateForState.compgen.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/computeHammingDistan.compgen.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getFinalHammingDista.compgen.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getFinalLowestState.compgen.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getReturnPath.compgen.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getSequence.compgen.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/calculateDistanceFor.compgen.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/calculateForState.compgen.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/computeHammingDistan.compgen.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getFinalHammingDista.compgen.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getFinalLowestState.compgen.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getReturnPath.compgen.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getSequence.compgen.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.compgen.tcl 
+Execute         ap_part_info -name xc7s100-fgga676-2 -data names -quiet 
+Execute         ap_part_info -name xc7s100-fgga676-2 -data info -quiet 
+Execute         ap_part_info -name xc7s100-fgga676-2 -data names -quiet 
+Execute         ap_part_info -name xc7s100-fgga676-2 -data info -quiet 
+Execute         ap_part_info -name xc7s100-fgga676-2 -data names -quiet 
+Execute         ap_part_info -name xc7s100-fgga676-2 -data info -quiet 
+Execute         ap_part_info -name xc7s100-fgga676-2 -data names -quiet 
+Execute         ap_part_info -name xc7s100-fgga676-2 -data info -quiet 
+Execute         ap_part_info -name xc7s100-fgga676-2 -data names -quiet 
+Execute         ap_part_info -name xc7s100-fgga676-2 -data info -quiet 
+Execute         ap_part_info -name xc7s100-fgga676-2 -data names -quiet 
+Execute         ap_part_info -name xc7s100-fgga676-2 -data info -quiet 
+Execute         ap_part_info -name xc7s100-fgga676-2 -data names -quiet 
+Execute         ap_part_info -name xc7s100-fgga676-2 -data info -quiet 
+Execute         ap_part_info -name xc7s100-fgga676-2 -data names -quiet 
+Execute         ap_part_info -name xc7s100-fgga676-2 -data info -quiet 
+Execute         ap_part_info -name xc7s100-fgga676-2 -data names -quiet 
+Execute         ap_part_info -name xc7s100-fgga676-2 -data info -quiet 
+Execute       ap_part_info -name xc7s100-fgga676-2 -data names -quiet 
+Execute       ap_part_info -name xc7s100-fgga676-2 -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/calculateDistanceFor.compgen.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/calculateForState.compgen.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/computeHammingDistan.compgen.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getFinalHammingDista.compgen.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getFinalLowestState.compgen.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getReturnPath.compgen.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getSequence.compgen.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.compgen.tcl 
+Execute       ap_part_info -name xc7s100-fgga676-2 -data names -quiet 
+Execute       ap_part_info -name xc7s100-fgga676-2 -data info -quiet 
+Execute       ap_part_info -name xc7s100-fgga676-2 -data names -quiet 
+Execute       ap_part_info -name xc7s100-fgga676-2 -data info -quiet 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7s100-fgga676-2 -data names -quiet 
+Execute       ap_part_info -name xc7s100-fgga676-2 -data info -quiet 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.constraint.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=6
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=2
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=0 #modelList=9 #gSsdmPorts=6
+Execute       source K:/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/fileutil/fileutil.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_export -xo 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.rtl_wrap.cfg.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.compgen.dataonly.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7s100-fgga676-2 -data names -quiet 
+Execute       ap_part_info -name xc7s100-fgga676-2 -data info -quiet 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.constraint.tcl 
+Execute       sc_get_clocks decoder 
+Execute       ap_part_info -name xc7s100-fgga676-2 -data names -quiet 
+Execute       ap_part_info -name xc7s100-fgga676-2 -data info -quiet 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_debug -directory 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/calculateDistanceFor.tbgen.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/calculateForState.tbgen.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/computeHammingDistan.tbgen.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getFinalHammingDista.tbgen.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getFinalLowestState.tbgen.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getReturnPath.tbgen.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/getSequence.tbgen.tcl 
+Execute       source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -profile 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -stall_sig_gen 
+Execute       get_config_rtl -profile 
+INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist, skipping opencl info: C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/kernel.internal.xml
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:09 ; elapsed = 00:00:23 . Memory (MB): peak = 290.297 ; gain = 199.188
+INFO: [VHDL 208-304] Generating VHDL RTL for decoder.
+INFO: [VLOG 209-307] Generating Verilog RTL for decoder.
+Command     autosyn done; 7.911 sec.
+Command   csynth_design done; 22.133 sec.
+Command ap_source done; 23.083 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1 opened at Thu Jul 28 07:34:47 +0600 2022
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     config_clock -quiet -name default -uncertainty 1.25 -unit % 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib K:/Xilinx/Vivado/2019.1/common/technology/xilinx/spartan7/spartan7 
+Execute       source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.lib 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.lib 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.lib 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.lib 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.lib 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.lib 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.lib 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.lib 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.lib 
+Execute       source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute       source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/spartan7/dsp48e1.hlp 
+Execute       source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute     source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/spartan7/spartan7.gen 
+Execute       source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.103 sec.
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.141 sec.
+Command     ap_source done; 0.141 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib K:/Xilinx/Vivado/2019.1/common/technology/xilinx/spartan7/spartan7_fpv6 
+Execute       source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute             source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute     source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/spartan7/spartan7_fpv6.gen 
+Execute       source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xc7s100-fgga676-2 
+Execute       ap_part_info -name xc7s100-fgga676-2 -data single -quiet 
+Command       ap_part_info done; 0.585 sec.
+Execute       ap_part_info -name xc7s100-fgga676-2 -data info 
+Execute       add_library xilinx/spartan7/spartan7:xc7s100:-fgga676:-2 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7s100 
+Command         license_isbetapart done; error code: 1; 
+Execute         ap_part_info -data single -name xc7s100-fgga676-2 
+Execute         ap_part_info -name xc7s100-fgga676-2 -data resources 
+Execute         ap_part_info -name xc7s100-fgga676-2 -data info 
+Execute         ap_part_info -name xc7s100-fgga676-2 -data info 
+Execute         config_chip_info -quiet -resource {SLICE 16000} {LUT 64000} {FF 128000} {DSP48E 160} {BRAM 240} {URAM 0} 
+Execute         ap_part_info -name xc7s100-fgga676-2 -data info 
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/spartan7/spartan7_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7s100-fgga676-2'
+Execute       ap_part_info -name xc7s100-fgga676-2 -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.7 sec.
+Execute     ap_part_info -data single -name xc7s100-fgga676-2 
+Execute     ap_part_info -name xc7s100-fgga676-2 -data resources 
+Execute     ap_part_info -name xc7s100-fgga676-2 -data info 
+Execute     ap_part_info -name xc7s100-fgga676-2 -data info 
+Execute     config_chip_info -quiet -resource {SLICE 16000} {LUT 64000} {FF 128000} {DSP48E 160} {BRAM 240} {URAM 0} 
+Execute     ap_part_info -name xc7s100-fgga676-2 -data info 
+Execute     config_chip_info -quiet -speed medium 
+Execute     config_sdx -target=none 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' config_export -vivado_optimization_level=2 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+Execute       config_export -vivado_optimization_level=2 
+Execute         get_config_export -vivado_impl_strategy 
+Execute         get_config_export -vivado_phys_opt 
+Execute       get_config_compile -pipeline_loops 
+Execute       get_config_compile -name_max_length 
+Execute       get_config_schedule -enable_dsp_full_reg 
+Execute       get_config_rtl -register_reset_num 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_interface -m_axi_addr64 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' set_clock_uncertainty default 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+Execute       set_clock_uncertainty default 
+Execute     config_export -format=ip_catalog 
+Execute     config_export -rtl=verilog 
+Execute     config_export -use_netlist=top 
+Execute     config_export -vivado_optimization_level=2 
+Execute       get_config_export -vivado_impl_strategy 
+Execute       get_config_export -vivado_phys_opt 
+Execute     config_export -vivado_phys_opt=place 
+Execute     config_export -vivado_report_level=0 
+Command   open_solution done; 0.919 sec.
+Execute   csim_design -quiet 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/viterbitb.cpp 
+Execute     is_xip C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/viterbitb.cpp 
+Execute     is_encrypted C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/viterbi.cpp 
+Execute     is_xip C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/viterbi.cpp 
+Execute     is_encrypted C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/viterbi.h 
+Execute     is_xip C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/viterbi.h 
+Execute     ap_part_info -name xc7s100-fgga676-2 -data info 
+Execute     source run_sim.tcl 
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; 2.123 sec.
+Command ap_source done; 3.056 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1 opened at Thu Jul 28 07:35:00 +0600 2022
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     config_clock -quiet -name default -uncertainty 1.25 -unit % 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib K:/Xilinx/Vivado/2019.1/common/technology/xilinx/spartan7/spartan7 
+Execute       source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.lib 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.lib 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.lib 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.lib 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.lib 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.lib 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.lib 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.lib 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.lib 
+Execute       source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute       source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/spartan7/dsp48e1.hlp 
+Execute       source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute     source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/spartan7/spartan7.gen 
+Execute       source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.126 sec.
+Command     ap_source done; 0.127 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib K:/Xilinx/Vivado/2019.1/common/technology/xilinx/spartan7/spartan7_fpv6 
+Execute       source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute             source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute     source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/spartan7/spartan7_fpv6.gen 
+Execute       source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xc7s100-fgga676-2 
+Execute       ap_part_info -name xc7s100-fgga676-2 -data single -quiet 
+Command       ap_part_info done; 0.54 sec.
+Execute       ap_part_info -name xc7s100-fgga676-2 -data info 
+Execute       add_library xilinx/spartan7/spartan7:xc7s100:-fgga676:-2 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7s100 
+Command         license_isbetapart done; error code: 1; 
+Execute         ap_part_info -data single -name xc7s100-fgga676-2 
+Execute         ap_part_info -name xc7s100-fgga676-2 -data resources 
+Execute         ap_part_info -name xc7s100-fgga676-2 -data info 
+Execute         ap_part_info -name xc7s100-fgga676-2 -data info 
+Execute         config_chip_info -quiet -resource {SLICE 16000} {LUT 64000} {FF 128000} {DSP48E 160} {BRAM 240} {URAM 0} 
+Execute         ap_part_info -name xc7s100-fgga676-2 -data info 
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/spartan7/spartan7_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7s100-fgga676-2'
+Execute       ap_part_info -name xc7s100-fgga676-2 -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.631 sec.
+Execute     ap_part_info -data single -name xc7s100-fgga676-2 
+Execute     ap_part_info -name xc7s100-fgga676-2 -data resources 
+Execute     ap_part_info -name xc7s100-fgga676-2 -data info 
+Execute     ap_part_info -name xc7s100-fgga676-2 -data info 
+Execute     config_chip_info -quiet -resource {SLICE 16000} {LUT 64000} {FF 128000} {DSP48E 160} {BRAM 240} {URAM 0} 
+Execute     ap_part_info -name xc7s100-fgga676-2 -data info 
+Execute     config_chip_info -quiet -speed medium 
+Execute     config_sdx -target=none 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' config_export -vivado_optimization_level=2 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+Execute       config_export -vivado_optimization_level=2 
+Execute         get_config_export -vivado_impl_strategy 
+Execute         get_config_export -vivado_phys_opt 
+Execute       get_config_compile -pipeline_loops 
+Execute       get_config_compile -name_max_length 
+Execute       get_config_schedule -enable_dsp_full_reg 
+Execute       get_config_rtl -register_reset_num 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_interface -m_axi_addr64 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' set_clock_uncertainty default 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+Execute       set_clock_uncertainty default 
+Execute     config_export -format=ip_catalog 
+Execute     config_export -rtl=verilog 
+Execute     config_export -use_netlist=top 
+Execute     config_export -vivado_optimization_level=2 
+Execute       get_config_export -vivado_impl_strategy 
+Execute       get_config_export -vivado_phys_opt 
+Execute     config_export -vivado_phys_opt=place 
+Execute     config_export -vivado_report_level=0 
+Command   open_solution done; 0.816 sec.
+Execute   cosim_design -O -trace_level all 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/global.setting.tcl
+Execute     source K:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/common.gen 
+Execute       source K:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source K:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/op.gen 
+Execute     source K:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source K:/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/interface.gen 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/global.setting.tcl 
+Execute     source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/spartan7/spartan7.gen 
+Execute       source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
+Execute           source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.117 sec.
+Command     ap_source done; 0.117 sec.
+Execute     source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/spartan7/spartan7_fpv6.gen 
+Execute       source K:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+Execute     ap_part_info -name xc7s100-fgga676-2 -data names -quiet 
+Execute     ap_part_info -name xc7s100-fgga676-2 -data info -quiet 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+Execute     is_encrypted C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/viterbitb.cpp 
+Execute     is_encrypted C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/viterbi.cpp 
+Execute     is_encrypted C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/viterbi.h 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+Execute     ap_part_info -name xc7s100-fgga676-2 -data info 
+INFO-FLOW: TB processing: C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/viterbitb.cpp C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/./sim/autowrap/testbench/viterbitb.cpp_pre.cpp
+Execute     tidy_31 xilinx-tb-xfmat C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/./sim/autowrap/testbench/viterbitb.cpp_pre.cpp std=c++11 
+INFO-FLOW: exec K:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb-xfmat -quiet -fix-errors C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/./sim/autowrap/testbench/viterbitb.cpp_pre.cpp -- -std=c++11 -fhls -ferror-limit=0
+Command     tidy_31 done; 1.61 sec.
+Execute     tidy_31 xilinx-tb31-process C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/./sim/autowrap/testbench/viterbitb.cpp_pre.cpp.tb.cpp std=c++11 
+INFO-FLOW: exec K:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/./sim/autowrap/testbench/viterbitb.cpp_pre.cpp.tb.cpp -- -std=c++11 -fhls -ferror-limit=0
+Command     tidy_31 done; 2.017 sec.
+Execute     ap_part_info -name xc7s100-fgga676-2 -data info 
+INFO-FLOW: TB processing: C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/viterbi.cpp C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/./sim/autowrap/testbench/viterbi.cpp_pre.cpp
+Execute     tidy_31 xilinx-tb-xfmat C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/./sim/autowrap/testbench/viterbi.cpp_pre.cpp std=c++11 
+INFO-FLOW: exec K:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb-xfmat -quiet -fix-errors C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/./sim/autowrap/testbench/viterbi.cpp_pre.cpp -- -std=c++11 -fhls -ferror-limit=0
+Command     tidy_31 done; 1.122 sec.
+Execute     tidy_31 xilinx-tb31-process C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/./sim/autowrap/testbench/viterbi.cpp_pre.cpp.tb.cpp std=c++11 
+INFO-FLOW: exec K:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/./sim/autowrap/testbench/viterbi.cpp_pre.cpp.tb.cpp -- -std=c++11 -fhls -ferror-limit=0
+Command     tidy_31 done; 1.13 sec.
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+Execute     ap_part_info -name xc7s100-fgga676-2 -data info 
+Execute     source .run_sim.tcl 
+INFO: [COSIM 212-302] Starting C TB testing ... 
+Command     ap_source done; 0.389 sec.
+INFO: [COSIM 212-333] Generating C post check test bench ...
+Execute     ap_part_info -name xc7s100-fgga676-2 -data info 
+INFO: [COSIM 212-12] Generating RTL test bench ...
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+Execute     source ../tv/cdatafile/ref.tcl 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+Execute     source ../tv/cdatafile/ref.tcl 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+Execute     source C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/.autopilot/db/decoder.tbgen.tcl 
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+Execute     source .run_sim.tcl 
+Execute       source check_sim.tcl 
+Execute       source .sim.status.tcl 
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+Command     ap_source done; 20.637 sec.
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+Command   cosim_design done; 39.577 sec.
+Command ap_source done; 40.4 sec.
+Execute cleanup_all 

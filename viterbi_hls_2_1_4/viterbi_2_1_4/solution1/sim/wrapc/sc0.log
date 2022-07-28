@@ -1,0 +1,5 @@
+   Build using "K:/Xilinx/Vivado/2019.1/msys64/mingw64/bin/g++"
+   Compiling viterbitb.cpp_pre.cpp.tb.cpp
+   Compiling viterbi.cpp_pre.cpp.tb.cpp
+   Compiling apatb_decoder.cpp
+   Generating cosim.tv.exe

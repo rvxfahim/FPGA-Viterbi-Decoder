@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Jul 28 07:35:52 2022
+# Process ID: 23704
+# Current directory: C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/sim/verilog
+# Command line: vivado.exe -source open_wave.tcl
+# Log file: C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/sim/verilog/vivado.log
+# Journal file: C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/sim/verilog\vivado.jou
+#-----------------------------------------------------------
+start_gui
+source open_wave.tcl
+open_wave_config C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/sim/verilog/decoder.wcfg
+close_sim

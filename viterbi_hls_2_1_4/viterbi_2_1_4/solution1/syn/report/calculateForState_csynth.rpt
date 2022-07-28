@@ -1,0 +1,275 @@
+
+
+================================================================
+== Vivado HLS Report for 'calculateForState'
+================================================================
+* Date:           Thu Jul 28 06:40:28 2022
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        viterbi_2_1_4
+* Solution:       solution1
+* Product family: spartan7
+* Target device:  xc7s100-fgga676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     5.840|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    1|    1|    2|    2| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------------------+----------------------+-----+-----+-----+-----+----------+
+        |                                  |                      |  Latency  |  Interval | Pipeline |
+        |             Instance             |        Module        | min | max | min | max |   Type   |
+        +----------------------------------+----------------------+-----+-----+-----+-----+----------+
+        |grp_calculateDistanceFor_fu_1033  |calculateDistanceFor  |    0|    0|    1|    1| function |
+        |grp_calculateDistanceFor_fu_1047  |calculateDistanceFor  |    0|    0|    1|    1| function |
+        +----------------------------------+----------------------+-----+-----+-----+-----+----------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|     22|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        -|      -|       0|     66|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|   1001|    -|
+|Register         |        -|      -|     279|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|      0|     279|   1089|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      240|    160|  128000|  64000|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|      0|   ~0   |      1|    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------------------+----------------------+---------+-------+---+----+-----+
+    |             Instance             |        Module        | BRAM_18K| DSP48E| FF| LUT| URAM|
+    +----------------------------------+----------------------+---------+-------+---+----+-----+
+    |grp_calculateDistanceFor_fu_1033  |calculateDistanceFor  |        0|      0|  0|  33|    0|
+    |grp_calculateDistanceFor_fu_1047  |calculateDistanceFor  |        0|      0|  0|  33|    0|
+    +----------------------------------+----------------------+---------+-------+---+----+-----+
+    |Total                             |                      |        0|      0|  0|  66|    0|
+    +----------------------------------+----------------------+---------+-------+---+----+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------+----------+-------+---+----+------------+------------+
+    |  Variable Name | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------+----------+-------+---+----+------------+------------+
+    |grp_fu_1107_p2  |   icmp   |      0|  0|  11|           8|           8|
+    |grp_fu_1113_p2  |   icmp   |      0|  0|  11|           8|           8|
+    +----------------+----------+-------+---+----+------------+------------+
+    |Total           |          |      0|  0|  22|          16|          16|
+    +----------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------------------+----+-----------+-----+-----------+
+    |                        Name                        | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------------------+----+-----------+-----+-----------+
+    |HammingTable_aTransi_30_reg_1000                    |  21|          4|    8|         32|
+    |HammingTable_bTransi_20_reg_740                     |  15|          3|    8|         24|
+    |HammingTable_cTransi_30_reg_513                     |  21|          4|    8|         32|
+    |HammingTable_dTransi_20_reg_578                     |  15|          3|    8|         24|
+    |HammingTable_eTransi_30_reg_675                     |  21|          4|    8|         32|
+    |HammingTable_fTransi_20_reg_773                     |  15|          3|    8|         24|
+    |HammingTable_gTransi_30_reg_838                     |  21|          4|    8|         32|
+    |HammingTable_hTransi_20_reg_935                     |  15|          3|    8|         24|
+    |HammingTable_hammingDistances_finalStates_address0  |  56|         13|    3|         39|
+    |HammingTable_hammingDistances_finalStates_address1  |  56|         13|    3|         39|
+    |HammingTable_hammingDistances_finalStates_d0        |  15|          3|    8|         24|
+    |HammingTable_hammingDistances_finalStates_d1        |  15|          3|    8|         24|
+    |ap_NS_fsm                                           |  15|          3|    1|          3|
+    |ap_phi_mux_HammingTable_aTransi_30_phi_fu_1003_p26  |  15|          3|    8|         24|
+    |ap_phi_mux_HammingTable_aTransi_phi_fu_506_p4       |  15|          3|    8|         24|
+    |ap_phi_mux_HammingTable_bTransi_20_phi_fu_743_p26   |  15|          3|    8|         24|
+    |ap_phi_mux_HammingTable_bTransi_phi_fu_496_p4       |  15|          3|    8|         24|
+    |ap_phi_mux_HammingTable_cTransi_30_phi_fu_516_p26   |  15|          3|    8|         24|
+    |ap_phi_mux_HammingTable_cTransi_phi_fu_476_p4       |  15|          3|    8|         24|
+    |ap_phi_mux_HammingTable_dTransi_20_phi_fu_581_p26   |  15|          3|    8|         24|
+    |ap_phi_mux_HammingTable_dTransi_phi_fu_486_p4       |  15|          3|    8|         24|
+    |ap_phi_mux_HammingTable_eTransi_30_phi_fu_678_p26   |  15|          3|    8|         24|
+    |ap_phi_mux_HammingTable_eTransi_phi_fu_456_p4       |  15|          3|    8|         24|
+    |ap_phi_mux_HammingTable_fTransi_20_phi_fu_776_p26   |  15|          3|    8|         24|
+    |ap_phi_mux_HammingTable_fTransi_phi_fu_466_p4       |  15|          3|    8|         24|
+    |ap_phi_mux_HammingTable_gTransi_30_phi_fu_841_p26   |  15|          3|    8|         24|
+    |ap_phi_mux_HammingTable_gTransi_phi_fu_436_p4       |  15|          3|    8|         24|
+    |ap_phi_mux_HammingTable_hTransi_20_phi_fu_938_p26   |  15|          3|    8|         24|
+    |ap_phi_mux_HammingTable_hTransi_phi_fu_446_p4       |  15|          3|    8|         24|
+    |ap_phi_mux_phi_ln228_1_phi_fu_614_p26               |  21|          4|    8|         32|
+    |ap_phi_mux_phi_ln228_2_phi_fu_646_p26               |  21|          4|    8|         32|
+    |ap_phi_mux_phi_ln228_3_phi_fu_711_p26               |  15|          3|    8|         24|
+    |ap_phi_mux_phi_ln228_4_phi_fu_809_p26               |  21|          4|    8|         32|
+    |ap_phi_mux_phi_ln228_5_phi_fu_874_p26               |  15|          3|    8|         24|
+    |ap_phi_mux_phi_ln228_6_phi_fu_906_p26               |  15|          3|    8|         24|
+    |ap_phi_mux_phi_ln228_7_phi_fu_971_p26               |  21|          4|    8|         32|
+    |ap_phi_mux_phi_ln228_phi_fu_549_p26                 |  15|          3|    8|         24|
+    |grp_calculateDistanceFor_fu_1033_firstBit           |  15|          3|    1|          3|
+    |grp_calculateDistanceFor_fu_1033_previousDistance   |  44|          9|    8|         72|
+    |grp_calculateDistanceFor_fu_1033_secondBit          |  15|          3|    1|          3|
+    |grp_calculateDistanceFor_fu_1047_firstBit           |  15|          3|    1|          3|
+    |grp_calculateDistanceFor_fu_1047_previousDistance   |  44|          9|    8|         72|
+    |grp_calculateDistanceFor_fu_1047_secondBit          |  15|          3|    1|          3|
+    |phi_ln228_1_reg_611                                 |  21|          4|    8|         32|
+    |phi_ln228_2_reg_643                                 |  21|          4|    8|         32|
+    |phi_ln228_3_reg_708                                 |  21|          4|    8|         32|
+    |phi_ln228_4_reg_806                                 |  21|          4|    8|         32|
+    |phi_ln228_5_reg_871                                 |  21|          4|    8|         32|
+    |phi_ln228_6_reg_903                                 |  21|          4|    8|         32|
+    |phi_ln228_7_reg_968                                 |  21|          4|    8|         32|
+    |phi_ln228_reg_546                                   |  21|          4|    8|         32|
+    +----------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                               |1001|        201|  363|       1373|
+    +----------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------+---+----+-----+-----------+
+    |               Name               | FF| LUT| Bits| Const Bits|
+    +----------------------------------+---+----+-----+-----------+
+    |HammingTable_aTransi_30_reg_1000  |  8|   0|    8|          0|
+    |HammingTable_bTransi_20_reg_740   |  8|   0|    8|          0|
+    |HammingTable_cTransi_30_reg_513   |  8|   0|    8|          0|
+    |HammingTable_dTransi_20_reg_578   |  8|   0|    8|          0|
+    |HammingTable_eTransi_30_reg_675   |  8|   0|    8|          0|
+    |HammingTable_fTransi_20_reg_773   |  8|   0|    8|          0|
+    |HammingTable_gTransi_30_reg_838   |  8|   0|    8|          0|
+    |HammingTable_hTransi_20_reg_935   |  8|   0|    8|          0|
+    |ap_CS_fsm                         |  2|   0|    2|          0|
+    |p_read1029_reg_1324               |  8|   0|    8|          0|
+    |p_read221_reg_1444                |  8|   0|    8|          0|
+    |p_read322_reg_1429                |  8|   0|    8|          0|
+    |p_read423_reg_1414                |  8|   0|    8|          0|
+    |p_read524_reg_1399                |  8|   0|    8|          0|
+    |p_read625_reg_1384                |  8|   0|    8|          0|
+    |p_read726_reg_1369                |  8|   0|    8|          0|
+    |p_read827_reg_1354                |  8|   0|    8|          0|
+    |p_read928_reg_1339                |  8|   0|    8|          0|
+    |p_read_26_reg_1219                |  8|   0|    8|          0|
+    |p_read_27_reg_1234                |  8|   0|    8|          0|
+    |p_read_28_reg_1249                |  8|   0|    8|          0|
+    |p_read_29_reg_1264                |  8|   0|    8|          0|
+    |p_read_30_reg_1279                |  8|   0|    8|          0|
+    |p_read_31_reg_1294                |  8|   0|    8|          0|
+    |p_read_32_reg_1309                |  8|   0|    8|          0|
+    |phi_ln228_1_reg_611               |  8|   0|    8|          0|
+    |phi_ln228_2_reg_643               |  8|   0|    8|          0|
+    |phi_ln228_3_reg_708               |  8|   0|    8|          0|
+    |phi_ln228_4_reg_806               |  8|   0|    8|          0|
+    |phi_ln228_5_reg_871               |  8|   0|    8|          0|
+    |phi_ln228_6_reg_903               |  8|   0|    8|          0|
+    |phi_ln228_7_reg_968               |  8|   0|    8|          0|
+    |phi_ln228_reg_546                 |  8|   0|    8|          0|
+    |reg_1081                          |  8|   0|    8|          0|
+    |reg_1094                          |  8|   0|    8|          0|
+    |state_read_reg_1215               |  5|   0|    5|          0|
+    +----------------------------------+---+----+-----+-----------+
+    |Total                             |279|   0|  279|          0|
+    +----------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------------------------------+-----+-----+------------+-------------------------------------------+--------------+
+|                      RTL Ports                     | Dir | Bits|  Protocol  |               Source Object               |    C Type    |
++----------------------------------------------------+-----+-----+------------+-------------------------------------------+--------------+
+|ap_clk                                              |  in |    1| ap_ctrl_hs |             calculateForState             | return value |
+|ap_rst                                              |  in |    1| ap_ctrl_hs |             calculateForState             | return value |
+|ap_start                                            |  in |    1| ap_ctrl_hs |             calculateForState             | return value |
+|ap_done                                             | out |    1| ap_ctrl_hs |             calculateForState             | return value |
+|ap_idle                                             | out |    1| ap_ctrl_hs |             calculateForState             | return value |
+|ap_ready                                            | out |    1| ap_ctrl_hs |             calculateForState             | return value |
+|ap_return_0                                         | out |    8| ap_ctrl_hs |             calculateForState             | return value |
+|ap_return_1                                         | out |    8| ap_ctrl_hs |             calculateForState             | return value |
+|ap_return_2                                         | out |    8| ap_ctrl_hs |             calculateForState             | return value |
+|ap_return_3                                         | out |    8| ap_ctrl_hs |             calculateForState             | return value |
+|ap_return_4                                         | out |    8| ap_ctrl_hs |             calculateForState             | return value |
+|ap_return_5                                         | out |    8| ap_ctrl_hs |             calculateForState             | return value |
+|ap_return_6                                         | out |    8| ap_ctrl_hs |             calculateForState             | return value |
+|ap_return_7                                         | out |    8| ap_ctrl_hs |             calculateForState             | return value |
+|ap_return_8                                         | out |    8| ap_ctrl_hs |             calculateForState             | return value |
+|ap_return_9                                         | out |    8| ap_ctrl_hs |             calculateForState             | return value |
+|ap_return_10                                        | out |    8| ap_ctrl_hs |             calculateForState             | return value |
+|ap_return_11                                        | out |    8| ap_ctrl_hs |             calculateForState             | return value |
+|ap_return_12                                        | out |    8| ap_ctrl_hs |             calculateForState             | return value |
+|ap_return_13                                        | out |    8| ap_ctrl_hs |             calculateForState             | return value |
+|ap_return_14                                        | out |    8| ap_ctrl_hs |             calculateForState             | return value |
+|ap_return_15                                        | out |    8| ap_ctrl_hs |             calculateForState             | return value |
+|ap_ce                                               |  in |    1| ap_ctrl_hs |             calculateForState             | return value |
+|p_read                                              |  in |    1|   ap_none  |                   p_read                  |    scalar    |
+|p_read1                                             |  in |    1|   ap_none  |                  p_read1                  |    scalar    |
+|p_read2                                             |  in |    8|   ap_none  |                  p_read2                  |    scalar    |
+|p_read3                                             |  in |    8|   ap_none  |                  p_read3                  |    scalar    |
+|p_read4                                             |  in |    8|   ap_none  |                  p_read4                  |    scalar    |
+|p_read5                                             |  in |    8|   ap_none  |                  p_read5                  |    scalar    |
+|p_read6                                             |  in |    8|   ap_none  |                  p_read6                  |    scalar    |
+|p_read7                                             |  in |    8|   ap_none  |                  p_read7                  |    scalar    |
+|p_read8                                             |  in |    8|   ap_none  |                  p_read8                  |    scalar    |
+|p_read9                                             |  in |    8|   ap_none  |                  p_read9                  |    scalar    |
+|p_read10                                            |  in |    8|   ap_none  |                  p_read10                 |    scalar    |
+|p_read11                                            |  in |    8|   ap_none  |                  p_read11                 |    scalar    |
+|p_read12                                            |  in |    8|   ap_none  |                  p_read12                 |    scalar    |
+|p_read13                                            |  in |    8|   ap_none  |                  p_read13                 |    scalar    |
+|p_read14                                            |  in |    8|   ap_none  |                  p_read14                 |    scalar    |
+|p_read15                                            |  in |    8|   ap_none  |                  p_read15                 |    scalar    |
+|p_read16                                            |  in |    8|   ap_none  |                  p_read16                 |    scalar    |
+|p_read17                                            |  in |    8|   ap_none  |                  p_read17                 |    scalar    |
+|p_read18                                            |  in |    8|   ap_none  |                  p_read18                 |    scalar    |
+|p_read31                                            |  in |    8|   ap_none  |                  p_read31                 |    scalar    |
+|p_read32                                            |  in |    8|   ap_none  |                  p_read32                 |    scalar    |
+|p_read33                                            |  in |    8|   ap_none  |                  p_read33                 |    scalar    |
+|p_read34                                            |  in |    8|   ap_none  |                  p_read34                 |    scalar    |
+|p_read35                                            |  in |    8|   ap_none  |                  p_read35                 |    scalar    |
+|p_read36                                            |  in |    8|   ap_none  |                  p_read36                 |    scalar    |
+|p_read37                                            |  in |    8|   ap_none  |                  p_read37                 |    scalar    |
+|HammingTable_hammingDistances_finalStates_address0  | out |    3|  ap_memory | HammingTable_hammingDistances_finalStates |     array    |
+|HammingTable_hammingDistances_finalStates_ce0       | out |    1|  ap_memory | HammingTable_hammingDistances_finalStates |     array    |
+|HammingTable_hammingDistances_finalStates_we0       | out |    1|  ap_memory | HammingTable_hammingDistances_finalStates |     array    |
+|HammingTable_hammingDistances_finalStates_d0        | out |    8|  ap_memory | HammingTable_hammingDistances_finalStates |     array    |
+|HammingTable_hammingDistances_finalStates_q0        |  in |    8|  ap_memory | HammingTable_hammingDistances_finalStates |     array    |
+|HammingTable_hammingDistances_finalStates_address1  | out |    3|  ap_memory | HammingTable_hammingDistances_finalStates |     array    |
+|HammingTable_hammingDistances_finalStates_ce1       | out |    1|  ap_memory | HammingTable_hammingDistances_finalStates |     array    |
+|HammingTable_hammingDistances_finalStates_we1       | out |    1|  ap_memory | HammingTable_hammingDistances_finalStates |     array    |
+|HammingTable_hammingDistances_finalStates_d1        | out |    8|  ap_memory | HammingTable_hammingDistances_finalStates |     array    |
+|HammingTable_hammingDistances_finalStates_q1        |  in |    8|  ap_memory | HammingTable_hammingDistances_finalStates |     array    |
+|state                                               |  in |    5|   ap_none  |                   state                   |    scalar    |
++----------------------------------------------------+-----+-----+------------+-------------------------------------------+--------------+
+

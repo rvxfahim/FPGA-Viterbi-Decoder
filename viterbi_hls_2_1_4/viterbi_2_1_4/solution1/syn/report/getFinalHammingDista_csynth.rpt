@@ -1,0 +1,145 @@
+
+
+================================================================
+== Vivado HLS Report for 'getFinalHammingDista'
+================================================================
+* Date:           Thu Jul 28 06:40:29 2022
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        viterbi_2_1_4
+* Solution:       solution1
+* Product family: spartan7
+* Target device:  xc7s100-fgga676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     1.769|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    4|    4|    4|    4| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       -|      -|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        -|      -|       -|      -|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|     96|    -|
+|Register         |        -|      -|      86|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|      0|      86|     96|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      240|    160|  128000|  64000|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    +----------------------------------------------------+----+-----------+-----+-----------+
+    |                        Name                        | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------------------+----+-----------+-----+-----------+
+    |HammingTable_hammingDistances_finalStates_address0  |  27|          5|    3|         15|
+    |HammingTable_hammingDistances_finalStates_address1  |  27|          5|    3|         15|
+    |ap_NS_iter0_fsm                                     |  27|          5|    4|         20|
+    |ap_NS_iter1_fsm                                     |  15|          3|    2|          6|
+    +----------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                               |  96|         18|   12|         56|
+    +----------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------------------+---+----+-----+-----------+
+    |                      Name                     | FF| LUT| Bits| Const Bits|
+    +-----------------------------------------------+---+----+-----+-----------+
+    |HammingTable_hamming_27_reg_161                |  8|   0|    8|          0|
+    |HammingTable_hamming_27_reg_161_pp0_iter0_reg  |  8|   0|    8|          0|
+    |HammingTable_hamming_29_reg_166                |  8|   0|    8|          0|
+    |HammingTable_hamming_29_reg_166_pp0_iter0_reg  |  8|   0|    8|          0|
+    |HammingTable_hamming_31_reg_181                |  8|   0|    8|          0|
+    |HammingTable_hamming_31_reg_181_pp0_iter0_reg  |  8|   0|    8|          0|
+    |HammingTable_hamming_33_reg_186                |  8|   0|    8|          0|
+    |HammingTable_hamming_33_reg_186_pp0_iter0_reg  |  8|   0|    8|          0|
+    |HammingTable_hamming_35_reg_201                |  8|   0|    8|          0|
+    |HammingTable_hamming_37_reg_206                |  8|   0|    8|          0|
+    |ap_CS_iter0_fsm                                |  4|   0|    4|          0|
+    |ap_CS_iter1_fsm                                |  2|   0|    2|          0|
+    +-----------------------------------------------+---+----+-----+-----------+
+    |Total                                          | 86|   0|   86|          0|
+    +-----------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------------------------------+-----+-----+------------+-------------------------------------------+--------------+
+|                      RTL Ports                     | Dir | Bits|  Protocol  |               Source Object               |    C Type    |
++----------------------------------------------------+-----+-----+------------+-------------------------------------------+--------------+
+|ap_clk                                              |  in |    1| ap_ctrl_hs |            getFinalHammingDista           | return value |
+|ap_rst                                              |  in |    1| ap_ctrl_hs |            getFinalHammingDista           | return value |
+|ap_start                                            |  in |    1| ap_ctrl_hs |            getFinalHammingDista           | return value |
+|ap_done                                             | out |    1| ap_ctrl_hs |            getFinalHammingDista           | return value |
+|ap_idle                                             | out |    1| ap_ctrl_hs |            getFinalHammingDista           | return value |
+|ap_ready                                            | out |    1| ap_ctrl_hs |            getFinalHammingDista           | return value |
+|ap_ce                                               |  in |    1| ap_ctrl_hs |            getFinalHammingDista           | return value |
+|ap_return_0                                         | out |    8| ap_ctrl_hs |            getFinalHammingDista           | return value |
+|ap_return_1                                         | out |    8| ap_ctrl_hs |            getFinalHammingDista           | return value |
+|ap_return_2                                         | out |    8| ap_ctrl_hs |            getFinalHammingDista           | return value |
+|ap_return_3                                         | out |    8| ap_ctrl_hs |            getFinalHammingDista           | return value |
+|ap_return_4                                         | out |    8| ap_ctrl_hs |            getFinalHammingDista           | return value |
+|ap_return_5                                         | out |    8| ap_ctrl_hs |            getFinalHammingDista           | return value |
+|ap_return_6                                         | out |    8| ap_ctrl_hs |            getFinalHammingDista           | return value |
+|ap_return_7                                         | out |    8| ap_ctrl_hs |            getFinalHammingDista           | return value |
+|HammingTable_hammingDistances_finalStates_address0  | out |    3|  ap_memory | HammingTable_hammingDistances_finalStates |     array    |
+|HammingTable_hammingDistances_finalStates_ce0       | out |    1|  ap_memory | HammingTable_hammingDistances_finalStates |     array    |
+|HammingTable_hammingDistances_finalStates_q0        |  in |    8|  ap_memory | HammingTable_hammingDistances_finalStates |     array    |
+|HammingTable_hammingDistances_finalStates_address1  | out |    3|  ap_memory | HammingTable_hammingDistances_finalStates |     array    |
+|HammingTable_hammingDistances_finalStates_ce1       | out |    1|  ap_memory | HammingTable_hammingDistances_finalStates |     array    |
+|HammingTable_hammingDistances_finalStates_q1        |  in |    8|  ap_memory | HammingTable_hammingDistances_finalStates |     array    |
++----------------------------------------------------+-----+-----+------------+-------------------------------------------+--------------+
+

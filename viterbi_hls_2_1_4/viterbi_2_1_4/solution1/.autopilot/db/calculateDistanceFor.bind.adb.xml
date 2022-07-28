@@ -1,0 +1,293 @@
+<stg><name>calculateDistanceFor</name>
+
+
+<trans_list>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="2" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="6" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+_ifconv:0  %previousDistance_rea = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %previousDistance)
+
+]]></Node>
+<StgValue><ssdm name="previousDistance_rea"/></StgValue>
+</operation>
+
+<operation id="3" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="7" bw="1" op_0_bw="1" op_1_bw="1">
+<![CDATA[
+_ifconv:1  %secondBit_read = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %secondBit)
+
+]]></Node>
+<StgValue><ssdm name="secondBit_read"/></StgValue>
+</operation>
+
+<operation id="4" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="1" op_0_bw="1" op_1_bw="1">
+<![CDATA[
+_ifconv:2  %firstBit_read = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %firstBit)
+
+]]></Node>
+<StgValue><ssdm name="firstBit_read"/></StgValue>
+</operation>
+
+<operation id="5" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="9" bw="1" op_0_bw="1" op_1_bw="1">
+<![CDATA[
+_ifconv:3  %p_read13 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read1)
+
+]]></Node>
+<StgValue><ssdm name="p_read13"/></StgValue>
+</operation>
+
+<operation id="6" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="10" bw="1" op_0_bw="1" op_1_bw="1">
+<![CDATA[
+_ifconv:4  %p_read_33 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read)
+
+]]></Node>
+<StgValue><ssdm name="p_read_33"/></StgValue>
+</operation>
+
+<operation id="7" st_id="1" stage="1" lat="1">
+<core>LogicGate</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="11" bw="1" op_0_bw="1" op_1_bw="1">
+<![CDATA[
+_ifconv:5  %xor_ln233 = xor i1 %p_read_33, %firstBit_read
+
+]]></Node>
+<StgValue><ssdm name="xor_ln233"/></StgValue>
+</operation>
+
+<operation id="8" st_id="1" stage="1" lat="1">
+<core>LogicGate</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="12" bw="1" op_0_bw="1" op_1_bw="1">
+<![CDATA[
+_ifconv:6  %xor_ln233_1 = xor i1 %p_read13, %secondBit_read
+
+]]></Node>
+<StgValue><ssdm name="xor_ln233_1"/></StgValue>
+</operation>
+
+<operation id="9" st_id="1" stage="1" lat="1">
+<core>LogicGate</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="or_ln233" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="13" bw="1" op_0_bw="1" op_1_bw="1">
+<![CDATA[
+_ifconv:7  %and_ln233 = and i1 %xor_ln233, %xor_ln233_1
+
+]]></Node>
+<StgValue><ssdm name="and_ln233"/></StgValue>
+</operation>
+
+<operation id="10" st_id="1" stage="1" lat="1">
+<core>Sel</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="or_ln233" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="14" bw="8" op_0_bw="1" op_1_bw="8" op_2_bw="8">
+<![CDATA[
+_ifconv:8  %select_ln233 = select i1 %and_ln233, i8 2, i8 1
+
+]]></Node>
+<StgValue><ssdm name="select_ln233"/></StgValue>
+</operation>
+
+<operation id="11" st_id="1" stage="1" lat="1">
+<core>AddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="or_ln233" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="15" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+_ifconv:9  %add_ln233 = add i8 %previousDistance_rea, %select_ln233
+
+]]></Node>
+<StgValue><ssdm name="add_ln233"/></StgValue>
+</operation>
+
+<operation id="12" st_id="1" stage="1" lat="1">
+<core>LogicGate</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="16" bw="1" op_0_bw="1" op_1_bw="1">
+<![CDATA[
+_ifconv:10  %or_ln233 = or i1 %xor_ln233_1, %xor_ln233
+
+]]></Node>
+<StgValue><ssdm name="or_ln233"/></StgValue>
+</operation>
+
+<operation id="13" st_id="1" stage="1" lat="1">
+<core>Sel</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="17" bw="8" op_0_bw="1" op_1_bw="8" op_2_bw="8">
+<![CDATA[
+_ifconv:11  %select_ln233_1 = select i1 %or_ln233, i8 %add_ln233, i8 %previousDistance_rea
+
+]]></Node>
+<StgValue><ssdm name="select_ln233_1"/></StgValue>
+</operation>
+
+<operation id="14" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="18" bw="0" op_0_bw="8">
+<![CDATA[
+_ifconv:12  ret i8 %select_ln233_1
+
+]]></Node>
+<StgValue><ssdm name="ret_ln245"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="16" name="p_read" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="p_read"/></StgValue>
+</port>
+<port id="17" name="p_read1" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="p_read1"/></StgValue>
+</port>
+<port id="18" name="firstBit" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="firstBit"/></StgValue>
+</port>
+<port id="19" name="secondBit" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="secondBit"/></StgValue>
+</port>
+<port id="20" name="previousDistance" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="previousDistance"/></StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="22" from="_ssdm_op_Read.ap_auto.i8" to="previousDistance_rea" fromId="21" toId="2">
+</dataflow>
+<dataflow id="23" from="previousDistance" to="previousDistance_rea" fromId="20" toId="2">
+</dataflow>
+<dataflow id="25" from="_ssdm_op_Read.ap_auto.i1" to="secondBit_read" fromId="24" toId="3">
+</dataflow>
+<dataflow id="26" from="secondBit" to="secondBit_read" fromId="19" toId="3">
+</dataflow>
+<dataflow id="27" from="_ssdm_op_Read.ap_auto.i1" to="firstBit_read" fromId="24" toId="4">
+</dataflow>
+<dataflow id="28" from="firstBit" to="firstBit_read" fromId="18" toId="4">
+</dataflow>
+<dataflow id="29" from="_ssdm_op_Read.ap_auto.i1" to="p_read13" fromId="24" toId="5">
+</dataflow>
+<dataflow id="30" from="p_read1" to="p_read13" fromId="17" toId="5">
+</dataflow>
+<dataflow id="31" from="_ssdm_op_Read.ap_auto.i1" to="p_read_33" fromId="24" toId="6">
+</dataflow>
+<dataflow id="32" from="p_read" to="p_read_33" fromId="16" toId="6">
+</dataflow>
+<dataflow id="33" from="p_read_33" to="xor_ln233" fromId="6" toId="7">
+</dataflow>
+<dataflow id="34" from="firstBit_read" to="xor_ln233" fromId="4" toId="7">
+</dataflow>
+<dataflow id="35" from="p_read13" to="xor_ln233_1" fromId="5" toId="8">
+</dataflow>
+<dataflow id="36" from="secondBit_read" to="xor_ln233_1" fromId="3" toId="8">
+</dataflow>
+<dataflow id="37" from="xor_ln233" to="and_ln233" fromId="7" toId="9">
+</dataflow>
+<dataflow id="38" from="xor_ln233_1" to="and_ln233" fromId="8" toId="9">
+</dataflow>
+<dataflow id="39" from="and_ln233" to="select_ln233" fromId="9" toId="10">
+</dataflow>
+<dataflow id="41" from="StgValue_40" to="select_ln233" fromId="40" toId="10">
+</dataflow>
+<dataflow id="43" from="StgValue_42" to="select_ln233" fromId="42" toId="10">
+</dataflow>
+<dataflow id="44" from="previousDistance_rea" to="add_ln233" fromId="2" toId="11">
+</dataflow>
+<dataflow id="45" from="select_ln233" to="add_ln233" fromId="10" toId="11">
+</dataflow>
+<dataflow id="46" from="xor_ln233_1" to="or_ln233" fromId="8" toId="12">
+</dataflow>
+<dataflow id="47" from="xor_ln233" to="or_ln233" fromId="7" toId="12">
+</dataflow>
+<dataflow id="48" from="or_ln233" to="select_ln233_1" fromId="12" toId="13">
+</dataflow>
+<dataflow id="49" from="add_ln233" to="select_ln233_1" fromId="11" toId="13">
+</dataflow>
+<dataflow id="50" from="previousDistance_rea" to="select_ln233_1" fromId="2" toId="13">
+</dataflow>
+<dataflow id="51" from="select_ln233_1" to="ret_ln245" fromId="13" toId="14">
+</dataflow>
+<dataflow id="52" from="or_ln233" to="StgValue_1" fromId="12" toId="1">
+</dataflow>
+</dataflows>
+
+
+</stg>

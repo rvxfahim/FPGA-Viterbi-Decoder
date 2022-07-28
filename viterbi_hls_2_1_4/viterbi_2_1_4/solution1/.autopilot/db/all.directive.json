@@ -1,0 +1,127 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "HammingTable::HammingTable",
+          "label": "HammingTable_label1",
+          "functionLabel": "label1",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "HammingTable::HammingTable",
+          "label": "HammingTable_label4",
+          "functionLabel": "label3",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "HammingTable::getFinalLowestState",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {"name": "PIPELINE"}
+        },
+        {
+          "functionName": "HammingTable::getFinalLowestState",
+          "label": "getFinalLowestState_label5",
+          "functionLabel": "",
+          "pragma": {"name": "PIPELINE"}
+        },
+        {
+          "functionName": "HammingTable::HammingTable",
+          "label": "HammingTable_label3",
+          "functionLabel": "label2",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "getSequence",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "RESOURCE",
+            "option": [
+              {
+                "name": "variable",
+                "value": "return",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "core",
+                "value": "MuxnS"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "getSequence",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "RESOURCE",
+            "option": [
+              {
+                "name": "variable",
+                "value": "return",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "core",
+                "value": "MuxnS"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "getSequence",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {"name": "PIPELINE"}
+        },
+        {
+          "functionName": "decoder",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "RESOURCE",
+            "option": [
+              {
+                "name": "variable",
+                "value": "h6.hammingDistances",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "core",
+                "value": "AddSub"
+              },
+              {
+                "name": "latency",
+                "value": "1"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "decoder",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "PIPELINE",
+            "option": [{
+                "name": "enable_flush",
+                "value": "",
+                "positionalBoolean": "1"
+              }]
+          }
+        },
+        {
+          "functionName": "HammingTable::getReturnPath",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {"name": "PIPELINE"}
+        },
+        {
+          "functionName": "HammingTable::calculateForState",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {"name": "PIPELINE"}
+        }
+      ]
+    }]}

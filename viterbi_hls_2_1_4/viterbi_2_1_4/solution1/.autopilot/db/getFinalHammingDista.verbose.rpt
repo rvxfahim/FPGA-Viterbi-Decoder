@@ -1,0 +1,1010 @@
+
+
+================================================================
+== Vivado HLS Report for 'getFinalHammingDista'
+================================================================
+* Date:           Thu Jul 28 06:40:29 2022
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        viterbi_2_1_4
+* Solution:       solution1
+* Product family: spartan7
+* Target device:  xc7s100-fgga676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     1.769|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    4|    4|    4|    4| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       -|      -|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        -|      -|       -|      -|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|     96|    -|
+|Register         |        -|      -|      86|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|      0|      86|     96|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      240|    160|  128000|  64000|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    +----------------------------------------------------+----+-----------+-----+-----------+
+    |                        Name                        | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------------------+----+-----------+-----+-----------+
+    |HammingTable_hammingDistances_finalStates_address0  |  27|          5|    3|         15|
+    |HammingTable_hammingDistances_finalStates_address1  |  27|          5|    3|         15|
+    |ap_NS_iter0_fsm                                     |  27|          5|    4|         20|
+    |ap_NS_iter1_fsm                                     |  15|          3|    2|          6|
+    +----------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                               |  96|         18|   12|         56|
+    +----------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------------------+---+----+-----+-----------+
+    |                      Name                     | FF| LUT| Bits| Const Bits|
+    +-----------------------------------------------+---+----+-----+-----------+
+    |HammingTable_hamming_27_reg_161                |  8|   0|    8|          0|
+    |HammingTable_hamming_27_reg_161_pp0_iter0_reg  |  8|   0|    8|          0|
+    |HammingTable_hamming_29_reg_166                |  8|   0|    8|          0|
+    |HammingTable_hamming_29_reg_166_pp0_iter0_reg  |  8|   0|    8|          0|
+    |HammingTable_hamming_31_reg_181                |  8|   0|    8|          0|
+    |HammingTable_hamming_31_reg_181_pp0_iter0_reg  |  8|   0|    8|          0|
+    |HammingTable_hamming_33_reg_186                |  8|   0|    8|          0|
+    |HammingTable_hamming_33_reg_186_pp0_iter0_reg  |  8|   0|    8|          0|
+    |HammingTable_hamming_35_reg_201                |  8|   0|    8|          0|
+    |HammingTable_hamming_37_reg_206                |  8|   0|    8|          0|
+    |ap_CS_iter0_fsm                                |  4|   0|    4|          0|
+    |ap_CS_iter1_fsm                                |  2|   0|    2|          0|
+    +-----------------------------------------------+---+----+-----+-----------+
+    |Total                                          | 86|   0|   86|          0|
+    +-----------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------------------------------+-----+-----+------------+-------------------------------------------+--------------+
+|                      RTL Ports                     | Dir | Bits|  Protocol  |               Source Object               |    C Type    |
++----------------------------------------------------+-----+-----+------------+-------------------------------------------+--------------+
+|ap_clk                                              |  in |    1| ap_ctrl_hs |            getFinalHammingDista           | return value |
+|ap_rst                                              |  in |    1| ap_ctrl_hs |            getFinalHammingDista           | return value |
+|ap_start                                            |  in |    1| ap_ctrl_hs |            getFinalHammingDista           | return value |
+|ap_done                                             | out |    1| ap_ctrl_hs |            getFinalHammingDista           | return value |
+|ap_idle                                             | out |    1| ap_ctrl_hs |            getFinalHammingDista           | return value |
+|ap_ready                                            | out |    1| ap_ctrl_hs |            getFinalHammingDista           | return value |
+|ap_ce                                               |  in |    1| ap_ctrl_hs |            getFinalHammingDista           | return value |
+|ap_return_0                                         | out |    8| ap_ctrl_hs |            getFinalHammingDista           | return value |
+|ap_return_1                                         | out |    8| ap_ctrl_hs |            getFinalHammingDista           | return value |
+|ap_return_2                                         | out |    8| ap_ctrl_hs |            getFinalHammingDista           | return value |
+|ap_return_3                                         | out |    8| ap_ctrl_hs |            getFinalHammingDista           | return value |
+|ap_return_4                                         | out |    8| ap_ctrl_hs |            getFinalHammingDista           | return value |
+|ap_return_5                                         | out |    8| ap_ctrl_hs |            getFinalHammingDista           | return value |
+|ap_return_6                                         | out |    8| ap_ctrl_hs |            getFinalHammingDista           | return value |
+|ap_return_7                                         | out |    8| ap_ctrl_hs |            getFinalHammingDista           | return value |
+|HammingTable_hammingDistances_finalStates_address0  | out |    3|  ap_memory | HammingTable_hammingDistances_finalStates |     array    |
+|HammingTable_hammingDistances_finalStates_ce0       | out |    1|  ap_memory | HammingTable_hammingDistances_finalStates |     array    |
+|HammingTable_hammingDistances_finalStates_q0        |  in |    8|  ap_memory | HammingTable_hammingDistances_finalStates |     array    |
+|HammingTable_hammingDistances_finalStates_address1  | out |    3|  ap_memory | HammingTable_hammingDistances_finalStates |     array    |
+|HammingTable_hammingDistances_finalStates_ce1       | out |    1|  ap_memory | HammingTable_hammingDistances_finalStates |     array    |
+|HammingTable_hammingDistances_finalStates_q1        |  in |    8|  ap_memory | HammingTable_hammingDistances_finalStates |     array    |
++----------------------------------------------------+-----+-----+------------+-------------------------------------------+--------------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 2
+HasWiredReturn: 1
+HasMFsm: 1
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 4, depth = 5
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 1
+  Pipeline-0 : II = 4, D = 5, States = { 1 2 3 4 5 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.76>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%HammingTable_hamming = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 0" [viterbi_2_1_4/viterbi.cpp:288]   --->   Operation 6 'getelementptr' 'HammingTable_hamming' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [2/2] (1.76ns)   --->   "%HammingTable_hamming_27 = load i8* %HammingTable_hamming, align 1" [viterbi_2_1_4/viterbi.cpp:288]   --->   Operation 7 'load' 'HammingTable_hamming_27' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%HammingTable_hamming_28 = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 1" [viterbi_2_1_4/viterbi.cpp:288]   --->   Operation 8 'getelementptr' 'HammingTable_hamming_28' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [2/2] (1.76ns)   --->   "%HammingTable_hamming_29 = load i8* %HammingTable_hamming_28, align 1" [viterbi_2_1_4/viterbi.cpp:288]   --->   Operation 9 'load' 'HammingTable_hamming_29' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+
+State 2 <SV = 1> <Delay = 1.76>
+ST_2 : Operation 10 [1/2] (1.76ns)   --->   "%HammingTable_hamming_27 = load i8* %HammingTable_hamming, align 1" [viterbi_2_1_4/viterbi.cpp:288]   --->   Operation 10 'load' 'HammingTable_hamming_27' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_2 : Operation 11 [1/2] (1.76ns)   --->   "%HammingTable_hamming_29 = load i8* %HammingTable_hamming_28, align 1" [viterbi_2_1_4/viterbi.cpp:288]   --->   Operation 11 'load' 'HammingTable_hamming_29' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%HammingTable_hamming_30 = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 2" [viterbi_2_1_4/viterbi.cpp:288]   --->   Operation 12 'getelementptr' 'HammingTable_hamming_30' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [2/2] (1.76ns)   --->   "%HammingTable_hamming_31 = load i8* %HammingTable_hamming_30, align 1" [viterbi_2_1_4/viterbi.cpp:288]   --->   Operation 13 'load' 'HammingTable_hamming_31' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%HammingTable_hamming_32 = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 3" [viterbi_2_1_4/viterbi.cpp:288]   --->   Operation 14 'getelementptr' 'HammingTable_hamming_32' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [2/2] (1.76ns)   --->   "%HammingTable_hamming_33 = load i8* %HammingTable_hamming_32, align 1" [viterbi_2_1_4/viterbi.cpp:288]   --->   Operation 15 'load' 'HammingTable_hamming_33' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+
+State 3 <SV = 2> <Delay = 1.76>
+ST_3 : Operation 16 [1/2] (1.76ns)   --->   "%HammingTable_hamming_31 = load i8* %HammingTable_hamming_30, align 1" [viterbi_2_1_4/viterbi.cpp:288]   --->   Operation 16 'load' 'HammingTable_hamming_31' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_3 : Operation 17 [1/2] (1.76ns)   --->   "%HammingTable_hamming_33 = load i8* %HammingTable_hamming_32, align 1" [viterbi_2_1_4/viterbi.cpp:288]   --->   Operation 17 'load' 'HammingTable_hamming_33' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_3 : Operation 18 [1/1] (0.00ns)   --->   "%HammingTable_hamming_34 = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 4" [viterbi_2_1_4/viterbi.cpp:288]   --->   Operation 18 'getelementptr' 'HammingTable_hamming_34' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 19 [2/2] (1.76ns)   --->   "%HammingTable_hamming_35 = load i8* %HammingTable_hamming_34, align 1" [viterbi_2_1_4/viterbi.cpp:288]   --->   Operation 19 'load' 'HammingTable_hamming_35' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_3 : Operation 20 [1/1] (0.00ns)   --->   "%HammingTable_hamming_36 = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 5" [viterbi_2_1_4/viterbi.cpp:288]   --->   Operation 20 'getelementptr' 'HammingTable_hamming_36' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 21 [2/2] (1.76ns)   --->   "%HammingTable_hamming_37 = load i8* %HammingTable_hamming_36, align 1" [viterbi_2_1_4/viterbi.cpp:288]   --->   Operation 21 'load' 'HammingTable_hamming_37' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+
+State 4 <SV = 3> <Delay = 1.76>
+ST_4 : Operation 22 [1/2] (1.76ns)   --->   "%HammingTable_hamming_35 = load i8* %HammingTable_hamming_34, align 1" [viterbi_2_1_4/viterbi.cpp:288]   --->   Operation 22 'load' 'HammingTable_hamming_35' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_4 : Operation 23 [1/2] (1.76ns)   --->   "%HammingTable_hamming_37 = load i8* %HammingTable_hamming_36, align 1" [viterbi_2_1_4/viterbi.cpp:288]   --->   Operation 23 'load' 'HammingTable_hamming_37' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_4 : Operation 24 [1/1] (0.00ns)   --->   "%HammingTable_hamming_38 = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 6" [viterbi_2_1_4/viterbi.cpp:288]   --->   Operation 24 'getelementptr' 'HammingTable_hamming_38' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 25 [2/2] (1.76ns)   --->   "%HammingTable_hamming_39 = load i8* %HammingTable_hamming_38, align 1" [viterbi_2_1_4/viterbi.cpp:288]   --->   Operation 25 'load' 'HammingTable_hamming_39' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_4 : Operation 26 [1/1] (0.00ns)   --->   "%HammingTable_hamming_40 = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 7" [viterbi_2_1_4/viterbi.cpp:288]   --->   Operation 26 'getelementptr' 'HammingTable_hamming_40' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 27 [2/2] (1.76ns)   --->   "%HammingTable_hamming_41 = load i8* %HammingTable_hamming_40, align 1" [viterbi_2_1_4/viterbi.cpp:288]   --->   Operation 27 'load' 'HammingTable_hamming_41' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+
+State 5 <SV = 4> <Delay = 1.76>
+ST_5 : Operation 28 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecFUCore([8 x i8]* %HammingTable_hammingDistances_finalStates, [1 x i8]* @p_str, [7 x i8]* @p_str2, [1 x i8]* @p_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 28 'specfucore' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 29 [1/2] (1.76ns)   --->   "%HammingTable_hamming_39 = load i8* %HammingTable_hamming_38, align 1" [viterbi_2_1_4/viterbi.cpp:288]   --->   Operation 29 'load' 'HammingTable_hamming_39' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_5 : Operation 30 [1/2] (1.76ns)   --->   "%HammingTable_hamming_41 = load i8* %HammingTable_hamming_40, align 1" [viterbi_2_1_4/viterbi.cpp:288]   --->   Operation 30 'load' 'HammingTable_hamming_41' <Predicate = true> <Delay = 1.76> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.76> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 8> <RAM>
+ST_5 : Operation 31 [1/1] (0.00ns)   --->   "%mrv = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8 } undef, i8 %HammingTable_hamming_27, 0" [viterbi_2_1_4/viterbi.cpp:288]   --->   Operation 31 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 32 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8 } %mrv, i8 %HammingTable_hamming_29, 1" [viterbi_2_1_4/viterbi.cpp:288]   --->   Operation 32 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 33 [1/1] (0.00ns)   --->   "%mrv_2 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_1, i8 %HammingTable_hamming_31, 2" [viterbi_2_1_4/viterbi.cpp:288]   --->   Operation 33 'insertvalue' 'mrv_2' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 34 [1/1] (0.00ns)   --->   "%mrv_3 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_2, i8 %HammingTable_hamming_33, 3" [viterbi_2_1_4/viterbi.cpp:288]   --->   Operation 34 'insertvalue' 'mrv_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 35 [1/1] (0.00ns)   --->   "%mrv_4 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_3, i8 %HammingTable_hamming_35, 4" [viterbi_2_1_4/viterbi.cpp:288]   --->   Operation 35 'insertvalue' 'mrv_4' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 36 [1/1] (0.00ns)   --->   "%mrv_5 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_4, i8 %HammingTable_hamming_37, 5" [viterbi_2_1_4/viterbi.cpp:288]   --->   Operation 36 'insertvalue' 'mrv_5' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 37 [1/1] (0.00ns)   --->   "%mrv_6 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_5, i8 %HammingTable_hamming_39, 6" [viterbi_2_1_4/viterbi.cpp:288]   --->   Operation 37 'insertvalue' 'mrv_6' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 38 [1/1] (0.00ns)   --->   "%mrv_7 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_6, i8 %HammingTable_hamming_41, 7" [viterbi_2_1_4/viterbi.cpp:288]   --->   Operation 38 'insertvalue' 'mrv_7' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 39 [1/1] (0.00ns)   --->   "ret { i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_7" [viterbi_2_1_4/viterbi.cpp:288]   --->   Operation 39 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 1
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ HammingTable_hammingDistances_finalStates]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[11]; IO mode=ap_memory:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+HammingTable_hamming    (getelementptr) [ 001000]
+HammingTable_hamming_28 (getelementptr) [ 001000]
+HammingTable_hamming_27 (load         ) [ 010111]
+HammingTable_hamming_29 (load         ) [ 010111]
+HammingTable_hamming_30 (getelementptr) [ 000100]
+HammingTable_hamming_32 (getelementptr) [ 000100]
+HammingTable_hamming_31 (load         ) [ 010011]
+HammingTable_hamming_33 (load         ) [ 010011]
+HammingTable_hamming_34 (getelementptr) [ 000010]
+HammingTable_hamming_36 (getelementptr) [ 000010]
+HammingTable_hamming_35 (load         ) [ 010001]
+HammingTable_hamming_37 (load         ) [ 010001]
+HammingTable_hamming_38 (getelementptr) [ 010001]
+HammingTable_hamming_40 (getelementptr) [ 010001]
+specfucore_ln0          (specfucore   ) [ 000000]
+HammingTable_hamming_39 (load         ) [ 000000]
+HammingTable_hamming_41 (load         ) [ 000000]
+mrv                     (insertvalue  ) [ 000000]
+mrv_1                   (insertvalue  ) [ 000000]
+mrv_2                   (insertvalue  ) [ 000000]
+mrv_3                   (insertvalue  ) [ 000000]
+mrv_4                   (insertvalue  ) [ 000000]
+mrv_5                   (insertvalue  ) [ 000000]
+mrv_6                   (insertvalue  ) [ 000000]
+mrv_7                   (insertvalue  ) [ 000000]
+ret_ln288               (ret          ) [ 000000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="HammingTable_hammingDistances_finalStates">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="HammingTable_hammingDistances_finalStates"/><MemPortTyVec>1 1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1001" name="const_2">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1001" name="const_4">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1001" name="const_6">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1001" name="const_8">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1001" name="const_10">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1001" name="const_12">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1001" name="const_14">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1001" name="const_16">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1001" name="const_18">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecFUCore"/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1004" name="HammingTable_hamming_gep_fu_28">
+<pin_list>
+<pin id="29" dir="0" index="0" bw="8" slack="0"/>
+<pin id="30" dir="0" index="1" bw="1" slack="0"/>
+<pin id="31" dir="0" index="2" bw="1" slack="0"/>
+<pin id="32" dir="1" index="3" bw="3" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="HammingTable_hamming/1 "/>
+</bind>
+</comp>
+
+<comp id="36" class="1004" name="grp_access_fu_36">
+<pin_list>
+<pin id="37" dir="0" index="0" bw="3" slack="0"/>
+<pin id="38" dir="0" index="1" bw="8" slack="2147483647"/>
+<pin id="39" dir="0" index="2" bw="0" slack="0"/>
+<pin id="50" dir="0" index="4" bw="3" slack="2147483647"/>
+<pin id="51" dir="0" index="5" bw="8" slack="2147483647"/>
+<pin id="52" dir="0" index="6" bw="0" slack="2147483647"/>
+<pin id="40" dir="1" index="3" bw="8" slack="0"/>
+<pin id="53" dir="1" index="7" bw="8" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="HammingTable_hamming_27/1 HammingTable_hamming_29/1 HammingTable_hamming_31/2 HammingTable_hamming_33/2 HammingTable_hamming_35/3 HammingTable_hamming_37/3 HammingTable_hamming_39/4 HammingTable_hamming_41/4 "/>
+</bind>
+</comp>
+
+<comp id="42" class="1004" name="HammingTable_hamming_28_gep_fu_42">
+<pin_list>
+<pin id="43" dir="0" index="0" bw="8" slack="0"/>
+<pin id="44" dir="0" index="1" bw="1" slack="0"/>
+<pin id="45" dir="0" index="2" bw="1" slack="0"/>
+<pin id="46" dir="1" index="3" bw="3" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="HammingTable_hamming_28/1 "/>
+</bind>
+</comp>
+
+<comp id="55" class="1004" name="HammingTable_hamming_30_gep_fu_55">
+<pin_list>
+<pin id="56" dir="0" index="0" bw="8" slack="0"/>
+<pin id="57" dir="0" index="1" bw="1" slack="0"/>
+<pin id="58" dir="0" index="2" bw="3" slack="0"/>
+<pin id="59" dir="1" index="3" bw="3" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="HammingTable_hamming_30/2 "/>
+</bind>
+</comp>
+
+<comp id="64" class="1004" name="HammingTable_hamming_32_gep_fu_64">
+<pin_list>
+<pin id="65" dir="0" index="0" bw="8" slack="0"/>
+<pin id="66" dir="0" index="1" bw="1" slack="0"/>
+<pin id="67" dir="0" index="2" bw="3" slack="0"/>
+<pin id="68" dir="1" index="3" bw="3" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="HammingTable_hamming_32/2 "/>
+</bind>
+</comp>
+
+<comp id="73" class="1004" name="HammingTable_hamming_34_gep_fu_73">
+<pin_list>
+<pin id="74" dir="0" index="0" bw="8" slack="0"/>
+<pin id="75" dir="0" index="1" bw="1" slack="0"/>
+<pin id="76" dir="0" index="2" bw="4" slack="0"/>
+<pin id="77" dir="1" index="3" bw="3" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="HammingTable_hamming_34/3 "/>
+</bind>
+</comp>
+
+<comp id="82" class="1004" name="HammingTable_hamming_36_gep_fu_82">
+<pin_list>
+<pin id="83" dir="0" index="0" bw="8" slack="0"/>
+<pin id="84" dir="0" index="1" bw="1" slack="0"/>
+<pin id="85" dir="0" index="2" bw="4" slack="0"/>
+<pin id="86" dir="1" index="3" bw="3" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="HammingTable_hamming_36/3 "/>
+</bind>
+</comp>
+
+<comp id="91" class="1004" name="HammingTable_hamming_38_gep_fu_91">
+<pin_list>
+<pin id="92" dir="0" index="0" bw="8" slack="0"/>
+<pin id="93" dir="0" index="1" bw="1" slack="0"/>
+<pin id="94" dir="0" index="2" bw="4" slack="0"/>
+<pin id="95" dir="1" index="3" bw="3" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="HammingTable_hamming_38/4 "/>
+</bind>
+</comp>
+
+<comp id="100" class="1004" name="HammingTable_hamming_40_gep_fu_100">
+<pin_list>
+<pin id="101" dir="0" index="0" bw="8" slack="0"/>
+<pin id="102" dir="0" index="1" bw="1" slack="0"/>
+<pin id="103" dir="0" index="2" bw="4" slack="0"/>
+<pin id="104" dir="1" index="3" bw="3" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="HammingTable_hamming_40/4 "/>
+</bind>
+</comp>
+
+<comp id="109" class="1004" name="mrv_fu_109">
+<pin_list>
+<pin id="110" dir="0" index="0" bw="64" slack="0"/>
+<pin id="111" dir="0" index="1" bw="8" slack="3"/>
+<pin id="112" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="insertvalue(57) " fcode="insertvalue"/>
+<opset="mrv/5 "/>
+</bind>
+</comp>
+
+<comp id="114" class="1004" name="mrv_1_fu_114">
+<pin_list>
+<pin id="115" dir="0" index="0" bw="64" slack="0"/>
+<pin id="116" dir="0" index="1" bw="8" slack="3"/>
+<pin id="117" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="insertvalue(57) " fcode="insertvalue"/>
+<opset="mrv_1/5 "/>
+</bind>
+</comp>
+
+<comp id="119" class="1004" name="mrv_2_fu_119">
+<pin_list>
+<pin id="120" dir="0" index="0" bw="64" slack="0"/>
+<pin id="121" dir="0" index="1" bw="8" slack="2"/>
+<pin id="122" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="insertvalue(57) " fcode="insertvalue"/>
+<opset="mrv_2/5 "/>
+</bind>
+</comp>
+
+<comp id="124" class="1004" name="mrv_3_fu_124">
+<pin_list>
+<pin id="125" dir="0" index="0" bw="64" slack="0"/>
+<pin id="126" dir="0" index="1" bw="8" slack="2"/>
+<pin id="127" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="insertvalue(57) " fcode="insertvalue"/>
+<opset="mrv_3/5 "/>
+</bind>
+</comp>
+
+<comp id="129" class="1004" name="mrv_4_fu_129">
+<pin_list>
+<pin id="130" dir="0" index="0" bw="64" slack="0"/>
+<pin id="131" dir="0" index="1" bw="8" slack="1"/>
+<pin id="132" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="insertvalue(57) " fcode="insertvalue"/>
+<opset="mrv_4/5 "/>
+</bind>
+</comp>
+
+<comp id="134" class="1004" name="mrv_5_fu_134">
+<pin_list>
+<pin id="135" dir="0" index="0" bw="64" slack="0"/>
+<pin id="136" dir="0" index="1" bw="8" slack="1"/>
+<pin id="137" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="insertvalue(57) " fcode="insertvalue"/>
+<opset="mrv_5/5 "/>
+</bind>
+</comp>
+
+<comp id="139" class="1004" name="mrv_6_fu_139">
+<pin_list>
+<pin id="140" dir="0" index="0" bw="64" slack="0"/>
+<pin id="141" dir="0" index="1" bw="8" slack="0"/>
+<pin id="142" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="insertvalue(57) " fcode="insertvalue"/>
+<opset="mrv_6/5 "/>
+</bind>
+</comp>
+
+<comp id="145" class="1004" name="mrv_7_fu_145">
+<pin_list>
+<pin id="146" dir="0" index="0" bw="64" slack="0"/>
+<pin id="147" dir="0" index="1" bw="8" slack="0"/>
+<pin id="148" dir="1" index="2" bw="64" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="insertvalue(57) " fcode="insertvalue"/>
+<opset="mrv_7/5 "/>
+</bind>
+</comp>
+
+<comp id="151" class="1005" name="HammingTable_hamming_reg_151">
+<pin_list>
+<pin id="152" dir="0" index="0" bw="3" slack="1"/>
+<pin id="153" dir="1" index="1" bw="3" slack="1"/>
+</pin_list>
+<bind>
+<opset="HammingTable_hamming "/>
+</bind>
+</comp>
+
+<comp id="156" class="1005" name="HammingTable_hamming_28_reg_156">
+<pin_list>
+<pin id="157" dir="0" index="0" bw="3" slack="1"/>
+<pin id="158" dir="1" index="1" bw="3" slack="1"/>
+</pin_list>
+<bind>
+<opset="HammingTable_hamming_28 "/>
+</bind>
+</comp>
+
+<comp id="161" class="1005" name="HammingTable_hamming_27_reg_161">
+<pin_list>
+<pin id="162" dir="0" index="0" bw="8" slack="3"/>
+<pin id="163" dir="1" index="1" bw="8" slack="3"/>
+</pin_list>
+<bind>
+<opset="HammingTable_hamming_27 "/>
+</bind>
+</comp>
+
+<comp id="166" class="1005" name="HammingTable_hamming_29_reg_166">
+<pin_list>
+<pin id="167" dir="0" index="0" bw="8" slack="3"/>
+<pin id="168" dir="1" index="1" bw="8" slack="3"/>
+</pin_list>
+<bind>
+<opset="HammingTable_hamming_29 "/>
+</bind>
+</comp>
+
+<comp id="171" class="1005" name="HammingTable_hamming_30_reg_171">
+<pin_list>
+<pin id="172" dir="0" index="0" bw="3" slack="1"/>
+<pin id="173" dir="1" index="1" bw="3" slack="1"/>
+</pin_list>
+<bind>
+<opset="HammingTable_hamming_30 "/>
+</bind>
+</comp>
+
+<comp id="176" class="1005" name="HammingTable_hamming_32_reg_176">
+<pin_list>
+<pin id="177" dir="0" index="0" bw="3" slack="1"/>
+<pin id="178" dir="1" index="1" bw="3" slack="1"/>
+</pin_list>
+<bind>
+<opset="HammingTable_hamming_32 "/>
+</bind>
+</comp>
+
+<comp id="181" class="1005" name="HammingTable_hamming_31_reg_181">
+<pin_list>
+<pin id="182" dir="0" index="0" bw="8" slack="2"/>
+<pin id="183" dir="1" index="1" bw="8" slack="2"/>
+</pin_list>
+<bind>
+<opset="HammingTable_hamming_31 "/>
+</bind>
+</comp>
+
+<comp id="186" class="1005" name="HammingTable_hamming_33_reg_186">
+<pin_list>
+<pin id="187" dir="0" index="0" bw="8" slack="2"/>
+<pin id="188" dir="1" index="1" bw="8" slack="2"/>
+</pin_list>
+<bind>
+<opset="HammingTable_hamming_33 "/>
+</bind>
+</comp>
+
+<comp id="191" class="1005" name="HammingTable_hamming_34_reg_191">
+<pin_list>
+<pin id="192" dir="0" index="0" bw="3" slack="1"/>
+<pin id="193" dir="1" index="1" bw="3" slack="1"/>
+</pin_list>
+<bind>
+<opset="HammingTable_hamming_34 "/>
+</bind>
+</comp>
+
+<comp id="196" class="1005" name="HammingTable_hamming_36_reg_196">
+<pin_list>
+<pin id="197" dir="0" index="0" bw="3" slack="1"/>
+<pin id="198" dir="1" index="1" bw="3" slack="1"/>
+</pin_list>
+<bind>
+<opset="HammingTable_hamming_36 "/>
+</bind>
+</comp>
+
+<comp id="201" class="1005" name="HammingTable_hamming_35_reg_201">
+<pin_list>
+<pin id="202" dir="0" index="0" bw="8" slack="1"/>
+<pin id="203" dir="1" index="1" bw="8" slack="1"/>
+</pin_list>
+<bind>
+<opset="HammingTable_hamming_35 "/>
+</bind>
+</comp>
+
+<comp id="206" class="1005" name="HammingTable_hamming_37_reg_206">
+<pin_list>
+<pin id="207" dir="0" index="0" bw="8" slack="1"/>
+<pin id="208" dir="1" index="1" bw="8" slack="1"/>
+</pin_list>
+<bind>
+<opset="HammingTable_hamming_37 "/>
+</bind>
+</comp>
+
+<comp id="211" class="1005" name="HammingTable_hamming_38_reg_211">
+<pin_list>
+<pin id="212" dir="0" index="0" bw="3" slack="1"/>
+<pin id="213" dir="1" index="1" bw="3" slack="1"/>
+</pin_list>
+<bind>
+<opset="HammingTable_hamming_38 "/>
+</bind>
+</comp>
+
+<comp id="216" class="1005" name="HammingTable_hamming_40_reg_216">
+<pin_list>
+<pin id="217" dir="0" index="0" bw="3" slack="1"/>
+<pin id="218" dir="1" index="1" bw="3" slack="1"/>
+</pin_list>
+<bind>
+<opset="HammingTable_hamming_40 "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="33"><net_src comp="0" pin="0"/><net_sink comp="28" pin=0"/></net>
+
+<net id="34"><net_src comp="2" pin="0"/><net_sink comp="28" pin=1"/></net>
+
+<net id="35"><net_src comp="2" pin="0"/><net_sink comp="28" pin=2"/></net>
+
+<net id="41"><net_src comp="28" pin="3"/><net_sink comp="36" pin=0"/></net>
+
+<net id="47"><net_src comp="0" pin="0"/><net_sink comp="42" pin=0"/></net>
+
+<net id="48"><net_src comp="2" pin="0"/><net_sink comp="42" pin=1"/></net>
+
+<net id="49"><net_src comp="4" pin="0"/><net_sink comp="42" pin=2"/></net>
+
+<net id="54"><net_src comp="42" pin="3"/><net_sink comp="36" pin=2"/></net>
+
+<net id="60"><net_src comp="0" pin="0"/><net_sink comp="55" pin=0"/></net>
+
+<net id="61"><net_src comp="2" pin="0"/><net_sink comp="55" pin=1"/></net>
+
+<net id="62"><net_src comp="6" pin="0"/><net_sink comp="55" pin=2"/></net>
+
+<net id="63"><net_src comp="55" pin="3"/><net_sink comp="36" pin=0"/></net>
+
+<net id="69"><net_src comp="0" pin="0"/><net_sink comp="64" pin=0"/></net>
+
+<net id="70"><net_src comp="2" pin="0"/><net_sink comp="64" pin=1"/></net>
+
+<net id="71"><net_src comp="8" pin="0"/><net_sink comp="64" pin=2"/></net>
+
+<net id="72"><net_src comp="64" pin="3"/><net_sink comp="36" pin=2"/></net>
+
+<net id="78"><net_src comp="0" pin="0"/><net_sink comp="73" pin=0"/></net>
+
+<net id="79"><net_src comp="2" pin="0"/><net_sink comp="73" pin=1"/></net>
+
+<net id="80"><net_src comp="10" pin="0"/><net_sink comp="73" pin=2"/></net>
+
+<net id="81"><net_src comp="73" pin="3"/><net_sink comp="36" pin=0"/></net>
+
+<net id="87"><net_src comp="0" pin="0"/><net_sink comp="82" pin=0"/></net>
+
+<net id="88"><net_src comp="2" pin="0"/><net_sink comp="82" pin=1"/></net>
+
+<net id="89"><net_src comp="12" pin="0"/><net_sink comp="82" pin=2"/></net>
+
+<net id="90"><net_src comp="82" pin="3"/><net_sink comp="36" pin=2"/></net>
+
+<net id="96"><net_src comp="0" pin="0"/><net_sink comp="91" pin=0"/></net>
+
+<net id="97"><net_src comp="2" pin="0"/><net_sink comp="91" pin=1"/></net>
+
+<net id="98"><net_src comp="14" pin="0"/><net_sink comp="91" pin=2"/></net>
+
+<net id="99"><net_src comp="91" pin="3"/><net_sink comp="36" pin=0"/></net>
+
+<net id="105"><net_src comp="0" pin="0"/><net_sink comp="100" pin=0"/></net>
+
+<net id="106"><net_src comp="2" pin="0"/><net_sink comp="100" pin=1"/></net>
+
+<net id="107"><net_src comp="16" pin="0"/><net_sink comp="100" pin=2"/></net>
+
+<net id="108"><net_src comp="100" pin="3"/><net_sink comp="36" pin=2"/></net>
+
+<net id="113"><net_src comp="26" pin="0"/><net_sink comp="109" pin=0"/></net>
+
+<net id="118"><net_src comp="109" pin="2"/><net_sink comp="114" pin=0"/></net>
+
+<net id="123"><net_src comp="114" pin="2"/><net_sink comp="119" pin=0"/></net>
+
+<net id="128"><net_src comp="119" pin="2"/><net_sink comp="124" pin=0"/></net>
+
+<net id="133"><net_src comp="124" pin="2"/><net_sink comp="129" pin=0"/></net>
+
+<net id="138"><net_src comp="129" pin="2"/><net_sink comp="134" pin=0"/></net>
+
+<net id="143"><net_src comp="134" pin="2"/><net_sink comp="139" pin=0"/></net>
+
+<net id="144"><net_src comp="36" pin="3"/><net_sink comp="139" pin=1"/></net>
+
+<net id="149"><net_src comp="139" pin="2"/><net_sink comp="145" pin=0"/></net>
+
+<net id="150"><net_src comp="36" pin="7"/><net_sink comp="145" pin=1"/></net>
+
+<net id="154"><net_src comp="28" pin="3"/><net_sink comp="151" pin=0"/></net>
+
+<net id="155"><net_src comp="151" pin="1"/><net_sink comp="36" pin=0"/></net>
+
+<net id="159"><net_src comp="42" pin="3"/><net_sink comp="156" pin=0"/></net>
+
+<net id="160"><net_src comp="156" pin="1"/><net_sink comp="36" pin=2"/></net>
+
+<net id="164"><net_src comp="36" pin="3"/><net_sink comp="161" pin=0"/></net>
+
+<net id="165"><net_src comp="161" pin="1"/><net_sink comp="109" pin=1"/></net>
+
+<net id="169"><net_src comp="36" pin="7"/><net_sink comp="166" pin=0"/></net>
+
+<net id="170"><net_src comp="166" pin="1"/><net_sink comp="114" pin=1"/></net>
+
+<net id="174"><net_src comp="55" pin="3"/><net_sink comp="171" pin=0"/></net>
+
+<net id="175"><net_src comp="171" pin="1"/><net_sink comp="36" pin=0"/></net>
+
+<net id="179"><net_src comp="64" pin="3"/><net_sink comp="176" pin=0"/></net>
+
+<net id="180"><net_src comp="176" pin="1"/><net_sink comp="36" pin=2"/></net>
+
+<net id="184"><net_src comp="36" pin="3"/><net_sink comp="181" pin=0"/></net>
+
+<net id="185"><net_src comp="181" pin="1"/><net_sink comp="119" pin=1"/></net>
+
+<net id="189"><net_src comp="36" pin="7"/><net_sink comp="186" pin=0"/></net>
+
+<net id="190"><net_src comp="186" pin="1"/><net_sink comp="124" pin=1"/></net>
+
+<net id="194"><net_src comp="73" pin="3"/><net_sink comp="191" pin=0"/></net>
+
+<net id="195"><net_src comp="191" pin="1"/><net_sink comp="36" pin=0"/></net>
+
+<net id="199"><net_src comp="82" pin="3"/><net_sink comp="196" pin=0"/></net>
+
+<net id="200"><net_src comp="196" pin="1"/><net_sink comp="36" pin=2"/></net>
+
+<net id="204"><net_src comp="36" pin="3"/><net_sink comp="201" pin=0"/></net>
+
+<net id="205"><net_src comp="201" pin="1"/><net_sink comp="129" pin=1"/></net>
+
+<net id="209"><net_src comp="36" pin="7"/><net_sink comp="206" pin=0"/></net>
+
+<net id="210"><net_src comp="206" pin="1"/><net_sink comp="134" pin=1"/></net>
+
+<net id="214"><net_src comp="91" pin="3"/><net_sink comp="211" pin=0"/></net>
+
+<net id="215"><net_src comp="211" pin="1"/><net_sink comp="36" pin=0"/></net>
+
+<net id="219"><net_src comp="100" pin="3"/><net_sink comp="216" pin=0"/></net>
+
+<net id="220"><net_src comp="216" pin="1"/><net_sink comp="36" pin=2"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+	Port: getFinalHammingDista : HammingTable_hammingDistances_finalStates | {1 2 3 4 5 }
+  - Chain level:
+	State 1
+		HammingTable_hamming_27 : 1
+		HammingTable_hamming_29 : 1
+	State 2
+		HammingTable_hamming_31 : 1
+		HammingTable_hamming_33 : 1
+	State 3
+		HammingTable_hamming_35 : 1
+		HammingTable_hamming_37 : 1
+	State 4
+		HammingTable_hamming_39 : 1
+		HammingTable_hamming_41 : 1
+	State 5
+		mrv_1 : 1
+		mrv_2 : 2
+		mrv_3 : 3
+		mrv_4 : 4
+		mrv_5 : 5
+		mrv_6 : 6
+		mrv_7 : 7
+		ret_ln288 : 8
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|----------------|
+| Operation| Functional Unit|
+|----------|----------------|
+|          |   mrv_fu_109   |
+|          |  mrv_1_fu_114  |
+|          |  mrv_2_fu_119  |
+|insertvalue|  mrv_3_fu_124  |
+|          |  mrv_4_fu_129  |
+|          |  mrv_5_fu_134  |
+|          |  mrv_6_fu_139  |
+|          |  mrv_7_fu_145  |
+|----------|----------------|
+|   Total  |                |
+|----------|----------------|
+
+Memories:
+N/A
+
+* Register list:
++-------------------------------+--------+
+|                               |   FF   |
++-------------------------------+--------+
+|HammingTable_hamming_27_reg_161|    8   |
+|HammingTable_hamming_28_reg_156|    3   |
+|HammingTable_hamming_29_reg_166|    8   |
+|HammingTable_hamming_30_reg_171|    3   |
+|HammingTable_hamming_31_reg_181|    8   |
+|HammingTable_hamming_32_reg_176|    3   |
+|HammingTable_hamming_33_reg_186|    8   |
+|HammingTable_hamming_34_reg_191|    3   |
+|HammingTable_hamming_35_reg_201|    8   |
+|HammingTable_hamming_36_reg_196|    3   |
+|HammingTable_hamming_37_reg_206|    8   |
+|HammingTable_hamming_38_reg_211|    3   |
+|HammingTable_hamming_40_reg_216|    3   |
+|  HammingTable_hamming_reg_151 |    3   |
++-------------------------------+--------+
+|             Total             |   72   |
++-------------------------------+--------+
+
+* Multiplexer (MUX) list: 
+|------------------|------|------|------|--------||---------||---------|
+|       Comp       |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
+|------------------|------|------|------|--------||---------||---------|
+| grp_access_fu_36 |  p0  |   8  |   3  |   24   ||    41   |
+| grp_access_fu_36 |  p2  |   8  |   0  |    0   ||    41   |
+|------------------|------|------|------|--------||---------||---------|
+|       Total      |      |      |      |   24   ||  3.4948 ||    82   |
+|------------------|------|------|------|--------||---------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+
+|           |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+
+|  Function |    -   |    -   |    -   |
+|   Memory  |    -   |    -   |    -   |
+|Multiplexer|    3   |    -   |   82   |
+|  Register |    -   |   72   |    -   |
++-----------+--------+--------+--------+
+|   Total   |    3   |   72   |   82   |
++-----------+--------+--------+--------+

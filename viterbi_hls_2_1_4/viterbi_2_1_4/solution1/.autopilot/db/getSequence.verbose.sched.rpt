@@ -1,0 +1,221 @@
+
+
+================================================================
+== Vivado HLS Report for 'getSequence'
+================================================================
+* Date:           Thu Jul 28 06:40:26 2022
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        viterbi_2_1_4
+* Solution:       solution1
+* Product family: spartan7
+* Target device:  xc7s100-fgga676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     1.787|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    1|    1|    1|    1| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.78>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%stateB_read = call i4 @_ssdm_op_Read.ap_auto.i4(i4 %stateB)" [viterbi_2_1_4/viterbi.cpp:392]   --->   Operation 3 'read' 'stateB_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%stateA_read = call i4 @_ssdm_op_Read.ap_auto.i4(i4 %stateA)" [viterbi_2_1_4/viterbi.cpp:392]   --->   Operation 4 'read' 'stateA_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%trunc_ln429 = trunc i4 %stateB_read to i3" [viterbi_2_1_4/viterbi.cpp:429]   --->   Operation 5 'trunc' 'trunc_ln429' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%trunc_ln429_1 = trunc i4 %stateA_read to i3" [viterbi_2_1_4/viterbi.cpp:429]   --->   Operation 6 'trunc' 'trunc_ln429_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln429)   --->   "%or_ln429 = or i3 %trunc_ln429, %trunc_ln429_1" [viterbi_2_1_4/viterbi.cpp:429]   --->   Operation 7 'or' 'or_ln429' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 8 [1/1] (0.98ns) (out node of the LUT)   --->   "%icmp_ln429 = icmp eq i3 %or_ln429, 0" [viterbi_2_1_4/viterbi.cpp:429]   --->   Operation 8 'icmp' 'icmp_ln429' <Predicate = true> <Delay = 0.98> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "br i1 %icmp_ln429, label %1, label %2" [viterbi_2_1_4/viterbi.cpp:429]   --->   Operation 9 'br' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.98ns)   --->   "%icmp_ln434 = icmp eq i3 %trunc_ln429, 0" [viterbi_2_1_4/viterbi.cpp:434]   --->   Operation 10 'icmp' 'icmp_ln434' <Predicate = (!icmp_ln429)> <Delay = 0.98> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 11 [1/1] (0.98ns)   --->   "%icmp_ln434_1 = icmp eq i3 %trunc_ln429_1, 1" [viterbi_2_1_4/viterbi.cpp:434]   --->   Operation 11 'icmp' 'icmp_ln434_1' <Predicate = (!icmp_ln429)> <Delay = 0.98> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 12 [1/1] (0.80ns)   --->   "%and_ln434 = and i1 %icmp_ln434, %icmp_ln434_1" [viterbi_2_1_4/viterbi.cpp:434]   --->   Operation 12 'and' 'and_ln434' <Predicate = (!icmp_ln429)> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "br i1 %and_ln434, label %3, label %4" [viterbi_2_1_4/viterbi.cpp:434]   --->   Operation 13 'br' <Predicate = (!icmp_ln429)> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.98ns)   --->   "%icmp_ln439 = icmp eq i3 %trunc_ln429, 1" [viterbi_2_1_4/viterbi.cpp:439]   --->   Operation 14 'icmp' 'icmp_ln439' <Predicate = (!icmp_ln429 & !and_ln434)> <Delay = 0.98> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 15 [1/1] (0.98ns)   --->   "%icmp_ln439_1 = icmp eq i3 %trunc_ln429_1, 2" [viterbi_2_1_4/viterbi.cpp:439]   --->   Operation 15 'icmp' 'icmp_ln439_1' <Predicate = (!icmp_ln429 & !and_ln434)> <Delay = 0.98> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 16 [1/1] (0.80ns)   --->   "%and_ln439 = and i1 %icmp_ln439, %icmp_ln439_1" [viterbi_2_1_4/viterbi.cpp:439]   --->   Operation 16 'and' 'and_ln439' <Predicate = (!icmp_ln429 & !and_ln434)> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "br i1 %and_ln439, label %5, label %6" [viterbi_2_1_4/viterbi.cpp:439]   --->   Operation 17 'br' <Predicate = (!icmp_ln429 & !and_ln434)> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.98ns)   --->   "%icmp_ln444 = icmp eq i3 %trunc_ln429_1, 3" [viterbi_2_1_4/viterbi.cpp:444]   --->   Operation 18 'icmp' 'icmp_ln444' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439)> <Delay = 0.98> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 19 [1/1] (0.80ns)   --->   "%and_ln444 = and i1 %icmp_ln439, %icmp_ln444" [viterbi_2_1_4/viterbi.cpp:444]   --->   Operation 19 'and' 'and_ln444' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439)> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "br i1 %and_ln444, label %7, label %8" [viterbi_2_1_4/viterbi.cpp:444]   --->   Operation 20 'br' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439)> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.98ns)   --->   "%icmp_ln449 = icmp eq i3 %trunc_ln429, 2" [viterbi_2_1_4/viterbi.cpp:449]   --->   Operation 21 'icmp' 'icmp_ln449' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444)> <Delay = 0.98> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 22 [1/1] (0.98ns)   --->   "%icmp_ln449_1 = icmp eq i3 %trunc_ln429_1, -4" [viterbi_2_1_4/viterbi.cpp:449]   --->   Operation 22 'icmp' 'icmp_ln449_1' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444)> <Delay = 0.98> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 23 [1/1] (0.80ns)   --->   "%and_ln449 = and i1 %icmp_ln449, %icmp_ln449_1" [viterbi_2_1_4/viterbi.cpp:449]   --->   Operation 23 'and' 'and_ln449' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444)> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "br i1 %and_ln449, label %9, label %10" [viterbi_2_1_4/viterbi.cpp:449]   --->   Operation 24 'br' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444)> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.98ns)   --->   "%icmp_ln454 = icmp eq i3 %trunc_ln429_1, -3" [viterbi_2_1_4/viterbi.cpp:454]   --->   Operation 25 'icmp' 'icmp_ln454' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449)> <Delay = 0.98> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 26 [1/1] (0.80ns)   --->   "%and_ln454 = and i1 %icmp_ln449, %icmp_ln454" [viterbi_2_1_4/viterbi.cpp:454]   --->   Operation 26 'and' 'and_ln454' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449)> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "br i1 %and_ln454, label %11, label %12" [viterbi_2_1_4/viterbi.cpp:454]   --->   Operation 27 'br' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449)> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.98ns)   --->   "%icmp_ln459 = icmp eq i3 %trunc_ln429, 3" [viterbi_2_1_4/viterbi.cpp:459]   --->   Operation 28 'icmp' 'icmp_ln459' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454)> <Delay = 0.98> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 29 [1/1] (0.98ns)   --->   "%icmp_ln459_1 = icmp eq i3 %trunc_ln429_1, -2" [viterbi_2_1_4/viterbi.cpp:459]   --->   Operation 29 'icmp' 'icmp_ln459_1' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454)> <Delay = 0.98> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 30 [1/1] (0.80ns)   --->   "%and_ln459 = and i1 %icmp_ln459, %icmp_ln459_1" [viterbi_2_1_4/viterbi.cpp:459]   --->   Operation 30 'and' 'and_ln459' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454)> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "br i1 %and_ln459, label %13, label %14" [viterbi_2_1_4/viterbi.cpp:459]   --->   Operation 31 'br' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454)> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.98ns)   --->   "%icmp_ln464 = icmp eq i3 %trunc_ln429_1, -1" [viterbi_2_1_4/viterbi.cpp:464]   --->   Operation 32 'icmp' 'icmp_ln464' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459)> <Delay = 0.98> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 33 [1/1] (0.80ns)   --->   "%and_ln464 = and i1 %icmp_ln459, %icmp_ln464" [viterbi_2_1_4/viterbi.cpp:464]   --->   Operation 33 'and' 'and_ln464' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459)> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "br i1 %and_ln464, label %15, label %16" [viterbi_2_1_4/viterbi.cpp:464]   --->   Operation 34 'br' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459)> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.98ns)   --->   "%icmp_ln469 = icmp eq i3 %trunc_ln429, -4" [viterbi_2_1_4/viterbi.cpp:469]   --->   Operation 35 'icmp' 'icmp_ln469' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464)> <Delay = 0.98> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 36 [1/1] (0.98ns)   --->   "%icmp_ln469_1 = icmp eq i3 %trunc_ln429_1, 0" [viterbi_2_1_4/viterbi.cpp:469]   --->   Operation 36 'icmp' 'icmp_ln469_1' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464)> <Delay = 0.98> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 37 [1/1] (0.80ns)   --->   "%and_ln469 = and i1 %icmp_ln469, %icmp_ln469_1" [viterbi_2_1_4/viterbi.cpp:469]   --->   Operation 37 'and' 'and_ln469' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464)> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "br i1 %and_ln469, label %17, label %18" [viterbi_2_1_4/viterbi.cpp:469]   --->   Operation 38 'br' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464)> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.80ns)   --->   "%and_ln474 = and i1 %icmp_ln469, %icmp_ln434_1" [viterbi_2_1_4/viterbi.cpp:474]   --->   Operation 39 'and' 'and_ln474' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464 & !and_ln469)> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "br i1 %and_ln474, label %19, label %20" [viterbi_2_1_4/viterbi.cpp:474]   --->   Operation 40 'br' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464 & !and_ln469)> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.98ns)   --->   "%icmp_ln479 = icmp eq i3 %trunc_ln429, -3" [viterbi_2_1_4/viterbi.cpp:479]   --->   Operation 41 'icmp' 'icmp_ln479' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464 & !and_ln469 & !and_ln474)> <Delay = 0.98> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 42 [1/1] (0.80ns)   --->   "%and_ln479 = and i1 %icmp_ln479, %icmp_ln439_1" [viterbi_2_1_4/viterbi.cpp:479]   --->   Operation 42 'and' 'and_ln479' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464 & !and_ln469 & !and_ln474)> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "br i1 %and_ln479, label %21, label %22" [viterbi_2_1_4/viterbi.cpp:479]   --->   Operation 43 'br' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464 & !and_ln469 & !and_ln474)> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.80ns)   --->   "%and_ln484 = and i1 %icmp_ln479, %icmp_ln444" [viterbi_2_1_4/viterbi.cpp:484]   --->   Operation 44 'and' 'and_ln484' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464 & !and_ln469 & !and_ln474 & !and_ln479)> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "br i1 %and_ln484, label %23, label %24" [viterbi_2_1_4/viterbi.cpp:484]   --->   Operation 45 'br' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464 & !and_ln469 & !and_ln474 & !and_ln479)> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.98ns)   --->   "%icmp_ln489 = icmp eq i3 %trunc_ln429, -2" [viterbi_2_1_4/viterbi.cpp:489]   --->   Operation 46 'icmp' 'icmp_ln489' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464 & !and_ln469 & !and_ln474 & !and_ln479 & !and_ln484)> <Delay = 0.98> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 47 [1/1] (0.80ns)   --->   "%and_ln489 = and i1 %icmp_ln489, %icmp_ln449_1" [viterbi_2_1_4/viterbi.cpp:489]   --->   Operation 47 'and' 'and_ln489' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464 & !and_ln469 & !and_ln474 & !and_ln479 & !and_ln484)> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "br i1 %and_ln489, label %25, label %26" [viterbi_2_1_4/viterbi.cpp:489]   --->   Operation 48 'br' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464 & !and_ln469 & !and_ln474 & !and_ln479 & !and_ln484)> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.80ns)   --->   "%and_ln494 = and i1 %icmp_ln489, %icmp_ln454" [viterbi_2_1_4/viterbi.cpp:494]   --->   Operation 49 'and' 'and_ln494' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464 & !and_ln469 & !and_ln474 & !and_ln479 & !and_ln484 & !and_ln489)> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "br i1 %and_ln494, label %27, label %28" [viterbi_2_1_4/viterbi.cpp:494]   --->   Operation 50 'br' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464 & !and_ln469 & !and_ln474 & !and_ln479 & !and_ln484 & !and_ln489)> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.98ns)   --->   "%icmp_ln499 = icmp eq i3 %trunc_ln429, -1" [viterbi_2_1_4/viterbi.cpp:499]   --->   Operation 51 'icmp' 'icmp_ln499' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464 & !and_ln469 & !and_ln474 & !and_ln479 & !and_ln484 & !and_ln489 & !and_ln494)> <Delay = 0.98> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 52 [1/1] (0.80ns)   --->   "%and_ln499 = and i1 %icmp_ln499, %icmp_ln459_1" [viterbi_2_1_4/viterbi.cpp:499]   --->   Operation 52 'and' 'and_ln499' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464 & !and_ln469 & !and_ln474 & !and_ln479 & !and_ln484 & !and_ln489 & !and_ln494)> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "br i1 %and_ln499, label %29, label %30" [viterbi_2_1_4/viterbi.cpp:499]   --->   Operation 53 'br' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464 & !and_ln469 & !and_ln474 & !and_ln479 & !and_ln484 & !and_ln489 & !and_ln494)> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.80ns)   --->   "%and_ln504 = and i1 %icmp_ln499, %icmp_ln464" [viterbi_2_1_4/viterbi.cpp:504]   --->   Operation 54 'and' 'and_ln504' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464 & !and_ln469 & !and_ln474 & !and_ln479 & !and_ln484 & !and_ln489 & !and_ln494 & !and_ln499)> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "br i1 %and_ln504, label %31, label %._crit_edge" [viterbi_2_1_4/viterbi.cpp:504]   --->   Operation 55 'br' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464 & !and_ln469 & !and_ln474 & !and_ln479 & !and_ln484 & !and_ln489 & !and_ln494 & !and_ln499)> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (1.39ns)   --->   "store i1 true, i1* @bitSequence_decoded, align 1" [viterbi_2_1_4/viterbi.cpp:507]   --->   Operation 56 'store' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464 & !and_ln469 & !and_ln474 & !and_ln479 & !and_ln484 & !and_ln489 & !and_ln494 & !and_ln499 & and_ln504)> <Delay = 1.39>
+ST_1 : Operation 57 [1/1] (1.39ns)   --->   "store i1 true, i1* @bitSequence_decoded, align 1" [viterbi_2_1_4/viterbi.cpp:502]   --->   Operation 57 'store' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464 & !and_ln469 & !and_ln474 & !and_ln479 & !and_ln484 & !and_ln489 & !and_ln494 & and_ln499)> <Delay = 1.39>
+ST_1 : Operation 58 [1/1] (1.39ns)   --->   "store i1 true, i1* @bitSequence_decoded, align 1" [viterbi_2_1_4/viterbi.cpp:497]   --->   Operation 58 'store' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464 & !and_ln469 & !and_ln474 & !and_ln479 & !and_ln484 & !and_ln489 & and_ln494)> <Delay = 1.39>
+ST_1 : Operation 59 [1/1] (1.39ns)   --->   "store i1 true, i1* @bitSequence_decoded, align 1" [viterbi_2_1_4/viterbi.cpp:492]   --->   Operation 59 'store' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464 & !and_ln469 & !and_ln474 & !and_ln479 & !and_ln484 & and_ln489)> <Delay = 1.39>
+ST_1 : Operation 60 [1/1] (1.39ns)   --->   "store i1 true, i1* @bitSequence_decoded, align 1" [viterbi_2_1_4/viterbi.cpp:487]   --->   Operation 60 'store' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464 & !and_ln469 & !and_ln474 & !and_ln479 & and_ln484)> <Delay = 1.39>
+ST_1 : Operation 61 [1/1] (1.39ns)   --->   "store i1 true, i1* @bitSequence_decoded, align 1" [viterbi_2_1_4/viterbi.cpp:482]   --->   Operation 61 'store' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464 & !and_ln469 & !and_ln474 & and_ln479)> <Delay = 1.39>
+ST_1 : Operation 62 [1/1] (1.39ns)   --->   "store i1 true, i1* @bitSequence_decoded, align 1" [viterbi_2_1_4/viterbi.cpp:477]   --->   Operation 62 'store' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464 & !and_ln469 & and_ln474)> <Delay = 1.39>
+ST_1 : Operation 63 [1/1] (1.39ns)   --->   "store i1 true, i1* @bitSequence_decoded, align 1" [viterbi_2_1_4/viterbi.cpp:472]   --->   Operation 63 'store' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464 & and_ln469)> <Delay = 1.39>
+ST_1 : Operation 64 [1/1] (1.39ns)   --->   "store i1 false, i1* @bitSequence_decoded, align 1" [viterbi_2_1_4/viterbi.cpp:467]   --->   Operation 64 'store' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & and_ln464)> <Delay = 1.39>
+ST_1 : Operation 65 [1/1] (1.39ns)   --->   "store i1 false, i1* @bitSequence_decoded, align 1" [viterbi_2_1_4/viterbi.cpp:462]   --->   Operation 65 'store' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & and_ln459)> <Delay = 1.39>
+ST_1 : Operation 66 [1/1] (1.39ns)   --->   "store i1 false, i1* @bitSequence_decoded, align 1" [viterbi_2_1_4/viterbi.cpp:457]   --->   Operation 66 'store' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & and_ln454)> <Delay = 1.39>
+ST_1 : Operation 67 [1/1] (1.39ns)   --->   "store i1 false, i1* @bitSequence_decoded, align 1" [viterbi_2_1_4/viterbi.cpp:452]   --->   Operation 67 'store' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & and_ln449)> <Delay = 1.39>
+ST_1 : Operation 68 [1/1] (1.39ns)   --->   "store i1 false, i1* @bitSequence_decoded, align 1" [viterbi_2_1_4/viterbi.cpp:447]   --->   Operation 68 'store' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & and_ln444)> <Delay = 1.39>
+ST_1 : Operation 69 [1/1] (1.39ns)   --->   "store i1 false, i1* @bitSequence_decoded, align 1" [viterbi_2_1_4/viterbi.cpp:442]   --->   Operation 69 'store' <Predicate = (!icmp_ln429 & !and_ln434 & and_ln439)> <Delay = 1.39>
+ST_1 : Operation 70 [1/1] (1.39ns)   --->   "store i1 false, i1* @bitSequence_decoded, align 1" [viterbi_2_1_4/viterbi.cpp:437]   --->   Operation 70 'store' <Predicate = (!icmp_ln429 & and_ln434)> <Delay = 1.39>
+ST_1 : Operation 71 [1/1] (1.39ns)   --->   "store i1 false, i1* @bitSequence_decoded, align 1" [viterbi_2_1_4/viterbi.cpp:432]   --->   Operation 71 'store' <Predicate = (icmp_ln429)> <Delay = 1.39>
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 72 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind" [viterbi_2_1_4/viterbi.cpp:393]   --->   Operation 72 'specpipeline' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 73 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecFUCore(i32 0, [1 x i8]* @p_str, [6 x i8]* @p_str1, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)" [viterbi_2_1_4/viterbi.cpp:393]   --->   Operation 73 'specfucore' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 74 [1/1] (0.00ns)   --->   "br label %._crit_edge" [viterbi_2_1_4/viterbi.cpp:508]   --->   Operation 74 'br' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464 & !and_ln469 & !and_ln474 & !and_ln479 & !and_ln484 & !and_ln489 & !and_ln494 & !and_ln499 & and_ln504)> <Delay = 0.00>
+ST_2 : Operation 75 [1/1] (0.00ns)   --->   "br label %32"   --->   Operation 75 'br' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464 & !and_ln469 & !and_ln474 & !and_ln479 & !and_ln484 & !and_ln489 & !and_ln494 & !and_ln499)> <Delay = 0.00>
+ST_2 : Operation 76 [1/1] (0.00ns)   --->   "br label %32" [viterbi_2_1_4/viterbi.cpp:503]   --->   Operation 76 'br' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464 & !and_ln469 & !and_ln474 & !and_ln479 & !and_ln484 & !and_ln489 & !and_ln494 & and_ln499)> <Delay = 0.00>
+ST_2 : Operation 77 [1/1] (0.00ns)   --->   "br label %33"   --->   Operation 77 'br' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464 & !and_ln469 & !and_ln474 & !and_ln479 & !and_ln484 & !and_ln489 & !and_ln494)> <Delay = 0.00>
+ST_2 : Operation 78 [1/1] (0.00ns)   --->   "br label %33" [viterbi_2_1_4/viterbi.cpp:498]   --->   Operation 78 'br' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464 & !and_ln469 & !and_ln474 & !and_ln479 & !and_ln484 & !and_ln489 & and_ln494)> <Delay = 0.00>
+ST_2 : Operation 79 [1/1] (0.00ns)   --->   "br label %34"   --->   Operation 79 'br' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464 & !and_ln469 & !and_ln474 & !and_ln479 & !and_ln484 & !and_ln489)> <Delay = 0.00>
+ST_2 : Operation 80 [1/1] (0.00ns)   --->   "br label %34" [viterbi_2_1_4/viterbi.cpp:493]   --->   Operation 80 'br' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464 & !and_ln469 & !and_ln474 & !and_ln479 & !and_ln484 & and_ln489)> <Delay = 0.00>
+ST_2 : Operation 81 [1/1] (0.00ns)   --->   "br label %35"   --->   Operation 81 'br' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464 & !and_ln469 & !and_ln474 & !and_ln479 & !and_ln484)> <Delay = 0.00>
+ST_2 : Operation 82 [1/1] (0.00ns)   --->   "br label %35" [viterbi_2_1_4/viterbi.cpp:488]   --->   Operation 82 'br' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464 & !and_ln469 & !and_ln474 & !and_ln479 & and_ln484)> <Delay = 0.00>
+ST_2 : Operation 83 [1/1] (0.00ns)   --->   "br label %36"   --->   Operation 83 'br' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464 & !and_ln469 & !and_ln474 & !and_ln479)> <Delay = 0.00>
+ST_2 : Operation 84 [1/1] (0.00ns)   --->   "br label %36" [viterbi_2_1_4/viterbi.cpp:483]   --->   Operation 84 'br' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464 & !and_ln469 & !and_ln474 & and_ln479)> <Delay = 0.00>
+ST_2 : Operation 85 [1/1] (0.00ns)   --->   "br label %37"   --->   Operation 85 'br' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464 & !and_ln469 & !and_ln474)> <Delay = 0.00>
+ST_2 : Operation 86 [1/1] (0.00ns)   --->   "br label %37" [viterbi_2_1_4/viterbi.cpp:478]   --->   Operation 86 'br' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464 & !and_ln469 & and_ln474)> <Delay = 0.00>
+ST_2 : Operation 87 [1/1] (0.00ns)   --->   "br label %38"   --->   Operation 87 'br' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464 & !and_ln469)> <Delay = 0.00>
+ST_2 : Operation 88 [1/1] (0.00ns)   --->   "br label %38" [viterbi_2_1_4/viterbi.cpp:473]   --->   Operation 88 'br' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464 & and_ln469)> <Delay = 0.00>
+ST_2 : Operation 89 [1/1] (0.00ns)   --->   "br label %39"   --->   Operation 89 'br' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & !and_ln464)> <Delay = 0.00>
+ST_2 : Operation 90 [1/1] (0.00ns)   --->   "br label %39" [viterbi_2_1_4/viterbi.cpp:468]   --->   Operation 90 'br' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459 & and_ln464)> <Delay = 0.00>
+ST_2 : Operation 91 [1/1] (0.00ns)   --->   "br label %40"   --->   Operation 91 'br' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & !and_ln459)> <Delay = 0.00>
+ST_2 : Operation 92 [1/1] (0.00ns)   --->   "br label %40" [viterbi_2_1_4/viterbi.cpp:463]   --->   Operation 92 'br' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454 & and_ln459)> <Delay = 0.00>
+ST_2 : Operation 93 [1/1] (0.00ns)   --->   "br label %41"   --->   Operation 93 'br' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & !and_ln454)> <Delay = 0.00>
+ST_2 : Operation 94 [1/1] (0.00ns)   --->   "br label %41" [viterbi_2_1_4/viterbi.cpp:458]   --->   Operation 94 'br' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449 & and_ln454)> <Delay = 0.00>
+ST_2 : Operation 95 [1/1] (0.00ns)   --->   "br label %42"   --->   Operation 95 'br' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & !and_ln449)> <Delay = 0.00>
+ST_2 : Operation 96 [1/1] (0.00ns)   --->   "br label %42" [viterbi_2_1_4/viterbi.cpp:453]   --->   Operation 96 'br' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444 & and_ln449)> <Delay = 0.00>
+ST_2 : Operation 97 [1/1] (0.00ns)   --->   "br label %43"   --->   Operation 97 'br' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & !and_ln444)> <Delay = 0.00>
+ST_2 : Operation 98 [1/1] (0.00ns)   --->   "br label %43" [viterbi_2_1_4/viterbi.cpp:448]   --->   Operation 98 'br' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439 & and_ln444)> <Delay = 0.00>
+ST_2 : Operation 99 [1/1] (0.00ns)   --->   "br label %44"   --->   Operation 99 'br' <Predicate = (!icmp_ln429 & !and_ln434 & !and_ln439)> <Delay = 0.00>
+ST_2 : Operation 100 [1/1] (0.00ns)   --->   "br label %44" [viterbi_2_1_4/viterbi.cpp:443]   --->   Operation 100 'br' <Predicate = (!icmp_ln429 & !and_ln434 & and_ln439)> <Delay = 0.00>
+ST_2 : Operation 101 [1/1] (0.00ns)   --->   "br label %45"   --->   Operation 101 'br' <Predicate = (!icmp_ln429 & !and_ln434)> <Delay = 0.00>
+ST_2 : Operation 102 [1/1] (0.00ns)   --->   "br label %45" [viterbi_2_1_4/viterbi.cpp:438]   --->   Operation 102 'br' <Predicate = (!icmp_ln429 & and_ln434)> <Delay = 0.00>
+ST_2 : Operation 103 [1/1] (0.00ns)   --->   "br label %46"   --->   Operation 103 'br' <Predicate = (!icmp_ln429)> <Delay = 0.00>
+ST_2 : Operation 104 [1/1] (0.00ns)   --->   "br label %46" [viterbi_2_1_4/viterbi.cpp:433]   --->   Operation 104 'br' <Predicate = (icmp_ln429)> <Delay = 0.00>
+ST_2 : Operation 105 [1/1] (0.00ns)   --->   "%bitSequence_decoded_s = load i1* @bitSequence_decoded, align 1" [viterbi_2_1_4/viterbi.cpp:509]   --->   Operation 105 'load' 'bitSequence_decoded_s' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 106 [1/1] (0.00ns)   --->   "ret i1 %bitSequence_decoded_s" [viterbi_2_1_4/viterbi.cpp:509]   --->   Operation 106 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.79ns
+The critical path consists of the following:
+	wire read on port 'stateB' (viterbi_2_1_4/viterbi.cpp:392) [4]  (0 ns)
+	'icmp' operation ('icmp_ln499', viterbi_2_1_4/viterbi.cpp:499) [68]  (0.987 ns)
+	'and' operation ('and_ln504', viterbi_2_1_4/viterbi.cpp:504) [72]  (0.8 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

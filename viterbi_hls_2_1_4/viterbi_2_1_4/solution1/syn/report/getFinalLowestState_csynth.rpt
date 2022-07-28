@@ -1,0 +1,162 @@
+
+
+================================================================
+== Vivado HLS Report for 'getFinalLowestState'
+================================================================
+* Date:           Thu Jul 28 06:40:29 2022
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        viterbi_2_1_4
+* Solution:       solution1
+* Product family: spartan7
+* Target device:  xc7s100-fgga676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     5.565|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    7|    7|    7|    7| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|     54|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        -|      -|       -|      -|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|    141|    -|
+|Register         |        -|      -|      29|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|      0|      29|    195|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      240|    160|  128000|  64000|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------+----------+-------+---+----+------------+------------+
+    |       Variable Name       | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------+----------+-------+---+----+------------+------------+
+    |ap_block_pp0_stage0_11001  |    and   |      0|  0|   2|           1|           1|
+    |grp_fu_173_p2              |   icmp   |      0|  0|  11|           8|           8|
+    |or_ln376_1_fu_271_p2       |    or    |      0|  0|   2|           1|           1|
+    |or_ln376_2_fu_304_p2       |    or    |      0|  0|   2|           1|           1|
+    |or_ln376_fu_220_p2         |    or    |      0|  0|   2|           1|           1|
+    |ap_return                  |  select  |      0|  0|   3|           1|           3|
+    |select_ln376_1_fu_200_p3   |  select  |      0|  0|   2|           1|           2|
+    |select_ln376_2_fu_212_p3   |  select  |      0|  0|   3|           1|           2|
+    |select_ln376_3_fu_225_p3   |  select  |      0|  0|   2|           1|           2|
+    |select_ln376_4_fu_235_p3   |  select  |      0|  0|   4|           1|           4|
+    |select_ln376_5_fu_251_p3   |  select  |      0|  0|   3|           1|           3|
+    |select_ln376_6_fu_263_p3   |  select  |      0|  0|   4|           1|           3|
+    |select_ln376_7_fu_276_p3   |  select  |      0|  0|   3|           1|           3|
+    |select_ln376_8_fu_284_p3   |  select  |      0|  0|   3|           1|           3|
+    |select_ln376_9_fu_296_p3   |  select  |      0|  0|   3|           1|           2|
+    |select_ln376_fu_187_p3     |  select  |      0|  0|   3|           1|           3|
+    |ap_enable_pp0              |    xor   |      0|  0|   2|           1|           2|
+    +---------------------------+----------+-------+---+----+------------+------------+
+    |Total                      |          |      0|  0|  54|          24|          44|
+    +---------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------------------+----+-----------+-----+-----------+
+    |                        Name                        | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------------------+----+-----------+-----+-----------+
+    |HammingTable_hammingDistances_finalStates_address0  |  41|          8|    3|         24|
+    |HammingTable_hammingDistances_finalStates_address1  |  41|          8|    3|         24|
+    |ap_NS_fsm                                           |  41|          8|    1|          8|
+    |ap_enable_reg_pp0_iter0                             |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1                             |   9|          2|    1|          2|
+    +----------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                               | 141|         28|    9|         60|
+    +----------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------+---+----+-----+-----------+
+    |             Name            | FF| LUT| Bits| Const Bits|
+    +-----------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                    |  7|   0|    7|          0|
+    |ap_enable_reg_pp0_iter0_reg  |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1      |  1|   0|    1|          0|
+    |icmp_ln376_1_reg_346         |  1|   0|    1|          0|
+    |icmp_ln376_3_reg_386         |  1|   0|    1|          0|
+    |icmp_ln376_5_reg_426         |  1|   0|    1|          0|
+    |icmp_ln376_reg_326           |  1|   0|    1|          0|
+    |select_ln376_1_reg_366       |  2|   0|    2|          0|
+    |select_ln376_3_reg_376       |  2|   0|    2|          0|
+    |select_ln376_4_reg_391       |  3|   0|    3|          0|
+    |select_ln376_5_reg_406       |  3|   0|    3|          0|
+    |select_ln376_7_reg_416       |  3|   0|    3|          0|
+    |select_ln376_reg_351         |  2|   0|    2|          0|
+    |zext_ln376_1_reg_341         |  1|   0|    2|          1|
+    +-----------------------------+---+----+-----+-----------+
+    |Total                        | 29|   0|   30|          1|
+    +-----------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------------------------------+-----+-----+------------+-------------------------------------------+--------------+
+|                      RTL Ports                     | Dir | Bits|  Protocol  |               Source Object               |    C Type    |
++----------------------------------------------------+-----+-----+------------+-------------------------------------------+--------------+
+|ap_clk                                              |  in |    1| ap_ctrl_hs |            getFinalLowestState            | return value |
+|ap_rst                                              |  in |    1| ap_ctrl_hs |            getFinalLowestState            | return value |
+|ap_start                                            |  in |    1| ap_ctrl_hs |            getFinalLowestState            | return value |
+|ap_done                                             | out |    1| ap_ctrl_hs |            getFinalLowestState            | return value |
+|ap_idle                                             | out |    1| ap_ctrl_hs |            getFinalLowestState            | return value |
+|ap_ready                                            | out |    1| ap_ctrl_hs |            getFinalLowestState            | return value |
+|ap_return                                           | out |    3| ap_ctrl_hs |            getFinalLowestState            | return value |
+|HammingTable_hammingDistances_finalStates_address0  | out |    3|  ap_memory | HammingTable_hammingDistances_finalStates |     array    |
+|HammingTable_hammingDistances_finalStates_ce0       | out |    1|  ap_memory | HammingTable_hammingDistances_finalStates |     array    |
+|HammingTable_hammingDistances_finalStates_q0        |  in |    8|  ap_memory | HammingTable_hammingDistances_finalStates |     array    |
+|HammingTable_hammingDistances_finalStates_address1  | out |    3|  ap_memory | HammingTable_hammingDistances_finalStates |     array    |
+|HammingTable_hammingDistances_finalStates_ce1       | out |    1|  ap_memory | HammingTable_hammingDistances_finalStates |     array    |
+|HammingTable_hammingDistances_finalStates_q1        |  in |    8|  ap_memory | HammingTable_hammingDistances_finalStates |     array    |
++----------------------------------------------------+-----+-----+------------+-------------------------------------------+--------------+
+

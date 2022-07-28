@@ -1,0 +1,12 @@
+sv work "glbl.v"
+sv xil_defaultlib "calculateDistanceFor.v"
+sv xil_defaultlib "calculateForState.v"
+sv xil_defaultlib "computeHammingDistan.v"
+sv xil_defaultlib "decoder.autotb.v"
+sv xil_defaultlib "decoder.v"
+sv xil_defaultlib "decoder_h1_hamminbkb.v"
+sv xil_defaultlib "getFinalHammingDista.v"
+sv xil_defaultlib "getFinalLowestState.v"
+sv xil_defaultlib "getReturnPath.v"
+sv xil_defaultlib "getSequence.v"
+

@@ -1,0 +1,144 @@
+
+
+================================================================
+== Vivado HLS Report for 'getReturnPath'
+================================================================
+* Date:           Thu Jul 28 06:40:29 2022
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        viterbi_2_1_4
+* Solution:       solution1
+* Product family: spartan7
+* Target device:  xc7s100-fgga676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     4.430|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    0|    0|    1|    1| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|    201|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        -|      -|       -|      -|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|      -|    -|
+|Register         |        -|      -|       -|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|      0|       0|    201|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      240|    160|  128000|  64000|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|      0|       0|   ~0  |    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------+----------+-------+---+----+------------+------------+
+    |       Variable Name      | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------+----------+-------+---+----+------------+------------+
+    |icmp_ln294_1_fu_232_p2    |   icmp   |      0|  0|   9|           3|           3|
+    |icmp_ln294_2_fu_246_p2    |   icmp   |      0|  0|   9|           3|           3|
+    |icmp_ln294_3_fu_260_p2    |   icmp   |      0|  0|   9|           3|           4|
+    |icmp_ln294_4_fu_274_p2    |   icmp   |      0|  0|   9|           3|           2|
+    |icmp_ln294_5_fu_288_p2    |   icmp   |      0|  0|   9|           3|           2|
+    |icmp_ln294_6_fu_302_p2    |   icmp   |      0|  0|   9|           3|           1|
+    |icmp_ln294_7_fu_316_p2    |   icmp   |      0|  0|   9|           3|           1|
+    |icmp_ln294_fu_214_p2      |   icmp   |      0|  0|   9|           3|           2|
+    |icmp_ln296_fu_110_p2      |   icmp   |      0|  0|  11|           8|           2|
+    |icmp_ln304_fu_120_p2      |   icmp   |      0|  0|  11|           8|           2|
+    |icmp_ln312_fu_134_p2      |   icmp   |      0|  0|  11|           8|           2|
+    |icmp_ln321_fu_148_p2      |   icmp   |      0|  0|  11|           8|           2|
+    |icmp_ln330_fu_162_p2      |   icmp   |      0|  0|  11|           8|           2|
+    |icmp_ln339_fu_172_p2      |   icmp   |      0|  0|  11|           8|           2|
+    |icmp_ln348_fu_186_p2      |   icmp   |      0|  0|  11|           8|           2|
+    |icmp_ln357_fu_200_p2      |   icmp   |      0|  0|  11|           8|           2|
+    |ap_return                 |  select  |      0|  0|   3|           1|           3|
+    |select_ln294_1_fu_238_p3  |  select  |      0|  0|   3|           1|           3|
+    |select_ln294_2_fu_252_p3  |  select  |      0|  0|   3|           1|           3|
+    |select_ln294_3_fu_266_p3  |  select  |      0|  0|   3|           1|           3|
+    |select_ln294_4_fu_280_p3  |  select  |      0|  0|   3|           1|           3|
+    |select_ln294_5_fu_294_p3  |  select  |      0|  0|   3|           1|           3|
+    |select_ln294_6_fu_308_p3  |  select  |      0|  0|   3|           1|           3|
+    |select_ln294_fu_220_p3    |  select  |      0|  0|   2|           1|           2|
+    |select_ln304_fu_126_p3    |  select  |      0|  0|   2|           1|           2|
+    |select_ln312_fu_140_p3    |  select  |      0|  0|   4|           1|           3|
+    |select_ln321_fu_154_p3    |  select  |      0|  0|   3|           1|           2|
+    |select_ln339_fu_178_p3    |  select  |      0|  0|   2|           1|           2|
+    |select_ln348_fu_192_p3    |  select  |      0|  0|   4|           1|           3|
+    |select_ln357_fu_206_p3    |  select  |      0|  0|   3|           1|           2|
+    +--------------------------+----------+-------+---+----+------------+------------+
+    |Total                     |          |      0|  0| 201|         102|          71|
+    +--------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------+-----+-----+------------+---------------+--------------+
+| RTL Ports | Dir | Bits|  Protocol  | Source Object |    C Type    |
++-----------+-----+-----+------------+---------------+--------------+
+|ap_ready   | out |    1| ap_ctrl_hs | getReturnPath | return value |
+|ap_return  | out |    3| ap_ctrl_hs | getReturnPath | return value |
+|p_read     |  in |    8|   ap_none  |     p_read    |    scalar    |
+|p_read1    |  in |    8|   ap_none  |    p_read1    |    scalar    |
+|p_read2    |  in |    8|   ap_none  |    p_read2    |    scalar    |
+|p_read3    |  in |    8|   ap_none  |    p_read3    |    scalar    |
+|p_read4    |  in |    8|   ap_none  |    p_read4    |    scalar    |
+|p_read5    |  in |    8|   ap_none  |    p_read5    |    scalar    |
+|p_read6    |  in |    8|   ap_none  |    p_read6    |    scalar    |
+|p_read7    |  in |    8|   ap_none  |    p_read7    |    scalar    |
+|state      |  in |    3|   ap_none  |     state     |    scalar    |
++-----------+-----+-----+------------+---------------+--------------+
+

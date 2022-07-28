@@ -1,0 +1,157 @@
+
+
+================================================================
+== Vivado HLS Report for 'getSequence'
+================================================================
+* Date:           Thu Jul 28 06:40:29 2022
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        viterbi_2_1_4
+* Solution:       solution1
+* Product family: spartan7
+* Target device:  xc7s100-fgga676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     1.787|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    1|    1|    1|    1| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|    192|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        -|      -|       -|      -|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|      -|    -|
+|Register         |        -|      -|       3|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|      0|       3|    192|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      240|    160|  128000|  64000|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------------+----------+-------+---+----+------------+------------+
+    |        Variable Name        | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------------+----------+-------+---+----+------------+------------+
+    |and_ln434_fu_98_p2           |    and   |      0|  0|   2|           1|           1|
+    |and_ln439_fu_116_p2          |    and   |      0|  0|   2|           1|           1|
+    |and_ln444_fu_128_p2          |    and   |      0|  0|   2|           1|           1|
+    |and_ln449_fu_146_p2          |    and   |      0|  0|   2|           1|           1|
+    |and_ln454_fu_158_p2          |    and   |      0|  0|   2|           1|           1|
+    |and_ln459_fu_176_p2          |    and   |      0|  0|   2|           1|           1|
+    |and_ln464_fu_188_p2          |    and   |      0|  0|   2|           1|           1|
+    |and_ln469_fu_206_p2          |    and   |      0|  0|   2|           1|           1|
+    |and_ln474_fu_212_p2          |    and   |      0|  0|   2|           1|           1|
+    |and_ln479_fu_224_p2          |    and   |      0|  0|   2|           1|           1|
+    |and_ln484_fu_230_p2          |    and   |      0|  0|   2|           1|           1|
+    |and_ln489_fu_242_p2          |    and   |      0|  0|   2|           1|           1|
+    |and_ln494_fu_248_p2          |    and   |      0|  0|   2|           1|           1|
+    |and_ln499_fu_260_p2          |    and   |      0|  0|   2|           1|           1|
+    |and_ln504_fu_266_p2          |    and   |      0|  0|   2|           1|           1|
+    |ap_block_pp0_stage0_11001    |    and   |      0|  0|   2|           1|           1|
+    |icmp_ln429_fu_80_p2          |   icmp   |      0|  0|   9|           3|           1|
+    |icmp_ln434_1_fu_92_p2        |   icmp   |      0|  0|   9|           3|           1|
+    |icmp_ln434_fu_86_p2          |   icmp   |      0|  0|   9|           3|           1|
+    |icmp_ln439_1_fu_110_p2       |   icmp   |      0|  0|   9|           3|           2|
+    |icmp_ln439_fu_104_p2         |   icmp   |      0|  0|   9|           3|           1|
+    |icmp_ln444_fu_122_p2         |   icmp   |      0|  0|   9|           3|           2|
+    |icmp_ln449_1_fu_140_p2       |   icmp   |      0|  0|   9|           3|           4|
+    |icmp_ln449_fu_134_p2         |   icmp   |      0|  0|   9|           3|           2|
+    |icmp_ln454_fu_152_p2         |   icmp   |      0|  0|   9|           3|           3|
+    |icmp_ln459_1_fu_170_p2       |   icmp   |      0|  0|   9|           3|           3|
+    |icmp_ln459_fu_164_p2         |   icmp   |      0|  0|   9|           3|           2|
+    |icmp_ln464_fu_182_p2         |   icmp   |      0|  0|   9|           3|           2|
+    |icmp_ln469_1_fu_200_p2       |   icmp   |      0|  0|   9|           3|           1|
+    |icmp_ln469_fu_194_p2         |   icmp   |      0|  0|   9|           3|           4|
+    |icmp_ln479_fu_218_p2         |   icmp   |      0|  0|   9|           3|           3|
+    |icmp_ln489_fu_236_p2         |   icmp   |      0|  0|   9|           3|           3|
+    |icmp_ln499_fu_254_p2         |   icmp   |      0|  0|   9|           3|           2|
+    |ap_block_pp0_stage0_subdone  |    or    |      0|  0|   2|           1|           1|
+    |or_ln429_fu_74_p2            |    or    |      0|  0|   3|           3|           3|
+    |ap_enable_pp0                |    xor   |      0|  0|   2|           1|           2|
+    +-----------------------------+----------+-------+---+----+------------+------------+
+    |Total                        |          |      0|  0| 192|          72|          59|
+    +-----------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    +-------------------------+---+----+-----+-----------+
+    |           Name          | FF| LUT| Bits| Const Bits|
+    +-------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |  1|   0|    1|          0|
+    |bitSequence_decoded      |  1|   0|    1|          0|
+    +-------------------------+---+----+-----+-----------+
+    |Total                    |  3|   0|    3|          0|
+    +-------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------+-----+-----+------------+--------------+--------------+
+| RTL Ports | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-----------+-----+-----+------------+--------------+--------------+
+|ap_clk     |  in |    1| ap_ctrl_hs |  getSequence | return value |
+|ap_rst     |  in |    1| ap_ctrl_hs |  getSequence | return value |
+|ap_start   |  in |    1| ap_ctrl_hs |  getSequence | return value |
+|ap_done    | out |    1| ap_ctrl_hs |  getSequence | return value |
+|ap_idle    | out |    1| ap_ctrl_hs |  getSequence | return value |
+|ap_ready   | out |    1| ap_ctrl_hs |  getSequence | return value |
+|ap_ce      |  in |    1| ap_ctrl_hs |  getSequence | return value |
+|ap_return  | out |    1| ap_ctrl_hs |  getSequence | return value |
+|stateA     |  in |    4|   ap_none  |    stateA    |    scalar    |
+|stateB     |  in |    4|   ap_none  |    stateB    |    scalar    |
++-----------+-----+-----+------------+--------------+--------------+
+

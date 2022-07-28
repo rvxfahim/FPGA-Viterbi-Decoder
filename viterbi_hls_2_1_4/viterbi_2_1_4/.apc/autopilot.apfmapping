@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="viterbi.cpp" path="C:\Users\fahim\Documents\viterbi_hls_2_1_4\viterbi_2_1_4\viterbi.cpp"/>
+    <originFiles name="viterbi.h" path="C:\Users\fahim\Documents\viterbi_hls_2_1_4\viterbi_2_1_4\viterbi.h"/>
+  </source>
+  <testbench>
+    <originFiles name="viterbitb.cpp" path="C:\Users\fahim\Documents\viterbi_hls_2_1_4\viterbi_2_1_4\viterbitb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

@@ -1,0 +1,57 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'decoder'" level="0">
+<item name = "Date">Thu Jul 28 06:40:27 2022
+</item>
+<item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
+<item name = "Project">viterbi_2_1_4</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">spartan7</item>
+<item name = "Target device">xc7s100-fgga676-2</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 8.226, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">171, 171, 30, 30, function</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_computeHammingDistan_fu_118">computeHammingDistan, 16, 16, 17, 17, function</column>
+<column name="grp_computeHammingDistan_fu_144">computeHammingDistan, 16, 16, 17, 17, function</column>
+<column name="grp_computeHammingDistan_fu_161">computeHammingDistan, 16, 16, 17, 17, function</column>
+<column name="grp_computeHammingDistan_fu_178">computeHammingDistan, 16, 16, 17, 17, function</column>
+<column name="grp_computeHammingDistan_fu_195">computeHammingDistan, 16, 16, 17, 17, function</column>
+<column name="grp_computeHammingDistan_fu_212">computeHammingDistan, 16, 16, 17, 17, function</column>
+<column name="grp_computeHammingDistan_fu_229">computeHammingDistan, 16, 16, 17, 17, function</column>
+<column name="grp_getFinalLowestState_fu_246">getFinalLowestState, 7, 7, 7, 7, function</column>
+<column name="grp_getSequence_fu_251">getSequence, 1, 1, 1, 1, function</column>
+<column name="grp_getReturnPath_fu_259">getReturnPath, 0, 0, 1, 1, function</column>
+<column name="grp_getFinalHammingDista_fu_273">getFinalHammingDista, 4, 4, 4, 4, function</column>
+<column name="grp_getFinalHammingDista_fu_278">getFinalHammingDista, 4, 4, 4, 4, function</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

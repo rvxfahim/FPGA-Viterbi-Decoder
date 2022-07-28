@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# xsim v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Jul 28 07:35:32 2022
+# Process ID: 15468
+# Current directory: C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/sim/verilog
+# Command line: xsim.exe -mode tcl -source {xsim.dir/decoder/xsim_script.tcl}
+# Log file: C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/sim/verilog/xsim.log
+# Journal file: C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/sim/verilog\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/decoder/xsim_script.tcl
+source decoder.tcl

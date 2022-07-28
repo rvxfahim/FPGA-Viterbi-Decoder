@@ -1,0 +1,162 @@
+
+
+================================================================
+== Vivado HLS Report for 'getReturnPath'
+================================================================
+* Date:           Thu Jul 28 06:40:26 2022
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        viterbi_2_1_4
+* Solution:       solution1
+* Product family: spartan7
+* Target device:  xc7s100-fgga676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     4.430|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    0|    0|    1|    1| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 1, States = { 1 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 4.43>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%state_read = call i3 @_ssdm_op_Read.ap_auto.i3(i3 %state)" [viterbi_2_1_4/viterbi.cpp:291]   --->   Operation 2 'read' 'state_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%p_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read7)" [viterbi_2_1_4/viterbi.cpp:291]   --->   Operation 3 'read' 'p_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%p_read_2 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read6)" [viterbi_2_1_4/viterbi.cpp:291]   --->   Operation 4 'read' 'p_read_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%p_read_3 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read5)" [viterbi_2_1_4/viterbi.cpp:291]   --->   Operation 5 'read' 'p_read_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%p_read_4 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read4)" [viterbi_2_1_4/viterbi.cpp:291]   --->   Operation 6 'read' 'p_read_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%p_read_5 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read3)" [viterbi_2_1_4/viterbi.cpp:291]   --->   Operation 7 'read' 'p_read_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%p_read_6 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read2)" [viterbi_2_1_4/viterbi.cpp:291]   --->   Operation 8 'read' 'p_read_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%p_read_7 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read1)" [viterbi_2_1_4/viterbi.cpp:291]   --->   Operation 9 'read' 'p_read_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%p_read_8 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read)" [viterbi_2_1_4/viterbi.cpp:291]   --->   Operation 10 'read' 'p_read_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind" [viterbi_2_1_4/viterbi.cpp:292]   --->   Operation 11 'specpipeline' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (1.21ns)   --->   "%icmp_ln296 = icmp eq i8 %p_read_8, -1" [viterbi_2_1_4/viterbi.cpp:296]   --->   Operation 12 'icmp' 'icmp_ln296' <Predicate = (icmp_ln294_7)> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 13 [1/1] (0.00ns) (grouped into LUT with out node select_ln294_7)   --->   "%zext_ln304 = zext i1 %icmp_ln296 to i3" [viterbi_2_1_4/viterbi.cpp:304]   --->   Operation 13 'zext' 'zext_ln304' <Predicate = (icmp_ln294_7)> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (1.21ns)   --->   "%icmp_ln304 = icmp eq i8 %p_read_6, -1" [viterbi_2_1_4/viterbi.cpp:304]   --->   Operation 14 'icmp' 'icmp_ln304' <Predicate = (icmp_ln294_6 & !icmp_ln294_7)> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 15 [1/1] (0.00ns) (grouped into LUT with out node select_ln294_6)   --->   "%select_ln304 = select i1 %icmp_ln304, i3 3, i3 2" [viterbi_2_1_4/viterbi.cpp:304]   --->   Operation 15 'select' 'select_ln304' <Predicate = (icmp_ln294_6 & !icmp_ln294_7)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 16 [1/1] (1.21ns)   --->   "%icmp_ln312 = icmp eq i8 %p_read_4, -1" [viterbi_2_1_4/viterbi.cpp:312]   --->   Operation 16 'icmp' 'icmp_ln312' <Predicate = (icmp_ln294_5 & !icmp_ln294_6 & !icmp_ln294_7)> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 17 [1/1] (0.00ns) (grouped into LUT with out node select_ln294_6)   --->   "%select_ln312 = select i1 %icmp_ln312, i3 -3, i3 -4" [viterbi_2_1_4/viterbi.cpp:312]   --->   Operation 17 'select' 'select_ln312' <Predicate = (icmp_ln294_5 & !icmp_ln294_6 & !icmp_ln294_7)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 18 [1/1] (1.21ns)   --->   "%icmp_ln321 = icmp eq i8 %p_read_2, -1" [viterbi_2_1_4/viterbi.cpp:321]   --->   Operation 18 'icmp' 'icmp_ln321' <Predicate = (icmp_ln294_4 & !icmp_ln294_5 & !icmp_ln294_6 & !icmp_ln294_7)> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 19 [1/1] (0.00ns) (grouped into LUT with out node select_ln294_4)   --->   "%select_ln321 = select i1 %icmp_ln321, i3 -1, i3 -2" [viterbi_2_1_4/viterbi.cpp:321]   --->   Operation 19 'select' 'select_ln321' <Predicate = (icmp_ln294_4 & !icmp_ln294_5 & !icmp_ln294_6 & !icmp_ln294_7)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 20 [1/1] (1.21ns)   --->   "%icmp_ln330 = icmp eq i8 %p_read_7, -1" [viterbi_2_1_4/viterbi.cpp:330]   --->   Operation 20 'icmp' 'icmp_ln330' <Predicate = (icmp_ln294_3 & !icmp_ln294_4 & !icmp_ln294_5 & !icmp_ln294_6 & !icmp_ln294_7)> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 21 [1/1] (0.00ns) (grouped into LUT with out node select_ln294_4)   --->   "%zext_ln339 = zext i1 %icmp_ln330 to i3" [viterbi_2_1_4/viterbi.cpp:339]   --->   Operation 21 'zext' 'zext_ln339' <Predicate = (icmp_ln294_3 & !icmp_ln294_4 & !icmp_ln294_5 & !icmp_ln294_6 & !icmp_ln294_7)> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (1.21ns)   --->   "%icmp_ln339 = icmp eq i8 %p_read_5, -1" [viterbi_2_1_4/viterbi.cpp:339]   --->   Operation 22 'icmp' 'icmp_ln339' <Predicate = (icmp_ln294_2 & !icmp_ln294_3 & !icmp_ln294_4 & !icmp_ln294_5 & !icmp_ln294_6 & !icmp_ln294_7)> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 23 [1/1] (0.00ns) (grouped into LUT with out node select_ln294_2)   --->   "%select_ln339 = select i1 %icmp_ln339, i3 3, i3 2" [viterbi_2_1_4/viterbi.cpp:339]   --->   Operation 23 'select' 'select_ln339' <Predicate = (icmp_ln294_2 & !icmp_ln294_3 & !icmp_ln294_4 & !icmp_ln294_5 & !icmp_ln294_6 & !icmp_ln294_7)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 24 [1/1] (1.21ns)   --->   "%icmp_ln348 = icmp eq i8 %p_read_3, -1" [viterbi_2_1_4/viterbi.cpp:348]   --->   Operation 24 'icmp' 'icmp_ln348' <Predicate = (icmp_ln294_1 & !icmp_ln294_2 & !icmp_ln294_3 & !icmp_ln294_4 & !icmp_ln294_5 & !icmp_ln294_6 & !icmp_ln294_7)> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 25 [1/1] (0.00ns) (grouped into LUT with out node select_ln294_2)   --->   "%select_ln348 = select i1 %icmp_ln348, i3 -3, i3 -4" [viterbi_2_1_4/viterbi.cpp:348]   --->   Operation 25 'select' 'select_ln348' <Predicate = (icmp_ln294_1 & !icmp_ln294_2 & !icmp_ln294_3 & !icmp_ln294_4 & !icmp_ln294_5 & !icmp_ln294_6 & !icmp_ln294_7)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 26 [1/1] (1.21ns)   --->   "%icmp_ln357 = icmp eq i8 %p_read_1, -1" [viterbi_2_1_4/viterbi.cpp:357]   --->   Operation 26 'icmp' 'icmp_ln357' <Predicate = (icmp_ln294 & !icmp_ln294_1 & !icmp_ln294_2 & !icmp_ln294_3 & !icmp_ln294_4 & !icmp_ln294_5 & !icmp_ln294_6 & !icmp_ln294_7)> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 27 [1/1] (0.00ns) (grouped into LUT with out node select_ln294_2)   --->   "%select_ln357 = select i1 %icmp_ln357, i2 -1, i2 -2" [viterbi_2_1_4/viterbi.cpp:357]   --->   Operation 27 'select' 'select_ln357' <Predicate = (icmp_ln294 & !icmp_ln294_1 & !icmp_ln294_2 & !icmp_ln294_3 & !icmp_ln294_4 & !icmp_ln294_5 & !icmp_ln294_6 & !icmp_ln294_7)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 28 [1/1] (0.98ns)   --->   "%icmp_ln294 = icmp eq i3 %state_read, -1" [viterbi_2_1_4/viterbi.cpp:294]   --->   Operation 28 'icmp' 'icmp_ln294' <Predicate = (!icmp_ln294_1 & !icmp_ln294_2 & !icmp_ln294_3 & !icmp_ln294_4 & !icmp_ln294_5 & !icmp_ln294_6 & !icmp_ln294_7)> <Delay = 0.98> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 29 [1/1] (0.00ns) (grouped into LUT with out node select_ln294_2)   --->   "%select_ln294 = select i1 %icmp_ln294, i2 %select_ln357, i2 0" [viterbi_2_1_4/viterbi.cpp:294]   --->   Operation 29 'select' 'select_ln294' <Predicate = (!icmp_ln294_1 & !icmp_ln294_2 & !icmp_ln294_3 & !icmp_ln294_4 & !icmp_ln294_5 & !icmp_ln294_6 & !icmp_ln294_7)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 30 [1/1] (0.00ns) (grouped into LUT with out node select_ln294_2)   --->   "%sext_ln294 = sext i2 %select_ln294 to i3" [viterbi_2_1_4/viterbi.cpp:294]   --->   Operation 30 'sext' 'sext_ln294' <Predicate = (!icmp_ln294_1 & !icmp_ln294_2 & !icmp_ln294_3 & !icmp_ln294_4 & !icmp_ln294_5 & !icmp_ln294_6 & !icmp_ln294_7)> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.98ns)   --->   "%icmp_ln294_1 = icmp eq i3 %state_read, -2" [viterbi_2_1_4/viterbi.cpp:294]   --->   Operation 31 'icmp' 'icmp_ln294_1' <Predicate = (!icmp_ln294_2 & !icmp_ln294_3 & !icmp_ln294_4 & !icmp_ln294_5 & !icmp_ln294_6 & !icmp_ln294_7)> <Delay = 0.98> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 32 [1/1] (0.00ns) (grouped into LUT with out node select_ln294_2)   --->   "%select_ln294_1 = select i1 %icmp_ln294_1, i3 %select_ln348, i3 %sext_ln294" [viterbi_2_1_4/viterbi.cpp:294]   --->   Operation 32 'select' 'select_ln294_1' <Predicate = (!icmp_ln294_2 & !icmp_ln294_3 & !icmp_ln294_4 & !icmp_ln294_5 & !icmp_ln294_6 & !icmp_ln294_7)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 33 [1/1] (0.98ns)   --->   "%icmp_ln294_2 = icmp eq i3 %state_read, -3" [viterbi_2_1_4/viterbi.cpp:294]   --->   Operation 33 'icmp' 'icmp_ln294_2' <Predicate = (!icmp_ln294_3 & !icmp_ln294_4 & !icmp_ln294_5 & !icmp_ln294_6 & !icmp_ln294_7)> <Delay = 0.98> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 34 [1/1] (0.81ns) (out node of the LUT)   --->   "%select_ln294_2 = select i1 %icmp_ln294_2, i3 %select_ln339, i3 %select_ln294_1" [viterbi_2_1_4/viterbi.cpp:294]   --->   Operation 34 'select' 'select_ln294_2' <Predicate = (!icmp_ln294_3 & !icmp_ln294_4 & !icmp_ln294_5 & !icmp_ln294_6 & !icmp_ln294_7)> <Delay = 0.81> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 35 [1/1] (0.98ns)   --->   "%icmp_ln294_3 = icmp eq i3 %state_read, -4" [viterbi_2_1_4/viterbi.cpp:294]   --->   Operation 35 'icmp' 'icmp_ln294_3' <Predicate = (!icmp_ln294_4 & !icmp_ln294_5 & !icmp_ln294_6 & !icmp_ln294_7)> <Delay = 0.98> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 36 [1/1] (0.00ns) (grouped into LUT with out node select_ln294_4)   --->   "%select_ln294_3 = select i1 %icmp_ln294_3, i3 %zext_ln339, i3 %select_ln294_2" [viterbi_2_1_4/viterbi.cpp:294]   --->   Operation 36 'select' 'select_ln294_3' <Predicate = (!icmp_ln294_4 & !icmp_ln294_5 & !icmp_ln294_6 & !icmp_ln294_7)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 37 [1/1] (0.98ns)   --->   "%icmp_ln294_4 = icmp eq i3 %state_read, 3" [viterbi_2_1_4/viterbi.cpp:294]   --->   Operation 37 'icmp' 'icmp_ln294_4' <Predicate = (!icmp_ln294_5 & !icmp_ln294_6 & !icmp_ln294_7)> <Delay = 0.98> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 38 [1/1] (0.81ns) (out node of the LUT)   --->   "%select_ln294_4 = select i1 %icmp_ln294_4, i3 %select_ln321, i3 %select_ln294_3" [viterbi_2_1_4/viterbi.cpp:294]   --->   Operation 38 'select' 'select_ln294_4' <Predicate = (!icmp_ln294_5 & !icmp_ln294_6 & !icmp_ln294_7)> <Delay = 0.81> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 39 [1/1] (0.98ns)   --->   "%icmp_ln294_5 = icmp eq i3 %state_read, 2" [viterbi_2_1_4/viterbi.cpp:294]   --->   Operation 39 'icmp' 'icmp_ln294_5' <Predicate = (!icmp_ln294_6 & !icmp_ln294_7)> <Delay = 0.98> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 40 [1/1] (0.00ns) (grouped into LUT with out node select_ln294_6)   --->   "%select_ln294_5 = select i1 %icmp_ln294_5, i3 %select_ln312, i3 %select_ln294_4" [viterbi_2_1_4/viterbi.cpp:294]   --->   Operation 40 'select' 'select_ln294_5' <Predicate = (!icmp_ln294_6 & !icmp_ln294_7)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 41 [1/1] (0.98ns)   --->   "%icmp_ln294_6 = icmp eq i3 %state_read, 1" [viterbi_2_1_4/viterbi.cpp:294]   --->   Operation 41 'icmp' 'icmp_ln294_6' <Predicate = (!icmp_ln294_7)> <Delay = 0.98> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 42 [1/1] (0.79ns) (out node of the LUT)   --->   "%select_ln294_6 = select i1 %icmp_ln294_6, i3 %select_ln304, i3 %select_ln294_5" [viterbi_2_1_4/viterbi.cpp:294]   --->   Operation 42 'select' 'select_ln294_6' <Predicate = (!icmp_ln294_7)> <Delay = 0.79> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 43 [1/1] (0.98ns)   --->   "%icmp_ln294_7 = icmp eq i3 %state_read, 0" [viterbi_2_1_4/viterbi.cpp:294]   --->   Operation 43 'icmp' 'icmp_ln294_7' <Predicate = true> <Delay = 0.98> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 44 [1/1] (0.79ns) (out node of the LUT)   --->   "%select_ln294_7 = select i1 %icmp_ln294_7, i3 %zext_ln304, i3 %select_ln294_6" [viterbi_2_1_4/viterbi.cpp:294]   --->   Operation 44 'select' 'select_ln294_7' <Predicate = true> <Delay = 0.79> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "ret i3 %select_ln294_7" [viterbi_2_1_4/viterbi.cpp:365]   --->   Operation 45 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 4.43ns
+The critical path consists of the following:
+	wire read on port 'p_read7' (viterbi_2_1_4/viterbi.cpp:291) [11]  (0 ns)
+	'icmp' operation ('icmp_ln357', viterbi_2_1_4/viterbi.cpp:357) [34]  (1.21 ns)
+	'select' operation ('select_ln357', viterbi_2_1_4/viterbi.cpp:357) [35]  (0 ns)
+	'select' operation ('select_ln294', viterbi_2_1_4/viterbi.cpp:294) [37]  (0 ns)
+	'select' operation ('select_ln294_1', viterbi_2_1_4/viterbi.cpp:294) [40]  (0 ns)
+	'select' operation ('select_ln294_2', viterbi_2_1_4/viterbi.cpp:294) [42]  (0.813 ns)
+	'select' operation ('select_ln294_3', viterbi_2_1_4/viterbi.cpp:294) [44]  (0 ns)
+	'select' operation ('select_ln294_4', viterbi_2_1_4/viterbi.cpp:294) [46]  (0.813 ns)
+	'select' operation ('select_ln294_5', viterbi_2_1_4/viterbi.cpp:294) [48]  (0 ns)
+	'select' operation ('select_ln294_6', viterbi_2_1_4/viterbi.cpp:294) [50]  (0.795 ns)
+	'select' operation ('select_ln294_7', viterbi_2_1_4/viterbi.cpp:294) [52]  (0.795 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

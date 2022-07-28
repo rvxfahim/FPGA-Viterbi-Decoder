@@ -1,0 +1,46 @@
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "K:/Xilinx/Vivado/2019.1/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: K:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_decoder_top glbl -prj decoder.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile K:/Xilinx/Vivado/2019.1/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s decoder -debug wave 
+Multi-threading is on. Using 10 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/sim/verilog/calculateDistanceFor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module calculateDistanceFor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/sim/verilog/calculateForState.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module calculateForState
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/sim/verilog/computeHammingDistan.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module computeHammingDistan
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/sim/verilog/decoder.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_decoder_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/sim/verilog/decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decoder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/sim/verilog/decoder_h1_hamminbkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decoder_h1_hamminbkb_ram
+INFO: [VRFC 10-311] analyzing module decoder_h1_hamminbkb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/sim/verilog/getFinalHammingDista.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module getFinalHammingDista
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/sim/verilog/getFinalLowestState.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module getFinalLowestState
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/sim/verilog/getReturnPath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module getReturnPath
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/fahim/Documents/viterbi_hls_2_1_4/viterbi_2_1_4/solution1/sim/verilog/getSequence.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module getSequence
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.decoder_h1_hamminbkb_ram
+Compiling module xil_defaultlib.decoder_h1_hamminbkb(DataWidth=8...
+Compiling module xil_defaultlib.calculateDistanceFor
+Compiling module xil_defaultlib.calculateForState
+Compiling module xil_defaultlib.computeHammingDistan
+Compiling module xil_defaultlib.getFinalLowestState
+Compiling module xil_defaultlib.getSequence
+Compiling module xil_defaultlib.getReturnPath
+Compiling module xil_defaultlib.getFinalHammingDista
+Compiling module xil_defaultlib.decoder
+Compiling module xil_defaultlib.apatb_decoder_top
+Compiling module work.glbl
+Built simulation snapshot decoder

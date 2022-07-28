@@ -1,0 +1,2603 @@
+<stg><name>calculateForState</name>
+
+
+<trans_list>
+
+<trans id="180" from="1" to="2">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="3" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="29" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="0" op_3_bw="0" op_4_bw="0" op_5_bw="32" op_6_bw="0" op_7_bw="0" op_8_bw="0" op_9_bw="0" op_10_bw="0">
+<![CDATA[
+:0  call void (...)* @_ssdm_op_SpecFUCore([8 x i8]* %HammingTable_hammingDistances_finalStates, [1 x i8]* @p_str, [7 x i8]* @p_str2, [1 x i8]* @p_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
+
+]]></Node>
+<StgValue><ssdm name="specfucore_ln0"/></StgValue>
+</operation>
+
+<operation id="4" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="30" bw="5" op_0_bw="5" op_1_bw="5">
+<![CDATA[
+:1  %state_read = call i5 @_ssdm_op_Read.ap_auto.i5(i5 %state)
+
+]]></Node>
+<StgValue><ssdm name="state_read"/></StgValue>
+</operation>
+
+<operation id="5" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="31" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:2  %p_read_18 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read37)
+
+]]></Node>
+<StgValue><ssdm name="p_read_18"/></StgValue>
+</operation>
+
+<operation id="6" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="32" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:3  %p_read_19 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read36)
+
+]]></Node>
+<StgValue><ssdm name="p_read_19"/></StgValue>
+</operation>
+
+<operation id="7" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="33" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:4  %p_read_20 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read35)
+
+]]></Node>
+<StgValue><ssdm name="p_read_20"/></StgValue>
+</operation>
+
+<operation id="8" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="34" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:5  %p_read_21 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read34)
+
+]]></Node>
+<StgValue><ssdm name="p_read_21"/></StgValue>
+</operation>
+
+<operation id="9" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="35" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:6  %p_read_22 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read33)
+
+]]></Node>
+<StgValue><ssdm name="p_read_22"/></StgValue>
+</operation>
+
+<operation id="10" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="36" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:7  %p_read_23 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read32)
+
+]]></Node>
+<StgValue><ssdm name="p_read_23"/></StgValue>
+</operation>
+
+<operation id="11" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="37" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:8  %p_read_24 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read31)
+
+]]></Node>
+<StgValue><ssdm name="p_read_24"/></StgValue>
+</operation>
+
+<operation id="12" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="38" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:9  %p_read_25 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read18)
+
+]]></Node>
+<StgValue><ssdm name="p_read_25"/></StgValue>
+</operation>
+
+<operation id="13" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="39" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:10  %p_read_26 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read17)
+
+]]></Node>
+<StgValue><ssdm name="p_read_26"/></StgValue>
+</operation>
+
+<operation id="14" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="40" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:11  %p_read_27 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read16)
+
+]]></Node>
+<StgValue><ssdm name="p_read_27"/></StgValue>
+</operation>
+
+<operation id="15" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="41" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:12  %p_read_28 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read15)
+
+]]></Node>
+<StgValue><ssdm name="p_read_28"/></StgValue>
+</operation>
+
+<operation id="16" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="42" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:13  %p_read_29 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read14)
+
+]]></Node>
+<StgValue><ssdm name="p_read_29"/></StgValue>
+</operation>
+
+<operation id="17" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="43" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:14  %p_read_30 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read13)
+
+]]></Node>
+<StgValue><ssdm name="p_read_30"/></StgValue>
+</operation>
+
+<operation id="18" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="44" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:15  %p_read_31 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read12)
+
+]]></Node>
+<StgValue><ssdm name="p_read_31"/></StgValue>
+</operation>
+
+<operation id="19" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="45" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:16  %p_read_32 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read11)
+
+]]></Node>
+<StgValue><ssdm name="p_read_32"/></StgValue>
+</operation>
+
+<operation id="20" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="46" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:17  %p_read1029 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read10)
+
+]]></Node>
+<StgValue><ssdm name="p_read1029"/></StgValue>
+</operation>
+
+<operation id="21" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="47" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:18  %p_read928 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read9)
+
+]]></Node>
+<StgValue><ssdm name="p_read928"/></StgValue>
+</operation>
+
+<operation id="22" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="48" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:19  %p_read827 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read8)
+
+]]></Node>
+<StgValue><ssdm name="p_read827"/></StgValue>
+</operation>
+
+<operation id="23" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="49" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:20  %p_read726 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read7)
+
+]]></Node>
+<StgValue><ssdm name="p_read726"/></StgValue>
+</operation>
+
+<operation id="24" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="50" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:21  %p_read625 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read6)
+
+]]></Node>
+<StgValue><ssdm name="p_read625"/></StgValue>
+</operation>
+
+<operation id="25" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="51" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:22  %p_read524 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read5)
+
+]]></Node>
+<StgValue><ssdm name="p_read524"/></StgValue>
+</operation>
+
+<operation id="26" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="52" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:23  %p_read423 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read4)
+
+]]></Node>
+<StgValue><ssdm name="p_read423"/></StgValue>
+</operation>
+
+<operation id="27" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="53" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:24  %p_read322 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read3)
+
+]]></Node>
+<StgValue><ssdm name="p_read322"/></StgValue>
+</operation>
+
+<operation id="28" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="54" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:25  %p_read221 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read2)
+
+]]></Node>
+<StgValue><ssdm name="p_read221"/></StgValue>
+</operation>
+
+<operation id="29" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="55" bw="1" op_0_bw="1" op_1_bw="1">
+<![CDATA[
+:26  %p_read120 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read1)
+
+]]></Node>
+<StgValue><ssdm name="p_read120"/></StgValue>
+</operation>
+
+<operation id="30" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="56" bw="1" op_0_bw="1" op_1_bw="1">
+<![CDATA[
+:27  %p_read19 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read)
+
+]]></Node>
+<StgValue><ssdm name="p_read19"/></StgValue>
+</operation>
+
+<operation id="31" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="57" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
+<![CDATA[
+:28  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind
+
+]]></Node>
+<StgValue><ssdm name="specpipeline_ln73"/></StgValue>
+</operation>
+
+<operation id="32" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="58" bw="0" op_0_bw="5" op_1_bw="0" op_2_bw="5" op_3_bw="0" op_4_bw="5" op_5_bw="0" op_6_bw="5" op_7_bw="0" op_8_bw="5" op_9_bw="0" op_10_bw="5" op_11_bw="0" op_12_bw="5" op_13_bw="0" op_14_bw="5" op_15_bw="0" op_16_bw="5" op_17_bw="0">
+<![CDATA[
+:29  switch i5 %state_read, label %._crit_edge [
+    i5 0, label %1
+    i5 1, label %2
+    i5 2, label %6
+    i5 3, label %7
+    i5 4, label %11
+    i5 5, label %12
+    i5 6, label %16
+    i5 7, label %17
+  ]
+
+]]></Node>
+<StgValue><ssdm name="switch_ln73"/></StgValue>
+</operation>
+
+<operation id="33" st_id="1" stage="1" lat="1">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="7"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="60" bw="8" op_0_bw="8" op_1_bw="1" op_2_bw="1" op_3_bw="1" op_4_bw="1" op_5_bw="8">
+<![CDATA[
+:0  %tmp_13 = call fastcc i8 @calculateDistanceFor(i1 %p_read19, i1 %p_read120, i1 true, i1 false, i8 %p_read_18)
+
+]]></Node>
+<StgValue><ssdm name="tmp_13"/></StgValue>
+</operation>
+
+<operation id="34" st_id="1" stage="1" lat="1">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="7"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="61" bw="8" op_0_bw="8" op_1_bw="1" op_2_bw="1" op_3_bw="1" op_4_bw="1" op_5_bw="8">
+<![CDATA[
+:1  %tmp_14 = call fastcc i8 @calculateDistanceFor(i1 %p_read19, i1 %p_read120, i1 false, i1 true, i8 %p_read_18)
+
+]]></Node>
+<StgValue><ssdm name="tmp_14"/></StgValue>
+</operation>
+
+<operation id="35" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="7"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="62" bw="3" op_0_bw="8" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+:2  %HammingTable_hamming_61 = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 3
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_61"/></StgValue>
+</operation>
+
+<operation id="36" st_id="1" stage="2" lat="2">
+<core>RAM</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="7"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="63" bw="8" op_0_bw="3">
+<![CDATA[
+:3  %HammingTable_hamming_62 = load i8* %HammingTable_hamming_61, align 1
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_62"/></StgValue>
+</operation>
+
+<operation id="37" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="7"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="72" bw="3" op_0_bw="8" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+:2  %HammingTable_hamming_63 = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 7
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_63"/></StgValue>
+</operation>
+
+<operation id="38" st_id="1" stage="2" lat="2">
+<core>RAM</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="7"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="73" bw="8" op_0_bw="3">
+<![CDATA[
+:3  %HammingTable_hamming_64 = load i8* %HammingTable_hamming_63, align 1
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_64"/></StgValue>
+</operation>
+
+<operation id="39" st_id="1" stage="1" lat="1">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="6"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="80" bw="8" op_0_bw="8" op_1_bw="1" op_2_bw="1" op_3_bw="1" op_4_bw="1" op_5_bw="8">
+<![CDATA[
+:0  %tmp_11 = call fastcc i8 @calculateDistanceFor(i1 %p_read19, i1 %p_read120, i1 false, i1 true, i8 %p_read_19)
+
+]]></Node>
+<StgValue><ssdm name="tmp_11"/></StgValue>
+</operation>
+
+<operation id="40" st_id="1" stage="1" lat="1">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="6"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="81" bw="8" op_0_bw="8" op_1_bw="1" op_2_bw="1" op_3_bw="1" op_4_bw="1" op_5_bw="8">
+<![CDATA[
+:1  %tmp_12 = call fastcc i8 @calculateDistanceFor(i1 %p_read19, i1 %p_read120, i1 true, i1 false, i8 %p_read_19)
+
+]]></Node>
+<StgValue><ssdm name="tmp_12"/></StgValue>
+</operation>
+
+<operation id="41" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="6"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="82" bw="3" op_0_bw="8" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+:2  %HammingTable_hamming_59 = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 3
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_59"/></StgValue>
+</operation>
+
+<operation id="42" st_id="1" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="6"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="83" bw="0" op_0_bw="8" op_1_bw="3">
+<![CDATA[
+:3  store i8 %tmp_11, i8* %HammingTable_hamming_59, align 1
+
+]]></Node>
+<StgValue><ssdm name="store_ln198"/></StgValue>
+</operation>
+
+<operation id="43" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="6"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="84" bw="3" op_0_bw="8" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+:4  %HammingTable_hamming_60 = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 7
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_60"/></StgValue>
+</operation>
+
+<operation id="44" st_id="1" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="6"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="85" bw="0" op_0_bw="8" op_1_bw="3">
+<![CDATA[
+:5  store i8 %tmp_12, i8* %HammingTable_hamming_60, align 1
+
+]]></Node>
+<StgValue><ssdm name="store_ln199"/></StgValue>
+</operation>
+
+<operation id="45" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="6"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="86" bw="0" op_0_bw="0">
+<![CDATA[
+:6  br label %._crit_edge
+
+]]></Node>
+<StgValue><ssdm name="br_ln200"/></StgValue>
+</operation>
+
+<operation id="46" st_id="1" stage="1" lat="1">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="5"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="88" bw="8" op_0_bw="8" op_1_bw="1" op_2_bw="1" op_3_bw="1" op_4_bw="1" op_5_bw="8">
+<![CDATA[
+:0  %tmp_1 = call fastcc i8 @calculateDistanceFor(i1 %p_read19, i1 %p_read120, i1 false, i1 false, i8 %p_read_20)
+
+]]></Node>
+<StgValue><ssdm name="tmp_1"/></StgValue>
+</operation>
+
+<operation id="47" st_id="1" stage="1" lat="1">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="5"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="89" bw="8" op_0_bw="8" op_1_bw="1" op_2_bw="1" op_3_bw="1" op_4_bw="1" op_5_bw="8">
+<![CDATA[
+:1  %tmp_10 = call fastcc i8 @calculateDistanceFor(i1 %p_read19, i1 %p_read120, i1 true, i1 true, i8 %p_read_20)
+
+]]></Node>
+<StgValue><ssdm name="tmp_10"/></StgValue>
+</operation>
+
+<operation id="48" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="5"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="90" bw="3" op_0_bw="8" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+:2  %HammingTable_hamming_55 = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 2
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_55"/></StgValue>
+</operation>
+
+<operation id="49" st_id="1" stage="2" lat="2">
+<core>RAM</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="5"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="91" bw="8" op_0_bw="3">
+<![CDATA[
+:3  %HammingTable_hamming_56 = load i8* %HammingTable_hamming_55, align 1
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_56"/></StgValue>
+</operation>
+
+<operation id="50" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="5"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="100" bw="3" op_0_bw="8" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+:2  %HammingTable_hamming_57 = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 6
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_57"/></StgValue>
+</operation>
+
+<operation id="51" st_id="1" stage="2" lat="2">
+<core>RAM</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="5"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="101" bw="8" op_0_bw="3">
+<![CDATA[
+:3  %HammingTable_hamming_58 = load i8* %HammingTable_hamming_57, align 1
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_58"/></StgValue>
+</operation>
+
+<operation id="52" st_id="1" stage="1" lat="1">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="4"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="108" bw="8" op_0_bw="8" op_1_bw="1" op_2_bw="1" op_3_bw="1" op_4_bw="1" op_5_bw="8">
+<![CDATA[
+:0  %tmp_9 = call fastcc i8 @calculateDistanceFor(i1 %p_read19, i1 %p_read120, i1 true, i1 true, i8 %p_read_21)
+
+]]></Node>
+<StgValue><ssdm name="tmp_9"/></StgValue>
+</operation>
+
+<operation id="53" st_id="1" stage="1" lat="1">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="4"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="109" bw="8" op_0_bw="8" op_1_bw="1" op_2_bw="1" op_3_bw="1" op_4_bw="1" op_5_bw="8">
+<![CDATA[
+:1  %tmp_s = call fastcc i8 @calculateDistanceFor(i1 %p_read19, i1 %p_read120, i1 false, i1 false, i8 %p_read_21)
+
+]]></Node>
+<StgValue><ssdm name="tmp_s"/></StgValue>
+</operation>
+
+<operation id="54" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="4"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="110" bw="3" op_0_bw="8" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+:2  %HammingTable_hamming_53 = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 2
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_53"/></StgValue>
+</operation>
+
+<operation id="55" st_id="1" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="4"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="111" bw="0" op_0_bw="8" op_1_bw="3">
+<![CDATA[
+:3  store i8 %tmp_9, i8* %HammingTable_hamming_53, align 1
+
+]]></Node>
+<StgValue><ssdm name="store_ln162"/></StgValue>
+</operation>
+
+<operation id="56" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="4"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="112" bw="3" op_0_bw="8" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+:4  %HammingTable_hamming_54 = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 6
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_54"/></StgValue>
+</operation>
+
+<operation id="57" st_id="1" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="4"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="113" bw="0" op_0_bw="8" op_1_bw="3">
+<![CDATA[
+:5  store i8 %tmp_s, i8* %HammingTable_hamming_54, align 1
+
+]]></Node>
+<StgValue><ssdm name="store_ln163"/></StgValue>
+</operation>
+
+<operation id="58" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="4"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="114" bw="0" op_0_bw="0">
+<![CDATA[
+:6  br label %._crit_edge
+
+]]></Node>
+<StgValue><ssdm name="br_ln164"/></StgValue>
+</operation>
+
+<operation id="59" st_id="1" stage="1" lat="1">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="3"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="116" bw="8" op_0_bw="8" op_1_bw="1" op_2_bw="1" op_3_bw="1" op_4_bw="1" op_5_bw="8">
+<![CDATA[
+:0  %tmp_7 = call fastcc i8 @calculateDistanceFor(i1 %p_read19, i1 %p_read120, i1 false, i1 true, i8 %p_read_22)
+
+]]></Node>
+<StgValue><ssdm name="tmp_7"/></StgValue>
+</operation>
+
+<operation id="60" st_id="1" stage="1" lat="1">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="3"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="117" bw="8" op_0_bw="8" op_1_bw="1" op_2_bw="1" op_3_bw="1" op_4_bw="1" op_5_bw="8">
+<![CDATA[
+:1  %tmp_8 = call fastcc i8 @calculateDistanceFor(i1 %p_read19, i1 %p_read120, i1 true, i1 false, i8 %p_read_22)
+
+]]></Node>
+<StgValue><ssdm name="tmp_8"/></StgValue>
+</operation>
+
+<operation id="61" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="3"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="118" bw="3" op_0_bw="8" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+:2  %HammingTable_hamming_49 = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 1
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_49"/></StgValue>
+</operation>
+
+<operation id="62" st_id="1" stage="2" lat="2">
+<core>RAM</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="3"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="119" bw="8" op_0_bw="3">
+<![CDATA[
+:3  %HammingTable_hamming_50 = load i8* %HammingTable_hamming_49, align 1
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_50"/></StgValue>
+</operation>
+
+<operation id="63" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="3"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="128" bw="3" op_0_bw="8" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+:2  %HammingTable_hamming_51 = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 5
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_51"/></StgValue>
+</operation>
+
+<operation id="64" st_id="1" stage="2" lat="2">
+<core>RAM</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="3"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="129" bw="8" op_0_bw="3">
+<![CDATA[
+:3  %HammingTable_hamming_52 = load i8* %HammingTable_hamming_51, align 1
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_52"/></StgValue>
+</operation>
+
+<operation id="65" st_id="1" stage="1" lat="1">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="2"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="136" bw="8" op_0_bw="8" op_1_bw="1" op_2_bw="1" op_3_bw="1" op_4_bw="1" op_5_bw="8">
+<![CDATA[
+:0  %tmp_5 = call fastcc i8 @calculateDistanceFor(i1 %p_read19, i1 %p_read120, i1 true, i1 false, i8 %p_read_23)
+
+]]></Node>
+<StgValue><ssdm name="tmp_5"/></StgValue>
+</operation>
+
+<operation id="66" st_id="1" stage="1" lat="1">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="2"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="137" bw="8" op_0_bw="8" op_1_bw="1" op_2_bw="1" op_3_bw="1" op_4_bw="1" op_5_bw="8">
+<![CDATA[
+:1  %tmp_6 = call fastcc i8 @calculateDistanceFor(i1 %p_read19, i1 %p_read120, i1 false, i1 true, i8 %p_read_23)
+
+]]></Node>
+<StgValue><ssdm name="tmp_6"/></StgValue>
+</operation>
+
+<operation id="67" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="2"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="138" bw="3" op_0_bw="8" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+:2  %HammingTable_hamming_47 = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 1
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_47"/></StgValue>
+</operation>
+
+<operation id="68" st_id="1" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="2"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="139" bw="0" op_0_bw="8" op_1_bw="3">
+<![CDATA[
+:3  store i8 %tmp_5, i8* %HammingTable_hamming_47, align 1
+
+]]></Node>
+<StgValue><ssdm name="store_ln126"/></StgValue>
+</operation>
+
+<operation id="69" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="2"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="140" bw="3" op_0_bw="8" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+:4  %HammingTable_hamming_48 = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 5
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_48"/></StgValue>
+</operation>
+
+<operation id="70" st_id="1" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="2"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="141" bw="0" op_0_bw="8" op_1_bw="3">
+<![CDATA[
+:5  store i8 %tmp_6, i8* %HammingTable_hamming_48, align 1
+
+]]></Node>
+<StgValue><ssdm name="store_ln127"/></StgValue>
+</operation>
+
+<operation id="71" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="2"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="142" bw="0" op_0_bw="0">
+<![CDATA[
+:6  br label %._crit_edge
+
+]]></Node>
+<StgValue><ssdm name="br_ln128"/></StgValue>
+</operation>
+
+<operation id="72" st_id="1" stage="1" lat="1">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="144" bw="8" op_0_bw="8" op_1_bw="1" op_2_bw="1" op_3_bw="1" op_4_bw="1" op_5_bw="8">
+<![CDATA[
+:0  %tmp_3 = call fastcc i8 @calculateDistanceFor(i1 %p_read19, i1 %p_read120, i1 true, i1 true, i8 %p_read_24)
+
+]]></Node>
+<StgValue><ssdm name="tmp_3"/></StgValue>
+</operation>
+
+<operation id="73" st_id="1" stage="1" lat="1">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="145" bw="8" op_0_bw="8" op_1_bw="1" op_2_bw="1" op_3_bw="1" op_4_bw="1" op_5_bw="8">
+<![CDATA[
+:1  %tmp_4 = call fastcc i8 @calculateDistanceFor(i1 %p_read19, i1 %p_read120, i1 false, i1 false, i8 %p_read_24)
+
+]]></Node>
+<StgValue><ssdm name="tmp_4"/></StgValue>
+</operation>
+
+<operation id="74" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="146" bw="3" op_0_bw="8" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+:2  %HammingTable_hamming_43 = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 0
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_43"/></StgValue>
+</operation>
+
+<operation id="75" st_id="1" stage="2" lat="2">
+<core>RAM</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="147" bw="8" op_0_bw="3">
+<![CDATA[
+:3  %HammingTable_hamming_44 = load i8* %HammingTable_hamming_43, align 1
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_44"/></StgValue>
+</operation>
+
+<operation id="76" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="156" bw="3" op_0_bw="8" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+:2  %HammingTable_hamming_45 = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 4
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_45"/></StgValue>
+</operation>
+
+<operation id="77" st_id="1" stage="2" lat="2">
+<core>RAM</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="157" bw="8" op_0_bw="3">
+<![CDATA[
+:3  %HammingTable_hamming_46 = load i8* %HammingTable_hamming_45, align 1
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_46"/></StgValue>
+</operation>
+
+<operation id="78" st_id="1" stage="1" lat="1">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="164" bw="8" op_0_bw="8" op_1_bw="1" op_2_bw="1" op_3_bw="1" op_4_bw="1" op_5_bw="8">
+<![CDATA[
+:0  %tmp = call fastcc i8 @calculateDistanceFor(i1 %p_read19, i1 %p_read120, i1 false, i1 false, i8 %p_read_25)
+
+]]></Node>
+<StgValue><ssdm name="tmp"/></StgValue>
+</operation>
+
+<operation id="79" st_id="1" stage="1" lat="1">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="165" bw="8" op_0_bw="8" op_1_bw="1" op_2_bw="1" op_3_bw="1" op_4_bw="1" op_5_bw="8">
+<![CDATA[
+:1  %tmp_2 = call fastcc i8 @calculateDistanceFor(i1 %p_read19, i1 %p_read120, i1 true, i1 true, i8 %p_read_25)
+
+]]></Node>
+<StgValue><ssdm name="tmp_2"/></StgValue>
+</operation>
+
+<operation id="80" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="166" bw="3" op_0_bw="8" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+:2  %HammingTable_hamming = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 0
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming"/></StgValue>
+</operation>
+
+<operation id="81" st_id="1" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="167" bw="0" op_0_bw="8" op_1_bw="3">
+<![CDATA[
+:3  store i8 %tmp, i8* %HammingTable_hamming, align 1
+
+]]></Node>
+<StgValue><ssdm name="store_ln83"/></StgValue>
+</operation>
+
+<operation id="82" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="168" bw="3" op_0_bw="8" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+:4  %HammingTable_hamming_42 = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 4
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_42"/></StgValue>
+</operation>
+
+<operation id="83" st_id="1" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="169" bw="0" op_0_bw="8" op_1_bw="3">
+<![CDATA[
+:5  store i8 %tmp_2, i8* %HammingTable_hamming_42, align 1
+
+]]></Node>
+<StgValue><ssdm name="store_ln84"/></StgValue>
+</operation>
+
+<operation id="84" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="0"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="170" bw="0" op_0_bw="0">
+<![CDATA[
+:6  br label %._crit_edge
+
+]]></Node>
+<StgValue><ssdm name="br_ln86"/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="85" st_id="2" stage="1" lat="2">
+<core>RAM</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="7"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="63" bw="8" op_0_bw="3">
+<![CDATA[
+:3  %HammingTable_hamming_62 = load i8* %HammingTable_hamming_61, align 1
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_62"/></StgValue>
+</operation>
+
+<operation id="86" st_id="2" stage="1" lat="1">
+<core>Cmp</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="7"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="64" bw="1" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:4  %icmp_ln209 = icmp slt i8 %tmp_13, %HammingTable_hamming_62
+
+]]></Node>
+<StgValue><ssdm name="icmp_ln209"/></StgValue>
+</operation>
+
+<operation id="87" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="7"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="65" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
+<![CDATA[
+:5  br i1 %icmp_ln209, label %18, label %19
+
+]]></Node>
+<StgValue><ssdm name="br_ln209"/></StgValue>
+</operation>
+
+<operation id="88" st_id="2" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="7"/>
+<literal name="icmp_ln209" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="67" bw="0" op_0_bw="8" op_1_bw="3" op_2_bw="8">
+<![CDATA[
+:0  store i8 %tmp_13, i8* %HammingTable_hamming_61, align 1
+
+]]></Node>
+<StgValue><ssdm name="store_ln211"/></StgValue>
+</operation>
+
+<operation id="89" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="7"/>
+<literal name="icmp_ln209" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="68" bw="0" op_0_bw="0">
+<![CDATA[
+:1  br label %19
+
+]]></Node>
+<StgValue><ssdm name="br_ln213"/></StgValue>
+</operation>
+
+<operation id="90" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="7"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="70" bw="8" op_0_bw="8" op_1_bw="0" op_2_bw="8" op_3_bw="0">
+<![CDATA[
+:0  %HammingTable_gTransi = phi i8 [ -1, %18 ], [ %p_read_29, %17 ]
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_gTransi"/></StgValue>
+</operation>
+
+<operation id="91" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="7"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="71" bw="8" op_0_bw="8" op_1_bw="0" op_2_bw="8" op_3_bw="0">
+<![CDATA[
+:1  %HammingTable_hTransi = phi i8 [ %tmp_13, %18 ], [ -1, %17 ]
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hTransi"/></StgValue>
+</operation>
+
+<operation id="92" st_id="2" stage="1" lat="2">
+<core>RAM</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="7"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="73" bw="8" op_0_bw="3">
+<![CDATA[
+:3  %HammingTable_hamming_64 = load i8* %HammingTable_hamming_63, align 1
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_64"/></StgValue>
+</operation>
+
+<operation id="93" st_id="2" stage="1" lat="1">
+<core>Cmp</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="7"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="74" bw="1" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:4  %icmp_ln218 = icmp slt i8 %tmp_14, %HammingTable_hamming_64
+
+]]></Node>
+<StgValue><ssdm name="icmp_ln218"/></StgValue>
+</operation>
+
+<operation id="94" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="7"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="75" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
+<![CDATA[
+:5  br i1 %icmp_ln218, label %20, label %._crit_edge
+
+]]></Node>
+<StgValue><ssdm name="br_ln218"/></StgValue>
+</operation>
+
+<operation id="95" st_id="2" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="7"/>
+<literal name="icmp_ln218" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="77" bw="0" op_0_bw="8" op_1_bw="3" op_2_bw="8">
+<![CDATA[
+:0  store i8 %tmp_14, i8* %HammingTable_hamming_63, align 1
+
+]]></Node>
+<StgValue><ssdm name="store_ln219"/></StgValue>
+</operation>
+
+<operation id="96" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="7"/>
+<literal name="icmp_ln218" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="78" bw="0" op_0_bw="0">
+<![CDATA[
+:1  br label %._crit_edge
+
+]]></Node>
+<StgValue><ssdm name="br_ln221"/></StgValue>
+</operation>
+
+<operation id="97" st_id="2" stage="1" lat="2">
+<core>RAM</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="5"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="91" bw="8" op_0_bw="3">
+<![CDATA[
+:3  %HammingTable_hamming_56 = load i8* %HammingTable_hamming_55, align 1
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_56"/></StgValue>
+</operation>
+
+<operation id="98" st_id="2" stage="1" lat="1">
+<core>Cmp</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="5"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="92" bw="1" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:4  %icmp_ln173 = icmp slt i8 %tmp_1, %HammingTable_hamming_56
+
+]]></Node>
+<StgValue><ssdm name="icmp_ln173"/></StgValue>
+</operation>
+
+<operation id="99" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="5"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="93" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
+<![CDATA[
+:5  br i1 %icmp_ln173, label %13, label %14
+
+]]></Node>
+<StgValue><ssdm name="br_ln173"/></StgValue>
+</operation>
+
+<operation id="100" st_id="2" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="5"/>
+<literal name="icmp_ln173" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="95" bw="0" op_0_bw="8" op_1_bw="3" op_2_bw="8">
+<![CDATA[
+:0  store i8 %tmp_1, i8* %HammingTable_hamming_55, align 1
+
+]]></Node>
+<StgValue><ssdm name="store_ln174"/></StgValue>
+</operation>
+
+<operation id="101" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="5"/>
+<literal name="icmp_ln173" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="96" bw="0" op_0_bw="0">
+<![CDATA[
+:1  br label %14
+
+]]></Node>
+<StgValue><ssdm name="br_ln176"/></StgValue>
+</operation>
+
+<operation id="102" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="5"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="98" bw="8" op_0_bw="8" op_1_bw="0" op_2_bw="8" op_3_bw="0">
+<![CDATA[
+:0  %HammingTable_eTransi = phi i8 [ -1, %13 ], [ %p_read1029, %12 ]
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_eTransi"/></StgValue>
+</operation>
+
+<operation id="103" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="5"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="99" bw="8" op_0_bw="8" op_1_bw="0" op_2_bw="8" op_3_bw="0">
+<![CDATA[
+:1  %HammingTable_fTransi = phi i8 [ %tmp_1, %13 ], [ -1, %12 ]
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_fTransi"/></StgValue>
+</operation>
+
+<operation id="104" st_id="2" stage="1" lat="2">
+<core>RAM</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="5"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="101" bw="8" op_0_bw="3">
+<![CDATA[
+:3  %HammingTable_hamming_58 = load i8* %HammingTable_hamming_57, align 1
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_58"/></StgValue>
+</operation>
+
+<operation id="105" st_id="2" stage="1" lat="1">
+<core>Cmp</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="5"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="102" bw="1" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:4  %icmp_ln181 = icmp slt i8 %tmp_10, %HammingTable_hamming_58
+
+]]></Node>
+<StgValue><ssdm name="icmp_ln181"/></StgValue>
+</operation>
+
+<operation id="106" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="5"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="103" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
+<![CDATA[
+:5  br i1 %icmp_ln181, label %15, label %._crit_edge
+
+]]></Node>
+<StgValue><ssdm name="br_ln181"/></StgValue>
+</operation>
+
+<operation id="107" st_id="2" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="5"/>
+<literal name="icmp_ln181" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="105" bw="0" op_0_bw="8" op_1_bw="3" op_2_bw="8">
+<![CDATA[
+:0  store i8 %tmp_10, i8* %HammingTable_hamming_57, align 1
+
+]]></Node>
+<StgValue><ssdm name="store_ln182"/></StgValue>
+</operation>
+
+<operation id="108" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="5"/>
+<literal name="icmp_ln181" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="106" bw="0" op_0_bw="0">
+<![CDATA[
+:1  br label %._crit_edge
+
+]]></Node>
+<StgValue><ssdm name="br_ln184"/></StgValue>
+</operation>
+
+<operation id="109" st_id="2" stage="1" lat="2">
+<core>RAM</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="3"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="119" bw="8" op_0_bw="3">
+<![CDATA[
+:3  %HammingTable_hamming_50 = load i8* %HammingTable_hamming_49, align 1
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_50"/></StgValue>
+</operation>
+
+<operation id="110" st_id="2" stage="1" lat="1">
+<core>Cmp</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="3"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="120" bw="1" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:4  %icmp_ln137 = icmp slt i8 %tmp_7, %HammingTable_hamming_50
+
+]]></Node>
+<StgValue><ssdm name="icmp_ln137"/></StgValue>
+</operation>
+
+<operation id="111" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="3"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="121" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
+<![CDATA[
+:5  br i1 %icmp_ln137, label %8, label %9
+
+]]></Node>
+<StgValue><ssdm name="br_ln137"/></StgValue>
+</operation>
+
+<operation id="112" st_id="2" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="3"/>
+<literal name="icmp_ln137" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="123" bw="0" op_0_bw="8" op_1_bw="3" op_2_bw="8">
+<![CDATA[
+:0  store i8 %tmp_7, i8* %HammingTable_hamming_49, align 1
+
+]]></Node>
+<StgValue><ssdm name="store_ln138"/></StgValue>
+</operation>
+
+<operation id="113" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="3"/>
+<literal name="icmp_ln137" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="124" bw="0" op_0_bw="0">
+<![CDATA[
+:1  br label %9
+
+]]></Node>
+<StgValue><ssdm name="br_ln140"/></StgValue>
+</operation>
+
+<operation id="114" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="3"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="126" bw="8" op_0_bw="8" op_1_bw="0" op_2_bw="8" op_3_bw="0">
+<![CDATA[
+:0  %HammingTable_cTransi = phi i8 [ -1, %8 ], [ %p_read625, %7 ]
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_cTransi"/></StgValue>
+</operation>
+
+<operation id="115" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="3"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="127" bw="8" op_0_bw="8" op_1_bw="0" op_2_bw="8" op_3_bw="0">
+<![CDATA[
+:1  %HammingTable_dTransi = phi i8 [ %tmp_7, %8 ], [ -1, %7 ]
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_dTransi"/></StgValue>
+</operation>
+
+<operation id="116" st_id="2" stage="1" lat="2">
+<core>RAM</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="3"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="129" bw="8" op_0_bw="3">
+<![CDATA[
+:3  %HammingTable_hamming_52 = load i8* %HammingTable_hamming_51, align 1
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_52"/></StgValue>
+</operation>
+
+<operation id="117" st_id="2" stage="1" lat="1">
+<core>Cmp</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="3"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="130" bw="1" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:4  %icmp_ln145 = icmp slt i8 %tmp_8, %HammingTable_hamming_52
+
+]]></Node>
+<StgValue><ssdm name="icmp_ln145"/></StgValue>
+</operation>
+
+<operation id="118" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="3"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="131" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
+<![CDATA[
+:5  br i1 %icmp_ln145, label %10, label %._crit_edge
+
+]]></Node>
+<StgValue><ssdm name="br_ln145"/></StgValue>
+</operation>
+
+<operation id="119" st_id="2" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="3"/>
+<literal name="icmp_ln145" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="133" bw="0" op_0_bw="8" op_1_bw="3" op_2_bw="8">
+<![CDATA[
+:0  store i8 %tmp_8, i8* %HammingTable_hamming_51, align 1
+
+]]></Node>
+<StgValue><ssdm name="store_ln146"/></StgValue>
+</operation>
+
+<operation id="120" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="3"/>
+<literal name="icmp_ln145" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="134" bw="0" op_0_bw="0">
+<![CDATA[
+:1  br label %._crit_edge
+
+]]></Node>
+<StgValue><ssdm name="br_ln148"/></StgValue>
+</operation>
+
+<operation id="121" st_id="2" stage="1" lat="2">
+<core>RAM</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="147" bw="8" op_0_bw="3">
+<![CDATA[
+:3  %HammingTable_hamming_44 = load i8* %HammingTable_hamming_43, align 1
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_44"/></StgValue>
+</operation>
+
+<operation id="122" st_id="2" stage="1" lat="1">
+<core>Cmp</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="148" bw="1" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:4  %icmp_ln100 = icmp slt i8 %tmp_3, %HammingTable_hamming_44
+
+]]></Node>
+<StgValue><ssdm name="icmp_ln100"/></StgValue>
+</operation>
+
+<operation id="123" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="149" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
+<![CDATA[
+:5  br i1 %icmp_ln100, label %3, label %4
+
+]]></Node>
+<StgValue><ssdm name="br_ln100"/></StgValue>
+</operation>
+
+<operation id="124" st_id="2" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="1"/>
+<literal name="icmp_ln100" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="151" bw="0" op_0_bw="8" op_1_bw="3" op_2_bw="8">
+<![CDATA[
+:0  store i8 %tmp_3, i8* %HammingTable_hamming_43, align 1
+
+]]></Node>
+<StgValue><ssdm name="store_ln101"/></StgValue>
+</operation>
+
+<operation id="125" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="1"/>
+<literal name="icmp_ln100" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="152" bw="0" op_0_bw="0">
+<![CDATA[
+:1  br label %4
+
+]]></Node>
+<StgValue><ssdm name="br_ln103"/></StgValue>
+</operation>
+
+<operation id="126" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="154" bw="8" op_0_bw="8" op_1_bw="0" op_2_bw="8" op_3_bw="0">
+<![CDATA[
+:0  %HammingTable_bTransi = phi i8 [ %tmp_3, %3 ], [ -1, %2 ]
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_bTransi"/></StgValue>
+</operation>
+
+<operation id="127" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="155" bw="8" op_0_bw="8" op_1_bw="0" op_2_bw="8" op_3_bw="0">
+<![CDATA[
+:1  %HammingTable_aTransi = phi i8 [ -1, %3 ], [ %p_read221, %2 ]
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_aTransi"/></StgValue>
+</operation>
+
+<operation id="128" st_id="2" stage="1" lat="2">
+<core>RAM</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="157" bw="8" op_0_bw="3">
+<![CDATA[
+:3  %HammingTable_hamming_46 = load i8* %HammingTable_hamming_45, align 1
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_46"/></StgValue>
+</operation>
+
+<operation id="129" st_id="2" stage="1" lat="1">
+<core>Cmp</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="158" bw="1" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:4  %icmp_ln108 = icmp slt i8 %tmp_4, %HammingTable_hamming_46
+
+]]></Node>
+<StgValue><ssdm name="icmp_ln108"/></StgValue>
+</operation>
+
+<operation id="130" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="159" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
+<![CDATA[
+:5  br i1 %icmp_ln108, label %5, label %._crit_edge
+
+]]></Node>
+<StgValue><ssdm name="br_ln108"/></StgValue>
+</operation>
+
+<operation id="131" st_id="2" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="1"/>
+<literal name="icmp_ln108" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="161" bw="0" op_0_bw="8" op_1_bw="3" op_2_bw="8">
+<![CDATA[
+:0  store i8 %tmp_4, i8* %HammingTable_hamming_45, align 1
+
+]]></Node>
+<StgValue><ssdm name="store_ln109"/></StgValue>
+</operation>
+
+<operation id="132" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="state_read" val="1"/>
+<literal name="icmp_ln108" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="162" bw="0" op_0_bw="0">
+<![CDATA[
+:1  br label %._crit_edge
+
+]]></Node>
+<StgValue><ssdm name="br_ln111"/></StgValue>
+</operation>
+
+<operation id="133" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="172" bw="8" op_0_bw="8" op_1_bw="0" op_2_bw="8" op_3_bw="0" op_4_bw="8" op_5_bw="0" op_6_bw="8" op_7_bw="0" op_8_bw="8" op_9_bw="0" op_10_bw="8" op_11_bw="0" op_12_bw="8" op_13_bw="0" op_14_bw="8" op_15_bw="0" op_16_bw="8" op_17_bw="0" op_18_bw="8" op_19_bw="0" op_20_bw="8" op_21_bw="0" op_22_bw="8" op_23_bw="0" op_24_bw="8" op_25_bw="0">
+<![CDATA[
+._crit_edge:0  %HammingTable_cTransi_30 = phi i8 [ %p_read625, %0 ], [ %p_read625, %16 ], [ %p_read625, %11 ], [ %tmp_5, %6 ], [ %p_read625, %1 ], [ %p_read625, %4 ], [ %p_read625, %5 ], [ %HammingTable_cTransi, %9 ], [ %HammingTable_cTransi, %10 ], [ %p_read625, %14 ], [ %p_read625, %15 ], [ %p_read625, %19 ], [ %p_read625, %20 ]
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_cTransi_30"/></StgValue>
+</operation>
+
+<operation id="134" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="173" bw="8" op_0_bw="8" op_1_bw="0" op_2_bw="8" op_3_bw="0" op_4_bw="8" op_5_bw="0" op_6_bw="8" op_7_bw="0" op_8_bw="8" op_9_bw="0" op_10_bw="8" op_11_bw="0" op_12_bw="8" op_13_bw="0" op_14_bw="8" op_15_bw="0" op_16_bw="8" op_17_bw="0" op_18_bw="8" op_19_bw="0" op_20_bw="8" op_21_bw="0" op_22_bw="8" op_23_bw="0" op_24_bw="8" op_25_bw="0">
+<![CDATA[
+._crit_edge:1  %phi_ln228 = phi i8 [ %p_read726, %0 ], [ %p_read726, %16 ], [ %p_read726, %11 ], [ %tmp_6, %6 ], [ %p_read726, %1 ], [ %p_read726, %4 ], [ %p_read726, %5 ], [ %p_read726, %9 ], [ -1, %10 ], [ %p_read726, %14 ], [ %p_read726, %15 ], [ %p_read726, %19 ], [ %p_read726, %20 ]
+
+]]></Node>
+<StgValue><ssdm name="phi_ln228"/></StgValue>
+</operation>
+
+<operation id="135" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="174" bw="8" op_0_bw="8" op_1_bw="0" op_2_bw="8" op_3_bw="0" op_4_bw="8" op_5_bw="0" op_6_bw="8" op_7_bw="0" op_8_bw="8" op_9_bw="0" op_10_bw="8" op_11_bw="0" op_12_bw="8" op_13_bw="0" op_14_bw="8" op_15_bw="0" op_16_bw="8" op_17_bw="0" op_18_bw="8" op_19_bw="0" op_20_bw="8" op_21_bw="0" op_22_bw="8" op_23_bw="0" op_24_bw="8" op_25_bw="0">
+<![CDATA[
+._crit_edge:2  %HammingTable_dTransi_20 = phi i8 [ %p_read827, %0 ], [ %p_read827, %16 ], [ %p_read827, %11 ], [ %p_read827, %6 ], [ %p_read827, %1 ], [ %p_read827, %4 ], [ %p_read827, %5 ], [ %HammingTable_dTransi, %9 ], [ %HammingTable_dTransi, %10 ], [ %p_read827, %14 ], [ %p_read827, %15 ], [ %p_read827, %19 ], [ %p_read827, %20 ]
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_dTransi_20"/></StgValue>
+</operation>
+
+<operation id="136" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="175" bw="8" op_0_bw="8" op_1_bw="0" op_2_bw="8" op_3_bw="0" op_4_bw="8" op_5_bw="0" op_6_bw="8" op_7_bw="0" op_8_bw="8" op_9_bw="0" op_10_bw="8" op_11_bw="0" op_12_bw="8" op_13_bw="0" op_14_bw="8" op_15_bw="0" op_16_bw="8" op_17_bw="0" op_18_bw="8" op_19_bw="0" op_20_bw="8" op_21_bw="0" op_22_bw="8" op_23_bw="0" op_24_bw="8" op_25_bw="0">
+<![CDATA[
+._crit_edge:3  %phi_ln228_1 = phi i8 [ %p_read928, %0 ], [ %p_read928, %16 ], [ %p_read928, %11 ], [ %p_read928, %6 ], [ %p_read928, %1 ], [ %p_read928, %4 ], [ %p_read928, %5 ], [ -1, %9 ], [ %tmp_8, %10 ], [ %p_read928, %14 ], [ %p_read928, %15 ], [ %p_read928, %19 ], [ %p_read928, %20 ]
+
+]]></Node>
+<StgValue><ssdm name="phi_ln228_1"/></StgValue>
+</operation>
+
+<operation id="137" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="176" bw="8" op_0_bw="8" op_1_bw="0" op_2_bw="8" op_3_bw="0" op_4_bw="8" op_5_bw="0" op_6_bw="8" op_7_bw="0" op_8_bw="8" op_9_bw="0" op_10_bw="8" op_11_bw="0" op_12_bw="8" op_13_bw="0" op_14_bw="8" op_15_bw="0" op_16_bw="8" op_17_bw="0" op_18_bw="8" op_19_bw="0" op_20_bw="8" op_21_bw="0" op_22_bw="8" op_23_bw="0" op_24_bw="8" op_25_bw="0">
+<![CDATA[
+._crit_edge:4  %phi_ln228_2 = phi i8 [ %p_read524, %0 ], [ %p_read524, %16 ], [ %p_read524, %11 ], [ %p_read524, %6 ], [ %p_read524, %1 ], [ -1, %4 ], [ %tmp_4, %5 ], [ %p_read524, %9 ], [ %p_read524, %10 ], [ %p_read524, %14 ], [ %p_read524, %15 ], [ %p_read524, %19 ], [ %p_read524, %20 ]
+
+]]></Node>
+<StgValue><ssdm name="phi_ln228_2"/></StgValue>
+</operation>
+
+<operation id="138" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="177" bw="8" op_0_bw="8" op_1_bw="0" op_2_bw="8" op_3_bw="0" op_4_bw="8" op_5_bw="0" op_6_bw="8" op_7_bw="0" op_8_bw="8" op_9_bw="0" op_10_bw="8" op_11_bw="0" op_12_bw="8" op_13_bw="0" op_14_bw="8" op_15_bw="0" op_16_bw="8" op_17_bw="0" op_18_bw="8" op_19_bw="0" op_20_bw="8" op_21_bw="0" op_22_bw="8" op_23_bw="0" op_24_bw="8" op_25_bw="0">
+<![CDATA[
+._crit_edge:5  %HammingTable_eTransi_30 = phi i8 [ %p_read1029, %0 ], [ %p_read1029, %16 ], [ %tmp_9, %11 ], [ %p_read1029, %6 ], [ %p_read1029, %1 ], [ %p_read1029, %4 ], [ %p_read1029, %5 ], [ %p_read1029, %9 ], [ %p_read1029, %10 ], [ %HammingTable_eTransi, %14 ], [ %HammingTable_eTransi, %15 ], [ %p_read1029, %19 ], [ %p_read1029, %20 ]
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_eTransi_30"/></StgValue>
+</operation>
+
+<operation id="139" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="178" bw="8" op_0_bw="8" op_1_bw="0" op_2_bw="8" op_3_bw="0" op_4_bw="8" op_5_bw="0" op_6_bw="8" op_7_bw="0" op_8_bw="8" op_9_bw="0" op_10_bw="8" op_11_bw="0" op_12_bw="8" op_13_bw="0" op_14_bw="8" op_15_bw="0" op_16_bw="8" op_17_bw="0" op_18_bw="8" op_19_bw="0" op_20_bw="8" op_21_bw="0" op_22_bw="8" op_23_bw="0" op_24_bw="8" op_25_bw="0">
+<![CDATA[
+._crit_edge:6  %phi_ln228_3 = phi i8 [ %p_read_32, %0 ], [ %p_read_32, %16 ], [ %tmp_s, %11 ], [ %p_read_32, %6 ], [ %p_read_32, %1 ], [ %p_read_32, %4 ], [ %p_read_32, %5 ], [ %p_read_32, %9 ], [ %p_read_32, %10 ], [ %p_read_32, %14 ], [ -1, %15 ], [ %p_read_32, %19 ], [ %p_read_32, %20 ]
+
+]]></Node>
+<StgValue><ssdm name="phi_ln228_3"/></StgValue>
+</operation>
+
+<operation id="140" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="179" bw="8" op_0_bw="8" op_1_bw="0" op_2_bw="8" op_3_bw="0" op_4_bw="8" op_5_bw="0" op_6_bw="8" op_7_bw="0" op_8_bw="8" op_9_bw="0" op_10_bw="8" op_11_bw="0" op_12_bw="8" op_13_bw="0" op_14_bw="8" op_15_bw="0" op_16_bw="8" op_17_bw="0" op_18_bw="8" op_19_bw="0" op_20_bw="8" op_21_bw="0" op_22_bw="8" op_23_bw="0" op_24_bw="8" op_25_bw="0">
+<![CDATA[
+._crit_edge:7  %HammingTable_bTransi_20 = phi i8 [ %p_read423, %0 ], [ %p_read423, %16 ], [ %p_read423, %11 ], [ %p_read423, %6 ], [ %p_read423, %1 ], [ %HammingTable_bTransi, %4 ], [ %HammingTable_bTransi, %5 ], [ %p_read423, %9 ], [ %p_read423, %10 ], [ %p_read423, %14 ], [ %p_read423, %15 ], [ %p_read423, %19 ], [ %p_read423, %20 ]
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_bTransi_20"/></StgValue>
+</operation>
+
+<operation id="141" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="180" bw="8" op_0_bw="8" op_1_bw="0" op_2_bw="8" op_3_bw="0" op_4_bw="8" op_5_bw="0" op_6_bw="8" op_7_bw="0" op_8_bw="8" op_9_bw="0" op_10_bw="8" op_11_bw="0" op_12_bw="8" op_13_bw="0" op_14_bw="8" op_15_bw="0" op_16_bw="8" op_17_bw="0" op_18_bw="8" op_19_bw="0" op_20_bw="8" op_21_bw="0" op_22_bw="8" op_23_bw="0" op_24_bw="8" op_25_bw="0">
+<![CDATA[
+._crit_edge:8  %HammingTable_fTransi_20 = phi i8 [ %p_read_31, %0 ], [ %p_read_31, %16 ], [ %p_read_31, %11 ], [ %p_read_31, %6 ], [ %p_read_31, %1 ], [ %p_read_31, %4 ], [ %p_read_31, %5 ], [ %p_read_31, %9 ], [ %p_read_31, %10 ], [ %HammingTable_fTransi, %14 ], [ %HammingTable_fTransi, %15 ], [ %p_read_31, %19 ], [ %p_read_31, %20 ]
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_fTransi_20"/></StgValue>
+</operation>
+
+<operation id="142" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="181" bw="8" op_0_bw="8" op_1_bw="0" op_2_bw="8" op_3_bw="0" op_4_bw="8" op_5_bw="0" op_6_bw="8" op_7_bw="0" op_8_bw="8" op_9_bw="0" op_10_bw="8" op_11_bw="0" op_12_bw="8" op_13_bw="0" op_14_bw="8" op_15_bw="0" op_16_bw="8" op_17_bw="0" op_18_bw="8" op_19_bw="0" op_20_bw="8" op_21_bw="0" op_22_bw="8" op_23_bw="0" op_24_bw="8" op_25_bw="0">
+<![CDATA[
+._crit_edge:9  %phi_ln228_4 = phi i8 [ %p_read_30, %0 ], [ %p_read_30, %16 ], [ %p_read_30, %11 ], [ %p_read_30, %6 ], [ %p_read_30, %1 ], [ %p_read_30, %4 ], [ %p_read_30, %5 ], [ %p_read_30, %9 ], [ %p_read_30, %10 ], [ -1, %14 ], [ %tmp_10, %15 ], [ %p_read_30, %19 ], [ %p_read_30, %20 ]
+
+]]></Node>
+<StgValue><ssdm name="phi_ln228_4"/></StgValue>
+</operation>
+
+<operation id="143" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="182" bw="8" op_0_bw="8" op_1_bw="0" op_2_bw="8" op_3_bw="0" op_4_bw="8" op_5_bw="0" op_6_bw="8" op_7_bw="0" op_8_bw="8" op_9_bw="0" op_10_bw="8" op_11_bw="0" op_12_bw="8" op_13_bw="0" op_14_bw="8" op_15_bw="0" op_16_bw="8" op_17_bw="0" op_18_bw="8" op_19_bw="0" op_20_bw="8" op_21_bw="0" op_22_bw="8" op_23_bw="0" op_24_bw="8" op_25_bw="0">
+<![CDATA[
+._crit_edge:10  %HammingTable_gTransi_30 = phi i8 [ %p_read_29, %0 ], [ %tmp_11, %16 ], [ %p_read_29, %11 ], [ %p_read_29, %6 ], [ %p_read_29, %1 ], [ %p_read_29, %4 ], [ %p_read_29, %5 ], [ %p_read_29, %9 ], [ %p_read_29, %10 ], [ %p_read_29, %14 ], [ %p_read_29, %15 ], [ %HammingTable_gTransi, %19 ], [ %HammingTable_gTransi, %20 ]
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_gTransi_30"/></StgValue>
+</operation>
+
+<operation id="144" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="183" bw="8" op_0_bw="8" op_1_bw="0" op_2_bw="8" op_3_bw="0" op_4_bw="8" op_5_bw="0" op_6_bw="8" op_7_bw="0" op_8_bw="8" op_9_bw="0" op_10_bw="8" op_11_bw="0" op_12_bw="8" op_13_bw="0" op_14_bw="8" op_15_bw="0" op_16_bw="8" op_17_bw="0" op_18_bw="8" op_19_bw="0" op_20_bw="8" op_21_bw="0" op_22_bw="8" op_23_bw="0" op_24_bw="8" op_25_bw="0">
+<![CDATA[
+._crit_edge:11  %phi_ln228_5 = phi i8 [ %p_read_28, %0 ], [ %tmp_12, %16 ], [ %p_read_28, %11 ], [ %p_read_28, %6 ], [ %p_read_28, %1 ], [ %p_read_28, %4 ], [ %p_read_28, %5 ], [ %p_read_28, %9 ], [ %p_read_28, %10 ], [ %p_read_28, %14 ], [ %p_read_28, %15 ], [ %p_read_28, %19 ], [ -1, %20 ]
+
+]]></Node>
+<StgValue><ssdm name="phi_ln228_5"/></StgValue>
+</operation>
+
+<operation id="145" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="184" bw="8" op_0_bw="8" op_1_bw="0" op_2_bw="8" op_3_bw="0" op_4_bw="8" op_5_bw="0" op_6_bw="8" op_7_bw="0" op_8_bw="8" op_9_bw="0" op_10_bw="8" op_11_bw="0" op_12_bw="8" op_13_bw="0" op_14_bw="8" op_15_bw="0" op_16_bw="8" op_17_bw="0" op_18_bw="8" op_19_bw="0" op_20_bw="8" op_21_bw="0" op_22_bw="8" op_23_bw="0" op_24_bw="8" op_25_bw="0">
+<![CDATA[
+._crit_edge:12  %phi_ln228_6 = phi i8 [ %p_read322, %0 ], [ %p_read322, %16 ], [ %p_read322, %11 ], [ %p_read322, %6 ], [ %tmp_2, %1 ], [ %p_read322, %4 ], [ -1, %5 ], [ %p_read322, %9 ], [ %p_read322, %10 ], [ %p_read322, %14 ], [ %p_read322, %15 ], [ %p_read322, %19 ], [ %p_read322, %20 ]
+
+]]></Node>
+<StgValue><ssdm name="phi_ln228_6"/></StgValue>
+</operation>
+
+<operation id="146" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="185" bw="8" op_0_bw="8" op_1_bw="0" op_2_bw="8" op_3_bw="0" op_4_bw="8" op_5_bw="0" op_6_bw="8" op_7_bw="0" op_8_bw="8" op_9_bw="0" op_10_bw="8" op_11_bw="0" op_12_bw="8" op_13_bw="0" op_14_bw="8" op_15_bw="0" op_16_bw="8" op_17_bw="0" op_18_bw="8" op_19_bw="0" op_20_bw="8" op_21_bw="0" op_22_bw="8" op_23_bw="0" op_24_bw="8" op_25_bw="0">
+<![CDATA[
+._crit_edge:13  %HammingTable_hTransi_20 = phi i8 [ %p_read_27, %0 ], [ %p_read_27, %16 ], [ %p_read_27, %11 ], [ %p_read_27, %6 ], [ %p_read_27, %1 ], [ %p_read_27, %4 ], [ %p_read_27, %5 ], [ %p_read_27, %9 ], [ %p_read_27, %10 ], [ %p_read_27, %14 ], [ %p_read_27, %15 ], [ %HammingTable_hTransi, %19 ], [ %HammingTable_hTransi, %20 ]
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hTransi_20"/></StgValue>
+</operation>
+
+<operation id="147" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="186" bw="8" op_0_bw="8" op_1_bw="0" op_2_bw="8" op_3_bw="0" op_4_bw="8" op_5_bw="0" op_6_bw="8" op_7_bw="0" op_8_bw="8" op_9_bw="0" op_10_bw="8" op_11_bw="0" op_12_bw="8" op_13_bw="0" op_14_bw="8" op_15_bw="0" op_16_bw="8" op_17_bw="0" op_18_bw="8" op_19_bw="0" op_20_bw="8" op_21_bw="0" op_22_bw="8" op_23_bw="0" op_24_bw="8" op_25_bw="0">
+<![CDATA[
+._crit_edge:14  %phi_ln228_7 = phi i8 [ %p_read_26, %0 ], [ %p_read_26, %16 ], [ %p_read_26, %11 ], [ %p_read_26, %6 ], [ %p_read_26, %1 ], [ %p_read_26, %4 ], [ %p_read_26, %5 ], [ %p_read_26, %9 ], [ %p_read_26, %10 ], [ %p_read_26, %14 ], [ %p_read_26, %15 ], [ -1, %19 ], [ %tmp_14, %20 ]
+
+]]></Node>
+<StgValue><ssdm name="phi_ln228_7"/></StgValue>
+</operation>
+
+<operation id="148" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="187" bw="8" op_0_bw="8" op_1_bw="0" op_2_bw="8" op_3_bw="0" op_4_bw="8" op_5_bw="0" op_6_bw="8" op_7_bw="0" op_8_bw="8" op_9_bw="0" op_10_bw="8" op_11_bw="0" op_12_bw="8" op_13_bw="0" op_14_bw="8" op_15_bw="0" op_16_bw="8" op_17_bw="0" op_18_bw="8" op_19_bw="0" op_20_bw="8" op_21_bw="0" op_22_bw="8" op_23_bw="0" op_24_bw="8" op_25_bw="0">
+<![CDATA[
+._crit_edge:15  %HammingTable_aTransi_30 = phi i8 [ %p_read221, %0 ], [ %p_read221, %16 ], [ %p_read221, %11 ], [ %p_read221, %6 ], [ %tmp, %1 ], [ %HammingTable_aTransi, %4 ], [ %HammingTable_aTransi, %5 ], [ %p_read221, %9 ], [ %p_read221, %10 ], [ %p_read221, %14 ], [ %p_read221, %15 ], [ %p_read221, %19 ], [ %p_read221, %20 ]
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_aTransi_30"/></StgValue>
+</operation>
+
+<operation id="149" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="188" bw="128" op_0_bw="128" op_1_bw="8">
+<![CDATA[
+._crit_edge:16  %mrv = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } undef, i8 %HammingTable_aTransi_30, 0
+
+]]></Node>
+<StgValue><ssdm name="mrv"/></StgValue>
+</operation>
+
+<operation id="150" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="189" bw="128" op_0_bw="128" op_1_bw="8">
+<![CDATA[
+._crit_edge:17  %mrv_1 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv, i8 %phi_ln228_6, 1
+
+]]></Node>
+<StgValue><ssdm name="mrv_1"/></StgValue>
+</operation>
+
+<operation id="151" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="190" bw="128" op_0_bw="128" op_1_bw="8">
+<![CDATA[
+._crit_edge:18  %mrv_2 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_1, i8 %HammingTable_bTransi_20, 2
+
+]]></Node>
+<StgValue><ssdm name="mrv_2"/></StgValue>
+</operation>
+
+<operation id="152" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="191" bw="128" op_0_bw="128" op_1_bw="8">
+<![CDATA[
+._crit_edge:19  %mrv_3 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_2, i8 %phi_ln228_2, 3
+
+]]></Node>
+<StgValue><ssdm name="mrv_3"/></StgValue>
+</operation>
+
+<operation id="153" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="192" bw="128" op_0_bw="128" op_1_bw="8">
+<![CDATA[
+._crit_edge:20  %mrv_4 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_3, i8 %HammingTable_cTransi_30, 4
+
+]]></Node>
+<StgValue><ssdm name="mrv_4"/></StgValue>
+</operation>
+
+<operation id="154" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="193" bw="128" op_0_bw="128" op_1_bw="8">
+<![CDATA[
+._crit_edge:21  %mrv_5 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_4, i8 %phi_ln228, 5
+
+]]></Node>
+<StgValue><ssdm name="mrv_5"/></StgValue>
+</operation>
+
+<operation id="155" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="194" bw="128" op_0_bw="128" op_1_bw="8">
+<![CDATA[
+._crit_edge:22  %mrv_6 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_5, i8 %HammingTable_dTransi_20, 6
+
+]]></Node>
+<StgValue><ssdm name="mrv_6"/></StgValue>
+</operation>
+
+<operation id="156" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="195" bw="128" op_0_bw="128" op_1_bw="8">
+<![CDATA[
+._crit_edge:23  %mrv_7 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_6, i8 %phi_ln228_1, 7
+
+]]></Node>
+<StgValue><ssdm name="mrv_7"/></StgValue>
+</operation>
+
+<operation id="157" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="196" bw="128" op_0_bw="128" op_1_bw="8">
+<![CDATA[
+._crit_edge:24  %mrv_8 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_7, i8 %HammingTable_eTransi_30, 8
+
+]]></Node>
+<StgValue><ssdm name="mrv_8"/></StgValue>
+</operation>
+
+<operation id="158" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="197" bw="128" op_0_bw="128" op_1_bw="8">
+<![CDATA[
+._crit_edge:25  %mrv_9 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_8, i8 %phi_ln228_3, 9
+
+]]></Node>
+<StgValue><ssdm name="mrv_9"/></StgValue>
+</operation>
+
+<operation id="159" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="198" bw="128" op_0_bw="128" op_1_bw="8">
+<![CDATA[
+._crit_edge:26  %mrv_10 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_9, i8 %HammingTable_fTransi_20, 10
+
+]]></Node>
+<StgValue><ssdm name="mrv_10"/></StgValue>
+</operation>
+
+<operation id="160" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="199" bw="128" op_0_bw="128" op_1_bw="8">
+<![CDATA[
+._crit_edge:27  %mrv_11 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_10, i8 %phi_ln228_4, 11
+
+]]></Node>
+<StgValue><ssdm name="mrv_11"/></StgValue>
+</operation>
+
+<operation id="161" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="200" bw="128" op_0_bw="128" op_1_bw="8">
+<![CDATA[
+._crit_edge:28  %mrv_12 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_11, i8 %HammingTable_gTransi_30, 12
+
+]]></Node>
+<StgValue><ssdm name="mrv_12"/></StgValue>
+</operation>
+
+<operation id="162" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="201" bw="128" op_0_bw="128" op_1_bw="8">
+<![CDATA[
+._crit_edge:29  %mrv_13 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_12, i8 %phi_ln228_5, 13
+
+]]></Node>
+<StgValue><ssdm name="mrv_13"/></StgValue>
+</operation>
+
+<operation id="163" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="202" bw="128" op_0_bw="128" op_1_bw="8">
+<![CDATA[
+._crit_edge:30  %mrv_14 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_13, i8 %HammingTable_hTransi_20, 14
+
+]]></Node>
+<StgValue><ssdm name="mrv_14"/></StgValue>
+</operation>
+
+<operation id="164" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="203" bw="128" op_0_bw="128" op_1_bw="8">
+<![CDATA[
+._crit_edge:31  %mrv_s = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_14, i8 %phi_ln228_7, 15
+
+]]></Node>
+<StgValue><ssdm name="mrv_s"/></StgValue>
+</operation>
+
+<operation id="165" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="204" bw="0" op_0_bw="128">
+<![CDATA[
+._crit_edge:32  ret { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_s
+
+]]></Node>
+<StgValue><ssdm name="ret_ln228"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+</ports>
+
+
+<dataflows>
+</dataflows>
+
+
+</stg>

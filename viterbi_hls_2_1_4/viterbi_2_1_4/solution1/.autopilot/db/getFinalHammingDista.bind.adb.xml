@@ -1,0 +1,710 @@
+<stg><name>getFinalHammingDista</name>
+
+
+<trans_list>
+
+<trans id="45" from="1" to="2">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="46" from="2" to="3">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="47" from="3" to="4">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="48" from="4" to="5">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="6" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="3" bw="3" op_0_bw="8" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+:1  %HammingTable_hamming = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 0
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming"/></StgValue>
+</operation>
+
+<operation id="7" st_id="1" stage="2" lat="2">
+<core>RAM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="4" bw="8" op_0_bw="3">
+<![CDATA[
+:2  %HammingTable_hamming_27 = load i8* %HammingTable_hamming, align 1
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_27"/></StgValue>
+</operation>
+
+<operation id="8" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="5" bw="3" op_0_bw="8" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+:3  %HammingTable_hamming_28 = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 1
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_28"/></StgValue>
+</operation>
+
+<operation id="9" st_id="1" stage="2" lat="2">
+<core>RAM</core>
+<MemPortIdVec>1 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="6" bw="8" op_0_bw="3">
+<![CDATA[
+:4  %HammingTable_hamming_29 = load i8* %HammingTable_hamming_28, align 1
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_29"/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="10" st_id="2" stage="1" lat="2">
+<core>RAM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="4" bw="8" op_0_bw="3">
+<![CDATA[
+:2  %HammingTable_hamming_27 = load i8* %HammingTable_hamming, align 1
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_27"/></StgValue>
+</operation>
+
+<operation id="11" st_id="2" stage="1" lat="2">
+<core>RAM</core>
+<MemPortIdVec>1 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="6" bw="8" op_0_bw="3">
+<![CDATA[
+:4  %HammingTable_hamming_29 = load i8* %HammingTable_hamming_28, align 1
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_29"/></StgValue>
+</operation>
+
+<operation id="12" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="7" bw="3" op_0_bw="8" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+:5  %HammingTable_hamming_30 = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 2
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_30"/></StgValue>
+</operation>
+
+<operation id="13" st_id="2" stage="2" lat="2">
+<core>RAM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="8" op_0_bw="3">
+<![CDATA[
+:6  %HammingTable_hamming_31 = load i8* %HammingTable_hamming_30, align 1
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_31"/></StgValue>
+</operation>
+
+<operation id="14" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="9" bw="3" op_0_bw="8" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+:7  %HammingTable_hamming_32 = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 3
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_32"/></StgValue>
+</operation>
+
+<operation id="15" st_id="2" stage="2" lat="2">
+<core>RAM</core>
+<MemPortIdVec>1 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="10" bw="8" op_0_bw="3">
+<![CDATA[
+:8  %HammingTable_hamming_33 = load i8* %HammingTable_hamming_32, align 1
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_33"/></StgValue>
+</operation>
+</state>
+
+<state id="3" st_id="3">
+
+<operation id="16" st_id="3" stage="1" lat="2">
+<core>RAM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="8" op_0_bw="3">
+<![CDATA[
+:6  %HammingTable_hamming_31 = load i8* %HammingTable_hamming_30, align 1
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_31"/></StgValue>
+</operation>
+
+<operation id="17" st_id="3" stage="1" lat="2">
+<core>RAM</core>
+<MemPortIdVec>1 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="10" bw="8" op_0_bw="3">
+<![CDATA[
+:8  %HammingTable_hamming_33 = load i8* %HammingTable_hamming_32, align 1
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_33"/></StgValue>
+</operation>
+
+<operation id="18" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="11" bw="3" op_0_bw="8" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+:9  %HammingTable_hamming_34 = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 4
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_34"/></StgValue>
+</operation>
+
+<operation id="19" st_id="3" stage="2" lat="2">
+<core>RAM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="12" bw="8" op_0_bw="3">
+<![CDATA[
+:10  %HammingTable_hamming_35 = load i8* %HammingTable_hamming_34, align 1
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_35"/></StgValue>
+</operation>
+
+<operation id="20" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="13" bw="3" op_0_bw="8" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+:11  %HammingTable_hamming_36 = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 5
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_36"/></StgValue>
+</operation>
+
+<operation id="21" st_id="3" stage="2" lat="2">
+<core>RAM</core>
+<MemPortIdVec>1 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="14" bw="8" op_0_bw="3">
+<![CDATA[
+:12  %HammingTable_hamming_37 = load i8* %HammingTable_hamming_36, align 1
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_37"/></StgValue>
+</operation>
+</state>
+
+<state id="4" st_id="4">
+
+<operation id="22" st_id="4" stage="1" lat="2">
+<core>RAM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="12" bw="8" op_0_bw="3">
+<![CDATA[
+:10  %HammingTable_hamming_35 = load i8* %HammingTable_hamming_34, align 1
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_35"/></StgValue>
+</operation>
+
+<operation id="23" st_id="4" stage="1" lat="2">
+<core>RAM</core>
+<MemPortIdVec>1 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="14" bw="8" op_0_bw="3">
+<![CDATA[
+:12  %HammingTable_hamming_37 = load i8* %HammingTable_hamming_36, align 1
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_37"/></StgValue>
+</operation>
+
+<operation id="24" st_id="4" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="15" bw="3" op_0_bw="8" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+:13  %HammingTable_hamming_38 = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 6
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_38"/></StgValue>
+</operation>
+
+<operation id="25" st_id="4" stage="2" lat="2">
+<core>RAM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="16" bw="8" op_0_bw="3">
+<![CDATA[
+:14  %HammingTable_hamming_39 = load i8* %HammingTable_hamming_38, align 1
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_39"/></StgValue>
+</operation>
+
+<operation id="26" st_id="4" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="17" bw="3" op_0_bw="8" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+:15  %HammingTable_hamming_40 = getelementptr [8 x i8]* %HammingTable_hammingDistances_finalStates, i64 0, i64 7
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_40"/></StgValue>
+</operation>
+
+<operation id="27" st_id="4" stage="2" lat="2">
+<core>RAM</core>
+<MemPortIdVec>1 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="18" bw="8" op_0_bw="3">
+<![CDATA[
+:16  %HammingTable_hamming_41 = load i8* %HammingTable_hamming_40, align 1
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_41"/></StgValue>
+</operation>
+</state>
+
+<state id="5" st_id="5">
+
+<operation id="28" st_id="5" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="2" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="0" op_3_bw="0" op_4_bw="0" op_5_bw="32" op_6_bw="0" op_7_bw="0" op_8_bw="0" op_9_bw="0" op_10_bw="0">
+<![CDATA[
+:0  call void (...)* @_ssdm_op_SpecFUCore([8 x i8]* %HammingTable_hammingDistances_finalStates, [1 x i8]* @p_str, [7 x i8]* @p_str2, [1 x i8]* @p_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
+
+]]></Node>
+<StgValue><ssdm name="specfucore_ln0"/></StgValue>
+</operation>
+
+<operation id="29" st_id="5" stage="1" lat="2">
+<core>RAM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="16" bw="8" op_0_bw="3">
+<![CDATA[
+:14  %HammingTable_hamming_39 = load i8* %HammingTable_hamming_38, align 1
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_39"/></StgValue>
+</operation>
+
+<operation id="30" st_id="5" stage="1" lat="2">
+<core>RAM</core>
+<MemPortIdVec>1 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="18" bw="8" op_0_bw="3">
+<![CDATA[
+:16  %HammingTable_hamming_41 = load i8* %HammingTable_hamming_40, align 1
+
+]]></Node>
+<StgValue><ssdm name="HammingTable_hamming_41"/></StgValue>
+</operation>
+
+<operation id="31" st_id="5" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="19" bw="64" op_0_bw="64" op_1_bw="8">
+<![CDATA[
+:17  %mrv = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8 } undef, i8 %HammingTable_hamming_27, 0
+
+]]></Node>
+<StgValue><ssdm name="mrv"/></StgValue>
+</operation>
+
+<operation id="32" st_id="5" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="20" bw="64" op_0_bw="64" op_1_bw="8">
+<![CDATA[
+:18  %mrv_1 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8 } %mrv, i8 %HammingTable_hamming_29, 1
+
+]]></Node>
+<StgValue><ssdm name="mrv_1"/></StgValue>
+</operation>
+
+<operation id="33" st_id="5" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="21" bw="64" op_0_bw="64" op_1_bw="8">
+<![CDATA[
+:19  %mrv_2 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_1, i8 %HammingTable_hamming_31, 2
+
+]]></Node>
+<StgValue><ssdm name="mrv_2"/></StgValue>
+</operation>
+
+<operation id="34" st_id="5" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="22" bw="64" op_0_bw="64" op_1_bw="8">
+<![CDATA[
+:20  %mrv_3 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_2, i8 %HammingTable_hamming_33, 3
+
+]]></Node>
+<StgValue><ssdm name="mrv_3"/></StgValue>
+</operation>
+
+<operation id="35" st_id="5" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="23" bw="64" op_0_bw="64" op_1_bw="8">
+<![CDATA[
+:21  %mrv_4 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_3, i8 %HammingTable_hamming_35, 4
+
+]]></Node>
+<StgValue><ssdm name="mrv_4"/></StgValue>
+</operation>
+
+<operation id="36" st_id="5" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="24" bw="64" op_0_bw="64" op_1_bw="8">
+<![CDATA[
+:22  %mrv_5 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_4, i8 %HammingTable_hamming_37, 5
+
+]]></Node>
+<StgValue><ssdm name="mrv_5"/></StgValue>
+</operation>
+
+<operation id="37" st_id="5" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="25" bw="64" op_0_bw="64" op_1_bw="8">
+<![CDATA[
+:23  %mrv_6 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_5, i8 %HammingTable_hamming_39, 6
+
+]]></Node>
+<StgValue><ssdm name="mrv_6"/></StgValue>
+</operation>
+
+<operation id="38" st_id="5" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="26" bw="64" op_0_bw="64" op_1_bw="8">
+<![CDATA[
+:24  %mrv_7 = insertvalue { i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_6, i8 %HammingTable_hamming_41, 7
+
+]]></Node>
+<StgValue><ssdm name="mrv_7"/></StgValue>
+</operation>
+
+<operation id="39" st_id="5" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="27" bw="0" op_0_bw="64">
+<![CDATA[
+:25  ret { i8, i8, i8, i8, i8, i8, i8, i8 } %mrv_7
+
+]]></Node>
+<StgValue><ssdm name="ret_ln288"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="49" name="HammingTable_hammingDistances_finalStates" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="HammingTable_hammingDistances_finalStates"/><MemPortTyVec>1 1 </MemPortTyVec>
+</StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="50" from="HammingTable_hammingDistances_finalStates" to="HammingTable_hamming" fromId="49" toId="6">
+</dataflow>
+<dataflow id="52" from="StgValue_51" to="HammingTable_hamming" fromId="51" toId="6">
+</dataflow>
+<dataflow id="53" from="StgValue_51" to="HammingTable_hamming" fromId="51" toId="6">
+</dataflow>
+<dataflow id="54" from="HammingTable_hamming" to="HammingTable_hamming_27" fromId="6" toId="7">
+</dataflow>
+<dataflow id="55" from="HammingTable_hammingDistances_finalStates" to="HammingTable_hamming_28" fromId="49" toId="8">
+</dataflow>
+<dataflow id="56" from="StgValue_51" to="HammingTable_hamming_28" fromId="51" toId="8">
+</dataflow>
+<dataflow id="58" from="StgValue_57" to="HammingTable_hamming_28" fromId="57" toId="8">
+</dataflow>
+<dataflow id="59" from="HammingTable_hamming_28" to="HammingTable_hamming_29" fromId="8" toId="9">
+</dataflow>
+<dataflow id="60" from="HammingTable_hamming" to="HammingTable_hamming_27" fromId="6" toId="10">
+</dataflow>
+<dataflow id="61" from="HammingTable_hamming_28" to="HammingTable_hamming_29" fromId="8" toId="11">
+</dataflow>
+<dataflow id="62" from="HammingTable_hammingDistances_finalStates" to="HammingTable_hamming_30" fromId="49" toId="12">
+</dataflow>
+<dataflow id="63" from="StgValue_51" to="HammingTable_hamming_30" fromId="51" toId="12">
+</dataflow>
+<dataflow id="65" from="StgValue_64" to="HammingTable_hamming_30" fromId="64" toId="12">
+</dataflow>
+<dataflow id="66" from="HammingTable_hamming_30" to="HammingTable_hamming_31" fromId="12" toId="13">
+</dataflow>
+<dataflow id="67" from="HammingTable_hammingDistances_finalStates" to="HammingTable_hamming_32" fromId="49" toId="14">
+</dataflow>
+<dataflow id="68" from="StgValue_51" to="HammingTable_hamming_32" fromId="51" toId="14">
+</dataflow>
+<dataflow id="70" from="StgValue_69" to="HammingTable_hamming_32" fromId="69" toId="14">
+</dataflow>
+<dataflow id="71" from="HammingTable_hamming_32" to="HammingTable_hamming_33" fromId="14" toId="15">
+</dataflow>
+<dataflow id="72" from="HammingTable_hamming_30" to="HammingTable_hamming_31" fromId="12" toId="16">
+</dataflow>
+<dataflow id="73" from="HammingTable_hamming_32" to="HammingTable_hamming_33" fromId="14" toId="17">
+</dataflow>
+<dataflow id="74" from="HammingTable_hammingDistances_finalStates" to="HammingTable_hamming_34" fromId="49" toId="18">
+</dataflow>
+<dataflow id="75" from="StgValue_51" to="HammingTable_hamming_34" fromId="51" toId="18">
+</dataflow>
+<dataflow id="77" from="StgValue_76" to="HammingTable_hamming_34" fromId="76" toId="18">
+</dataflow>
+<dataflow id="78" from="HammingTable_hamming_34" to="HammingTable_hamming_35" fromId="18" toId="19">
+</dataflow>
+<dataflow id="79" from="HammingTable_hammingDistances_finalStates" to="HammingTable_hamming_36" fromId="49" toId="20">
+</dataflow>
+<dataflow id="80" from="StgValue_51" to="HammingTable_hamming_36" fromId="51" toId="20">
+</dataflow>
+<dataflow id="82" from="StgValue_81" to="HammingTable_hamming_36" fromId="81" toId="20">
+</dataflow>
+<dataflow id="83" from="HammingTable_hamming_36" to="HammingTable_hamming_37" fromId="20" toId="21">
+</dataflow>
+<dataflow id="84" from="HammingTable_hamming_34" to="HammingTable_hamming_35" fromId="18" toId="22">
+</dataflow>
+<dataflow id="85" from="HammingTable_hamming_36" to="HammingTable_hamming_37" fromId="20" toId="23">
+</dataflow>
+<dataflow id="86" from="HammingTable_hammingDistances_finalStates" to="HammingTable_hamming_38" fromId="49" toId="24">
+</dataflow>
+<dataflow id="87" from="StgValue_51" to="HammingTable_hamming_38" fromId="51" toId="24">
+</dataflow>
+<dataflow id="89" from="StgValue_88" to="HammingTable_hamming_38" fromId="88" toId="24">
+</dataflow>
+<dataflow id="90" from="HammingTable_hamming_38" to="HammingTable_hamming_39" fromId="24" toId="25">
+</dataflow>
+<dataflow id="91" from="HammingTable_hammingDistances_finalStates" to="HammingTable_hamming_40" fromId="49" toId="26">
+</dataflow>
+<dataflow id="92" from="StgValue_51" to="HammingTable_hamming_40" fromId="51" toId="26">
+</dataflow>
+<dataflow id="94" from="StgValue_93" to="HammingTable_hamming_40" fromId="93" toId="26">
+</dataflow>
+<dataflow id="95" from="HammingTable_hamming_40" to="HammingTable_hamming_41" fromId="26" toId="27">
+</dataflow>
+<dataflow id="97" from="_ssdm_op_SpecFUCore" to="specfucore_ln0" fromId="96" toId="28">
+</dataflow>
+<dataflow id="98" from="HammingTable_hammingDistances_finalStates" to="specfucore_ln0" fromId="49" toId="28">
+</dataflow>
+<dataflow id="100" from="p_str" to="specfucore_ln0" fromId="99" toId="28">
+</dataflow>
+<dataflow id="102" from="p_str2" to="specfucore_ln0" fromId="101" toId="28">
+</dataflow>
+<dataflow id="103" from="p_str" to="specfucore_ln0" fromId="99" toId="28">
+</dataflow>
+<dataflow id="105" from="StgValue_104" to="specfucore_ln0" fromId="104" toId="28">
+</dataflow>
+<dataflow id="106" from="p_str" to="specfucore_ln0" fromId="99" toId="28">
+</dataflow>
+<dataflow id="107" from="p_str" to="specfucore_ln0" fromId="99" toId="28">
+</dataflow>
+<dataflow id="108" from="p_str" to="specfucore_ln0" fromId="99" toId="28">
+</dataflow>
+<dataflow id="109" from="p_str" to="specfucore_ln0" fromId="99" toId="28">
+</dataflow>
+<dataflow id="110" from="p_str" to="specfucore_ln0" fromId="99" toId="28">
+</dataflow>
+<dataflow id="111" from="HammingTable_hamming_38" to="HammingTable_hamming_39" fromId="24" toId="29">
+</dataflow>
+<dataflow id="112" from="HammingTable_hamming_40" to="HammingTable_hamming_41" fromId="26" toId="30">
+</dataflow>
+<dataflow id="114" from="StgValue_113" to="mrv" fromId="113" toId="31">
+</dataflow>
+<dataflow id="115" from="HammingTable_hamming_27" to="mrv" fromId="10" toId="31">
+</dataflow>
+<dataflow id="116" from="mrv" to="mrv_1" fromId="31" toId="32">
+</dataflow>
+<dataflow id="117" from="HammingTable_hamming_29" to="mrv_1" fromId="11" toId="32">
+</dataflow>
+<dataflow id="118" from="mrv_1" to="mrv_2" fromId="32" toId="33">
+</dataflow>
+<dataflow id="119" from="HammingTable_hamming_31" to="mrv_2" fromId="16" toId="33">
+</dataflow>
+<dataflow id="120" from="mrv_2" to="mrv_3" fromId="33" toId="34">
+</dataflow>
+<dataflow id="121" from="HammingTable_hamming_33" to="mrv_3" fromId="17" toId="34">
+</dataflow>
+<dataflow id="122" from="mrv_3" to="mrv_4" fromId="34" toId="35">
+</dataflow>
+<dataflow id="123" from="HammingTable_hamming_35" to="mrv_4" fromId="22" toId="35">
+</dataflow>
+<dataflow id="124" from="mrv_4" to="mrv_5" fromId="35" toId="36">
+</dataflow>
+<dataflow id="125" from="HammingTable_hamming_37" to="mrv_5" fromId="23" toId="36">
+</dataflow>
+<dataflow id="126" from="mrv_5" to="mrv_6" fromId="36" toId="37">
+</dataflow>
+<dataflow id="127" from="HammingTable_hamming_39" to="mrv_6" fromId="29" toId="37">
+</dataflow>
+<dataflow id="128" from="mrv_6" to="mrv_7" fromId="37" toId="38">
+</dataflow>
+<dataflow id="129" from="HammingTable_hamming_41" to="mrv_7" fromId="30" toId="38">
+</dataflow>
+<dataflow id="130" from="mrv_7" to="ret_ln288" fromId="38" toId="39">
+</dataflow>
+</dataflows>
+
+
+</stg>
